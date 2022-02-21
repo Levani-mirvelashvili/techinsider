@@ -19,7 +19,7 @@ body {
 }
 
 .window {
-  position: relative;
+  position: absolute;
   top: -5px;
   right: -100px;
   width: 900px;
