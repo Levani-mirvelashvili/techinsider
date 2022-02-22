@@ -18,6 +18,11 @@ body {
   text-align: top;
 }
 
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
 /* fonts */
 body, h1, h2, h3, h4, h5, h6  {
   font-family: Titillium Web, sans-serif;
