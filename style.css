@@ -10,7 +10,7 @@ body {
   margin: 0;
 }
 
-/* Style the header */
+/* header */
 .header {
   background-color: white;
   padding: 2px;
@@ -18,19 +18,18 @@ body {
   text-align: top;
 }
 
-/* Style fonts */
-/* Style fonts */
+/* fonts */
 body, h1, h2, h3, h4, h5, h6  {
   font-family: Titillium Web, sans-serif;
 }
 
-/* Style the top navigation bar */
+/* top navigation bar */
 .topnav {
   overflow: hidden;
   background-color: #121212;
 }
 
-/* Style the topnav links */
+/* the topnav links */
 .topnav a {
   float: left;
   display: block;
@@ -46,18 +45,18 @@ body, h1, h2, h3, h4, h5, h6  {
   color: black;
 }
 
-/* Create three unequal columns that floats next to each other */
+/* three different floating columns */
 .column {
   float: left;
   padding: 10px;
 }
 
-/* Left and right column */
+/* side columns */
 .column.side {
   width: 25%;
 }
 
-/* Middle column */
+/* main body column */
 .column.middle {
   width: 47%;
 }
@@ -69,7 +68,7 @@ body, h1, h2, h3, h4, h5, h6  {
   clear: both;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* Responsive layout */
 @media screen and (max-width: 600px) {
   .column.side, .column.middle {
     width: 100%;
@@ -79,14 +78,14 @@ body, h1, h2, h3, h4, h5, h6  {
 .window {
   position: absolute;
   top: -5px;
-  right: -100px;
+  right: -150px;
   width: 900px;
   height: 150px;
 }
 
-/* Style the footer */
+/* footer */
 .footer {
-  background-color: #f1f1f1;
+  background-color: #dbdbdb;
   padding: 10px;
   text-align: center;
 }
