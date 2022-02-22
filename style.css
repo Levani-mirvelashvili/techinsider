@@ -84,7 +84,7 @@ body, h1, h2, h3, h4, h5, h6  {
 
 /* Responsive layout */
 @media screen and (max-width: 600px) {
-  .column.side, .column.middle, .(topnav a) {
+  .column.side, .column.middle, .window, .(topnav a) {
     width: 100%;
   }
 }
