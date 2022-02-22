@@ -43,6 +43,18 @@ body, h1, h2, h3, h4, h5, h6  {
   height: auto;
 }
 
+/* modify selection background */
+::selection {
+  background: #fe3b1f;
+}
+
+.window {
+  position: absolute;
+  top: -5px;
+  right: -150px;
+  width: 900px;
+  height: 150px;
+
 /* the topnav links */
 .topnav a {
   float: left;
