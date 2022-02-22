@@ -75,6 +75,11 @@ body, h1, h2, h3, h4, h5, h6  {
   width: 47%;
 }
 
+/* modify selection background */
+::selection {
+  background: #fe3b1f;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
