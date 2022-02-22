@@ -18,19 +18,6 @@ body {
   text-align: top;
 }
 
-.button {
-  background-color: #fe3b1f;
-  border: none;
-  color: white;
-  padding: 17px 22px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 19px;
-  margin: 4px 2px;
-  cursor: crosshair;
-}
-
 .window {
   position: absolute;
   top: -5px;
