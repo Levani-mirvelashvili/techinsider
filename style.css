@@ -1,4 +1,4 @@
-<style>
+
 p,h1,h2,h3,h4,h5,h6 {
   color: black;
 }
@@ -10,7 +10,7 @@ body {
   margin: 0;
 }
 
-/* header */
+/* Style the header */
 .header {
   background-color: white;
   padding: 2px;
@@ -18,35 +18,18 @@ body {
   text-align: top;
 }
 
-/* fonts */
+/* Style fonts */
 body, h1, h2, h3, h4, h5, h6  {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium-Web', sans-serif;
 }
 
-/*  top navigation bar */
+/* Style the top navigation bar */
 .topnav {
   overflow: hidden;
   background-color: #121212;
 }
 
-/* responsive Images */
-.responsive {
-  width: 100%;
-  height: auto;
-}
-
-/* modify selection background */
-::selection {
-  background: #fe3b1f;
-
-.window {
-  position: absolute;
-  top: -5px;
-  right: -150px;
-  width: 900px;
-  height: 150px;
-
-/* the topnav links */
+/* Style the topnav links */
 .topnav a {
   float: left;
   display: block;
@@ -62,18 +45,18 @@ body, h1, h2, h3, h4, h5, h6  {
   color: black;
 }
 
-/* Create three different columns floating next to each other */
+/* Create three unequal columns that floats next to each other */
 .column {
   float: left;
   padding: 10px;
 }
 
-/* side columns */
+/* Left and right column */
 .column.side {
   width: 25%;
 }
 
-/* body column */
+/* Middle column */
 .column.middle {
   width: 47%;
 }
@@ -85,20 +68,27 @@ body, h1, h2, h3, h4, h5, h6  {
   clear: both;
 }
 
-/* Responsive layout */
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column.side, .column.middle {
     width: 100%;
   }
 }
 
-/* footer */
+.window {
+  position: absolute;
+  top: -5px;
+  right: -100px;
+  width: 900px;
+  height: 150px;
+}
+
+/* Style the footer */
 .footer {
-  background-color: #dbdbdb;
+  background-color: #f1f1f1;
   padding: 10px;
   text-align: center;
 }
-
 /* main */
     .footer {
       margin: auto;
@@ -110,4 +100,3 @@ body, h1, h2, h3, h4, h5, h6  {
     .column.middle { 
       font-size: 19px; 
       color: #111; }
-</style>
