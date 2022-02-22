@@ -21,7 +21,7 @@ body {
 .window {
   position: absolute;
   top: -5px;
-  right: -10px;
+  right: -600px;
   width: 100%;
   height: auto;
 }
