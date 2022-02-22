@@ -58,12 +58,12 @@ body, h1, h2, h3, h4, h5, h6  {
 
 /* side columns */
 .column.side {
-  width: 27%;
+  width: 30%;
 }
 
 /* main body column */
 .column.middle {
-  width: 46%;
+  width: 40%;
 }
 
 /* Clear floats after the columns */
