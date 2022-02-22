@@ -59,13 +59,6 @@ body, h1, h2, h3, h4, h5, h6  {
   color: black;
 }
 
-/* if your screen is smaller */
-@media screen and (max-width: 600px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-
 /* Create three different columns floating next to each other */
 .column {
   float: left;
