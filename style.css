@@ -28,13 +28,13 @@ body, h1, h2, h3, h4, h5, h6  {
   font-family: Titillium Web, sans-serif;
 }
 
-/* top navigation bar */
+/* upper navigation bar */
 .topnav {
   overflow: hidden;
   background-color: #121212;
 }
 
-/* the topnav links */
+/* topnavigation links */
 .topnav a {
   float: left;
   display: block;
@@ -44,7 +44,7 @@ body, h1, h2, h3, h4, h5, h6  {
   text-decoration: none;
 }
 
-/* Change color on hover */
+/* style the color while hover */
 .topnav a:hover {
   background-color: #fcfafa;
   color: black;
