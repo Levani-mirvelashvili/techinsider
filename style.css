@@ -18,11 +18,6 @@ body {
   text-align: top;
 }
 
-.dark-mode {
-  background-color: black;
-  color: red;
-}
-
 .responsive {
   width: 100%;
   height: auto;
