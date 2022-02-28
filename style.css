@@ -18,6 +18,8 @@ body {
   text-align: top;
 }
 
+overflow-wrap: break-word;
+
 .responsive {
   width: 100%;
   height: auto;
