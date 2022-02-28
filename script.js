@@ -5,3 +5,8 @@ function test() {
 function o() {
   alert("Coming soon");
 }
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
