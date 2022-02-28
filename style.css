@@ -18,7 +18,9 @@ body {
   text-align: top;
 }
 
-overflow-wrap: break-word;
+a:link {
+  overflow-wrap: break-word;
+}
 
 .responsive {
   width: 100%;
