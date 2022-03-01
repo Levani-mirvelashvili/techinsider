@@ -22,6 +22,11 @@ a:link {
   overflow-wrap: break-word;
 }
 
+.dark-mode {
+  background-color: black;
+  color: red;
+}
+
 .responsive {
   width: 100%;
   height: auto;
