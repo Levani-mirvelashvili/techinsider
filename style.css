@@ -22,10 +22,9 @@ a:link {
   overflow-wrap: break-word;
 }
 
-body {background-color: white}
-body.dark {background-color: black; Color:white; Color:white;}
-button {background-color: #de2121; color: white; border: none; padding: 4px 12px; font-size: 16px; float: right;}
-body.dark button {background-color: #de2121; color: white; font-size: 16px;}
+.dark-mode {
+  background-color: black;
+  color: white;
 
 .responsive {
   width: 100%;
