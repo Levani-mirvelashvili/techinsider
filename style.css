@@ -25,6 +25,7 @@ a:link {
 .daark-modee {
   background-color: black;
   color: white;
+  link: red;
 }
 
 .dark-mode-button {
