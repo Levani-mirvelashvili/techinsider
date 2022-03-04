@@ -1,4 +1,5 @@
 
+
 const body = document.querySelector('body');
 const button = document.querySelector('#darkbutton');
 function toggleDark() {
@@ -17,3 +18,5 @@ if (localStorage.getItem("theme") === "dark") {
   body.classList.add('dark');
   button.innerHTML = "Dark mode";
 }
+
+document.querySelector('#darkbutton').addEventListener('click', toggleDark);
