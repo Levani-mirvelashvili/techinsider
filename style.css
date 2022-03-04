@@ -22,9 +22,10 @@ a:link {
   overflow-wrap: break-word;
 }
 
-.dark-mode {
+.daark-mode-button {
   background-color: black;
   color: white;
+}
 
 .responsive {
   width: 100%;
