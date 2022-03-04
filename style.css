@@ -22,24 +22,10 @@ a:link {
   overflow-wrap: break-word;
 }
 
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-
-.daark-mode-button {
-  float: right;
-  background-color: #de2121;
-  border: none;
-  color: white;
-  padding: 4px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 0px 0px;
-  cursor: pointer;
-}
+body {background-color: white}
+body.dark {background-color: black; Color:white; Color:white;}
+button {background-color: #de2121; color: white; border: none; padding: 4px 12px; font-size: 16px; float: right;}
+body.dark button {background-color: #de2121; color: white; font-size: 16px;}
 
 .responsive {
   width: 100%;
