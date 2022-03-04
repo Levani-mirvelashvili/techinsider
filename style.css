@@ -22,6 +22,10 @@ a:link {
   overflow-wrap: break-word;
 }
 
+.daark-modee {
+  background-color: black;
+  color: white;
+
 .dark-mode-button {
   float: right;
   background-color: #de2121;
