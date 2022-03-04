@@ -22,11 +22,6 @@ a:link {
   overflow-wrap: break-word;
 }
 
-.daark-mode-button {
-  background-color: black;
-  color: white;
-}
-
 .responsive {
   width: 100%;
   height: auto;
