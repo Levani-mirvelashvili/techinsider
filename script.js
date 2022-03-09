@@ -11,7 +11,7 @@ function myFunction() {
    element.classList.toggle("daark-modee");
 }
 
-var message="Function Disabled!";
+var message="Sorry, right click function is Disabled!";
 
 function clickIE4(){
 if (event.button==2){
