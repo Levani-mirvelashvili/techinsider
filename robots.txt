@@ -1,0 +1,19 @@
+This is techinsider robots txt file
+
+User-agent: Applebot
+User-agent: baiduspider
+User-agent: Bingbot
+User-agent: Discordbot
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: LinkedinBot
+User-agent: msnbot
+User-agent: Naverbot
+User-agent: Pinterestbot
+User-agent: Screaming Frog SEO Spider
+User-agent: Twitterbot
+
+
+
+Allow: /*/
+Disallow: //*//
