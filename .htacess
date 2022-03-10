@@ -1,6 +1,0 @@
-#remove html file extension https://levani-mirvelashvili.github.io/Techinsider/ourclients.html
-# to https://levani-mirvelashvili.github.io/Techinsider/ourclients
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC, L]
