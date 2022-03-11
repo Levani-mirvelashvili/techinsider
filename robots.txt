@@ -19,11 +19,19 @@ Disallow: //*//
 
 - Googlebot is the web crawler software developed by Google. Bot crawls, analyzes, and collects documents, pages, data from the internet. It can refer two main types of bot crawler, Mobile crawler, and desktop crawler.
 - Applebot is the web crawler bot for apple. Developed by apple. inc. Used by products Siri, spotlight suggestions.
-    |
-    |
-    |
-  / _ \
-\_\(_)/_/
- _//o\\_
-  /   \
-
+                                                       
+                             |
+                             |
+                             |
+                           / _ \
+                         \_\(_)/_/
+                          _//o\\_
+                           /   \                              
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
