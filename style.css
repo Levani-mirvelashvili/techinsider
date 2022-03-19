@@ -22,6 +22,11 @@ a:link {
   overflow-wrap: break-word;
 }
 
+/* change color on hover */
+a:hover {
+  color: #e50914;
+}
+
 .daark-modee {
   background-color: black;
   color: white;
