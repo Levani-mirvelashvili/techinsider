@@ -1,3 +1,5 @@
+#BEGIN
+
 you broke it, there is no ads.txt file here. Techinsider doesn't have ads.txt
 
 * Techinsider/ads.txt
@@ -6,4 +8,6 @@ you broke it, there is no ads.txt file here. Techinsider doesn't have ads.txt
 
 
 
-*
+*/                 /*
+
+#END
