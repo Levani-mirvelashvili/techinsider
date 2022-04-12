@@ -27,6 +27,11 @@ a:hover {
   color: #e50914;
 }
 
+.verti {
+  border-left: 10px solid #cf200c;
+  height: 60px;
+}
+
 .daark-modee {
   background-color: black;
   color: white;
