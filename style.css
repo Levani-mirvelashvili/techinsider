@@ -27,9 +27,10 @@ a:hover {
   color: #e50914;
 }
 
-.verti {
-  border-left: 10px solid #cf200c;
-  height: 40px;
+blockquote p {
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
 }
 
 .daark-modee {
