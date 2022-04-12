@@ -28,6 +28,7 @@ a:hover {
 }
 
 blockquote p {
+    margin: 0;
     padding: 90px;
     background: #eee;
     border-radius: 5px;
