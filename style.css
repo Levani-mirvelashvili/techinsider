@@ -27,6 +27,12 @@ a:hover {
   color: #e50914;
 }
 
+.block {
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+}
+
 .daark-modee {
   background-color: black;
   color: white;
