@@ -27,13 +27,6 @@ a:hover {
   color: #e50914;
 }
 
-blockquote p {
-    margin: 0;
-    padding: 15px;
-    background: #eee;
-    border-radius: 50px;
-}
-
 .daark-modee {
   background-color: black;
   color: white;
