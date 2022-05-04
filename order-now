@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.main-box {
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  height: 450px;
+  width: 190px;
+  border: 1px outset red;
+  float: left;
+  margin: 35px;
+}
+h1 {
+  color: black;
+  font-family: 'Titillium Web', sans-serif;
+}
+p {
+  color: black;
+  font-family: 'Titillium Web', sans-serif;
+}
+.price {
+  font-size: 40px;
+  font-family: 'Titillium Web', sans-serif;
+}
+button {
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 19px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+body {
+  background-color: black;
+}
+</style>
+
+
+<div class="main-box">
+<h1>Econom</h1>
+<p>popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+<br>
+<div class="price">₾3,500</div>
+<a href="https://www.makeuseof.com/advertise/">
+<button>Order now</button>
+</a>
+</div>
+
+<div class="main-box">
+<h1>Premium</h1>
+<p>popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+<br>
+<div class="price">₾5,500</div>
+<a href="">
+<button>Order now</button>
+</a>
+</div>
+
+<div class="main-box">
+<h1>Enterprise</h1>
+<p>popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<br>
+<div class="price">₾10,000</div>
+<a href="#">
+<button>Order now</button>
+</a>
+</div>
+
+<div class="main-box">
+<h1>Lifetime access</h1>
+<p>popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+<br>
+<a href="#">
+<button>Try now to win</button>
+</a>
+</div>
+
+
+</body>
+</html>
