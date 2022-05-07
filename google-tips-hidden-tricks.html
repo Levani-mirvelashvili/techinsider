@@ -57,16 +57,43 @@
     <p></p>
     <br>
     <p></p>
-    <span id="loadtime"></span>
-    <script type="text/javascript">  
-     var before_loadtime = new Date().getTime();  
-     window.onload = Pageloadtime;  
-     function Pageloadtime() {  
-         var aftr_loadtime = new Date().getTime();  
-         pgloadtime = (aftr_loadtime - before_loadtime) / 1000  
-  
-         document.getElementById("loadtime").innerHTML = "This page loaded in <font color='lightgreen'><b>" + pgloadtime + "</b></font> Seconds";
-    </script>
+    <div id="counter"></div>
+    <script>
+var n = localStorage.getItem('on_load_counter');
+ 
+if (n === null) {
+    n = 0;
+}
+ 
+n++;
+ 
+localStorage.setItem("on_load_counter", n);
+ 
+document.getElementById('counter').innerHTML = n;
+</script>
+<div id="counter"></div>
+<button id="reset">Reset</button>
+ 
+<script>
+var n = localStorage.getItem('on_load_counter');
+ 
+if (n === null) {
+    n = 0;
+}
+ 
+n+;
+ 
+localStorage.setItem("on_load_counter", n);
+ 
+document.getElementById('counter').innerHTML = n;
+ 
+ 
+function reset_counter() {
+    localStorage.removeItem('on_load_counter');
+}
+ 
+document.getElementById('reset').addEventListener('click', reset_counter);
+</script>
   </div>
   
   <div class="column side">
