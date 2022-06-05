@@ -13,6 +13,9 @@ User-agent: Pinterestbot
 User-agent: Screaming Frog SEO Spider
 User-agent: Twitterbot
 
+https://developers.google.com/search/docs/advanced/crawling/googlebot
+https://ahrefs.com/robot
+
 
 Allow: /*/
 Disallow: //*//
