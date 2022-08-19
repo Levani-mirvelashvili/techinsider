@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swift Web Studio | Techinsider Holding</title>
+<link rel="shortcut icon" href="favicon-techinsider-holding.ico?">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+/* fonts */
+body, h1, h2, h3, h4, h5, h6  {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.centered {
+  position: absolute;
+  color: #E50914;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 5px red;
+}
+
+.button {
+  background-color: #E50914;
+  border: none;
+  color: white;
+  padding: 10px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 19px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted playsinline loop style="pointer-events: none;" loop id="myVideo">
+  <source src="https://levani-mirvelashvili.github.io/Techinsider/Process2548754.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+    <div class="bottom-left button"><a href="https://www.linkedin.com/company/swift-web-studio-2020/" target="blank">Swift Web Studio LinkedIn</a></div>
+    <div class="top-left"><a href="https://levani-mirvelashvili.github.io/Techinsider/"><img src="https://i.imgur.com/CHaGlJI.png" alt="logo" width="300" height="82"></a></div>
+    <div class="top-right button"><a href="#">Get a discount(Special limited offer)</a></div>
+    <div class="bottom-right button"><a href="#">F.A.Q</a></div>
+    <div class="centered"><p style="font-size:50px;">Swift Web Studio builds software you need, Providing software development services around the world. <a href="https://levani-mirvelashvili.github.io/Techinsider/order-now">Get a Quote</a></p></div>
+</body>
+</html>
