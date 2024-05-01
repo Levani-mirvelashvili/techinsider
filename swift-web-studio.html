@@ -1,162 +1,316 @@
-
-
-<!DOCTYPE html>
 <html>
 <head>
-<title>Swift Web Studio | Techinsider Holding</title>
-<link rel="shortcut icon" href="https://i.imgur.com/xqVscY5.png">
-
+  <meta charset="UTF-8">
+  <title>Pricing Table</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<link rel="stylesheet" href="style.css">
 <style>
-.main-box {
-  padding: 20px;
-  text-align: center;
-  background-color: rgb(240, 240, 240);
-  height: 450px;
-  width: 190px;
-  border: 1px outset red;
-  float: left;
-  margin: 35px;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+body{
+  margin: 0;
+  padding: 0;
+ font-family: 'Roboto', sans-serif !important;
 }
-h1 {
-  color: black;
-  font-family: 'Titillium Web', sans-serif;
+section{
+  width: 100%;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 140px 0;
 }
-p {
-  color: black;
-  font-family: 'Titillium Web', sans-serif;
+.card{
+  position: relative;
+  max-width: 300px;
+  height: auto;
+  background: linear-gradient(-45deg,#fe0847,#feae3f);
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+-webkit-transition: .5s;
+transition: .5s;
 }
-.price {
-  font-size: 40px;
-  font-family: 'Titillium Web', sans-serif;
+.card:hover{
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
+.col-sm-4:nth-child(1) .card ,
+.col-sm-4:nth-child(1) .card .title .fa{
+  background: linear-gradient(-45deg,#f403d1,#64b5f6);
 
-button {
-  background-color: #ff0000;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+}
+.col-sm-4:nth-child(2) .card,
+.col-sm-4:nth-child(2) .card .title .fa{
+  background: linear-gradient(-45deg,#ffec61,#f321d7);
+
+}
+.col-sm-4:nth-child(3) .card,
+.col-sm-4:nth-child(3) .card .title .fa{
+  background: linear-gradient(-45deg,#24ff72,#9a4eff);
+
+}
+.card::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, .1);
+z-index: 1;
+-webkit-transform: skewY(-5deg) scale(1.5);
+        transform: skewY(-5deg) scale(1.5);
+}
+.title .fa{
+  color:#fff;
+  font-size: 60px;
+  width: 100px;
+  height: 100px;
+  border-radius:  50%;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 19px;
-  margin: 4px 2px;
+  line-height: 100px;
+  -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+
+}
+.title h2 {
+  position: relative;
+  margin: 20px  0 0;
+  padding: 0;
+  color: #fff;
+  font-size: 28px;
+ z-index: 2;
+}
+.price,.option{
+  position: relative;
+  z-index: 2;
+}
+.price h4 {
+margin: 0;
+padding: 20px 0 ;
+color: #fff;
+font-size: 60px;
+}
+.option ul {
+  margin: 0;
+  padding: 0;
+
+}
+.option ul li {
+margin: 0 0 10px;
+padding: 0;
+list-style: none;
+color: #fff;
+font-size: 16px;
+}
+.card a {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  color : black;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  display: block;
+  text-align: center;
+  margin: 20px auto 0 ;
+  font-size: 16px;
   cursor: pointer;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+
 }
-body {
-  background-color: black;
+.card a:hover{
+    text-decoration: none;
 }
-a {
-  color: white;
-  text-decoration: none;
-}
+
 </style>
-
+</head>
+<body>
 <h1 style="text-align:left;"><a href="https://levani-mirvelashvili.github.io/Techinsider/development"><img src="https://i.imgur.com/KwQGQYj.png" alt="logo" width="637" height="118" class="responsive"></a></h1>
-
-<h1 style=color:#12e04f;">სერვისები - Swift Web Studio</h1>
-<div class="main-box">
-<h1>ვებ საიტის დამზადება</h1>
-<p>სასურველი ვებ საიტის დამზადება, 
-საიტის ტიპები: ბიზნეს საიტი, ბლოგი, 
-NGO, პირადი გვერდი, პორტფოლიო, 
-ნიუსები, კორპორატიული საიტი, 
-საგანმანათლებლო, 
-იქომერს(ონლაინ მაღაზია)  გალერეა, 
-ლენდინგ გვერდი 
-ერთ გვერდიანი საიტი</p>
-<br>
-<a href="https://www.makeuseof.com/advertise/"></a>
-<button><a href="tel:+995574740274" class="button">დაგვიკავშირდი</a></button>
-</a>
-</div>
-
-<div class="main-box">
-<h1>ტექნიკური მომსახურება სერვისი maintenance and support</h1>
-<p>რეგულარული კონტროლი, განახლებები, ხარვეზების გასწორება, ტექნიკური მონიტორინგი და მომსახურება 24/7</p>
-<div class="price">-</div>
-<a href="">
-<button><a href="https://www.facebook.com/messages/t/234196553121505" class="button">დაგვიკავშირდი</a></button>
-</a>
-</div>
-
-<div class="main-box">
-<h1>კიბერ უსაფრთხოება</h1>
-<p>ვებ საიტის უსაფრთხოების გაძლიერება, კიბერუსაფრთხოებისთვის აუცილებელი მოქმედებები, ქცევა როგორც კულტურა, კონსულტაცია</p>
-<br>
-<div class="price">-</div>
-<a href="#">
-<button>დაგვიკავშირდი</button>
-</a>
-</div>
-
-<div class="main-box">
-<h1>ციფრული მარკეტინგი</h1>
-<p>ციფრული მარკეტინგი, დაგეგმვა, ციფრული არხების აწყობა მართვა და კონტროლი (facebook, instagram, tiktok, youtube, linkedin) კონტენტ სტრატეგია, რეკლამის დაგეგმვა გაშვება</p>
-<br>
-<div class="price">-</div>
-<a href="#">
-<button>დაგვიკავშირდი</button>
-</a>
-</div>
-
-<div class="main-box">
-<h1>სოციალური მედია მარკეტინგი (SMM)</h1>
-<p>text heere.</p>
-<br>
-<div class="price">-</div>
-<a href="#">
-<button>დაგვიკავშირდი</button>
-</a>
-</div>
-
-<div class="main-box">
-<h1>საძიებო სისტემის ოპტიმიზაცია SEO</h1>
-<p>მეტი პოტენციური მომხმარებლის მოზიდვა და საძიებო სისტემებში მაღალი პოზიციების დაკავება</p>
-<br>
-<div class="price">-</div>
-<a href="#">
-<button>დაგვიკავშირდი</button>
-</a>
-</div>
-
-<div class="main-box">
-<h1>იმეილ მარკეტინგი</h1>
-<p>იმეილ მარკეტინგი მარტივად სწრაფად და ეფექტურად</p>
-<br>
-<div class="price">-</div>
-<a href="#">
-<button>დაგვიკავშირდი</button>
-</a>
-</div>
-
-<div class="main-box">
-<h1>ლოგოს დამზადება, ვიზუალური იდენტობა</h1>
-<p>text heere.</p>
-<br>
-<div class="price">-</div>
-<a href="#">
-<button>დაგვიკავშირდი</button>
-</a>
-</div>
-
-
-<div class="main-box">
-<h1>Lifetime access</h1>
-<p>
-Product catalogy - E-commerce
-Business website - Tourist services, blog, tourist recommendations
-Business website - hotel, restaurant, building development company
-News
-Personal blog, Portfolio
-Online tool (SAAS)
-and more. (We got that)
-</p>
-<br>
-<a href="#">
-<button>Try now to win</button>
-</a>
-</div>
-
-
+<section>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="title">
+              <i class="fa fa-rocket" aria-hidden="true"></i>
+              <h2>ვებ საიტის დამზადება</h2>
+            </div>
+            <div class="price">
+              <h4><sup>₾</sup>0</h4>
+            </div>
+            <div class="option">
+              <ul>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 10 GB Space </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 3 Domain Names </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 20 Email Address </li>
+              <li> <i class="fa fa-times" aria-hidden="true"></i> Live Support </li>
+              </ul>
+            </div>
+            <a href="#">Order Now </a>
+          </div>
+        </div>
+        <!-- END Col one -->
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="title">
+            <i class="fa fa-rocket" aria-hidden="true"></i>
+              <h2>ტექნიკური მომსახურება</h2>
+            </div>
+            <div class="price">
+              <h4><sup>₾</sup>0</h4>
+               რეგულარული კონტროლი, განახლებები, ხარვეზების გასწორება, ტექნიკური მონიტორინგი და მომსახურება 24/7
+            </div>
+            <div class="option">
+              <ul>
+              </ul>
+            </div>
+            <a href="#">Order Now </a>
+          </div>
+        </div>
+        <!-- END Col two -->
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="title">
+            <i class="fa fa-rocket" aria-hidden="true"></i>
+              <h2>კიბერ უსაფრთხოება</h2>
+            </div>
+            <div class="price">
+              <h4><sup>₾</sup>0</h4>
+            </div>
+            <div class="option">
+              <ul>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> Unlimited GB Space </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 30 Domain Names </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> Unlimited Email Address </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> Live Support </li>
+              </ul>
+            </div>
+            <a href="#">Order Now </a>
+          </div>
+        </div>
+        <!-- END Col three -->
+        <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="title">
+            <i class="fa fa-rocket" aria-hidden="true"></i>
+              <h2>ციფრული მარკეტინგი</h2>
+            </div>
+            <div class="price">
+              <h4><sup>₾</sup>0</h4>
+            </div>
+            <div class="option">
+              <ul>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 10 GB Space </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 3 Domain Names </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 20 Email Address </li>
+              <li> <i class="fa fa-times" aria-hidden="true"></i> Live Support </li>
+              </ul>
+            </div>
+            <a href="#">Order Now </a>
+          </div>
+        </div>
+        <!-- END Col one -->
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="title">
+            <i class="fa fa-rocket" aria-hidden="true"></i>
+              <h2>სოციალური მედია მარკეტინგი (SMM)</h2>
+            </div>
+            <div class="price">
+              <h4><sup>₾</sup>0</h4>
+            </div>
+            <div class="option">
+              <ul>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 50 GB Space </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 5 Domain Names </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> Unlimited Email Address </li>
+              <li> <i class="fa fa-times" aria-hidden="true"></i> Live Support </li>
+              </ul>
+            </div>
+            <a href="#">Order Now </a>
+          </div>
+        </div>
+        <!-- END Col two -->
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="title">
+              <i class="fa fa-rocket" aria-hidden="true"></i>
+              <h2>საძიებო სისტემის ოპტიმიზაცია SEO</h2>
+            </div>
+            <div class="price">
+              <h4><sup>₾</sup>0</h4>
+            </div>
+            <div class="option">
+              <ul>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> Unlimited GB Space </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 30 Domain Names </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> Unlimited Email Address </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> Live Support </li>
+              </ul>
+            </div>
+            <a href="#">Order Now </a>
+          </div>
+        </div>
+        <!-- END Col three -->
+        <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="title">
+            <i class="fa fa-rocket" aria-hidden="true"></i>
+              <h2>იმეილ მარკეტინგი</h2>
+            </div>
+            <div class="price">
+              <h4><sup>₾</sup>0</h4>
+            </div>
+            <div class="option">
+              <ul>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 10 GB Space </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 3 Domain Names </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 20 Email Address </li>
+              <li> <i class="fa fa-times" aria-hidden="true"></i> Live Support </li>
+              </ul>
+            </div>
+            <a href="#">Order Now </a>
+          </div>
+        </div>
+        <!-- END Col one -->
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <div class="title">
+              <i class="fa fa-rocket" aria-hidden="true"></i>
+              <h2>ლოგოს დამზადება, ვიზუალური იდენტობა</h2>
+            </div>
+            <div class="price">
+              <h4><sup>₾</sup>0</h4>
+            </div>
+            <div class="option">
+              <ul>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 50 GB Space </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 5 Domain Names </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> Unlimited Email Address </li>
+              <li> <i class="fa fa-times" aria-hidden="true"></i> Live Support </li>
+              </ul>
+            </div>
+            <a href="#">Order Now </a>
+          </div>
+        </div>
+        <!-- END Col two -->
+      </div>
+    </div>
+  </div>
+</section>
 </body>
 </html>
