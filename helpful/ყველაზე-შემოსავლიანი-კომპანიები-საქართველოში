@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YS67KFKM80"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YS67KFKM80');
+</script>
+<title>სასარგებლო ინფორმაცია | Techinsider Holding</title>
+<link rel="icon" href="https://levani-mirvelashvili.github.io/Techinsider/favicon-techinsider-holding.png" sizes="32x32" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon-techinsider-holding.png" type="image/x-icon" />
+<link rel="apple-touch-icon" href="favicon-techinsider-holding.png?" sizes="32x32" type="image/x-icon" />
+<link rel="apple-touch-icon" href="favicon-techinsider-holding.png" sizes="180x180" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<meta property="og:image"              content="https://raw.githubusercontent.com/Levani-mirvelashvili/Techinsider/main/Parent_techinsider_logo.jpeg" />
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <h1><a href="https://levani-mirvelashvili.github.io/Techinsider/"><img src="https://levani-mirvelashvili.github.io/Techinsider/Parent_brand_Umbrella-techinsider-preview.png" alt="logo" width="300" height="82"></a></h1>
+  <p></p>
+</div>
+
+<div class="topnav">
+  <a href="ourclients">ჩვენი პარტნიორები</a>
+  <a href="swift-web-studio-ვებ-საიტის-დამზადება">ვები (Swift Web Studio)</a>
+  <a href="solutions">გადაწყვეტილებები</a>
+  <a href="solutions">ჰოსტინგი</a>
+  <a href="merch">მერჩი</a>
+  <a href="news">სიახლეები (Stock)</a>
+  <a href="contact-us">დაგვიკავშირდი</a>
+  <a href="https://www.linkedin.com/in/levani-mirvelashvili-403abb175/" target="_blank">ლინკდინი</a>
+  <button id="daark-modee" class="dark-mode-button" onclick="myFunction()">Dark mode</button>
+</div>
+
+<div class="row">
+  <div class="column side">
+  </div>
+  
+  <div class="column middle">
+    <h1>100 ყველაზე შემოსავლიანი კერძო კომპანია საქართველოში(2023)</h1>
+    <hr>
+    <h5></h5>
+    <a href="https://m.me/Swift.Web.Studio.techinsider.holding/"><img src="https://i.imgur.com/FOqaNUD.png" alt="web development" class="responsive" width="580" height="100"></a>
+    <p></p>
+    <p></p>
+    <a href="https://m.me/Swift.Web.Studio.techinsider.holding/"><img src="https://i.imgur.com/FOqaNUD.png" alt="web development" class="responsive" width="580" height="100"></a>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <a href="https://m.me/Swift.Web.Studio.techinsider.holding/"><img src="https://i.imgur.com/FOqaNUD.png" alt="web development" class="responsive" width="580" height="100"></a>
+    <p></p>
+    <b>გვერდის გაზიარება<b>
+<hr>
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_copy_link"></a>
+<a class="a2a_button_whatsapp"></a>
+<a class="a2a_button_email"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+    <p></p>
+  </div>
+  <div class="column side">
+    <a hreflang="en" href="https://levani-mirvelashvili.github.io/Techinsider/"><p style="text-align:right;"></p><img width="25" height="25" src ="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA"/></a><a hreflang="de" href="https://levani-mirvelashvili.github.io/Techinsider/de"><p style="text-align:right;"></p><img width="25" height="25" src ="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg" alt="Ger"/></a>
+    <h4><a href="https://levani-mirvelashvili.github.io/Techinsider/sign-in">Login</a> | 
+    <a href="https://levani-mirvelashvili.github.io/Techinsider/maps">Maps</a></h4>
+    <h2>Shop (products)</h2>
+    <p><a href="https://levani-mirvelashvili.github.io/Techinsider/districts?utm_source=facebook_post&utm_medium=cpc&utm_campaign=Esim&utm_term=May_2021&utm_content=Video&fbclid=IwAR2FOMihHH1DGn62meBPd7N5MkpPOk1HAiIs-kfNG2wiKmLZvfE1YntAX_o">Find near you</a></p>
+    <hr>
+    <p><a href="#">Product link</a></p>
+    <br>
+    <h4><a href="careers" style="text-decoration: underline;"  target="_blank">Careers.techinsider</a></h4>
+    <a href="https://www.facebook.com/Swift.Web.Studio.techinsider.holding/"><img src="https://i.imgur.com/Hv0WJ70.png" alt="Swift" width="250" height="430"></a>
+  </div>
+</div>
+
+<div class="footer">
+
+<ul>
+  <ul><a href="https://marketingplatform.google.com/about/" target="_blank">Marketing.google</a></ul>
+  <ul><a href="https://developers.googleblog.com/" target="_blank">Developers.google</a></ul>
+  <ul><a href="https://www.facebook.com/Swift.Web.Studio.techinsider.holding/">Facebook</a> | <a href="https://www.linkedin.com/company/swift-web-studio-2020/">Linkedin</a> | <a href="https://www.tiktok.com/@swift_web_studio">Tiktok</a></ul>
+  <ul><a href="https://levani-mirvelashvili.github.io/Techinsider/contact-us">ინვესტორებისთვის / Investor Relations</a></ul>
+  <ul><a href="https://fast.com/">Test your internet connection speed here</a></ul>
+  <br>
+  <hr>
+  <ul><b>Techinsider Holding LLC Copyright © 2023</b></ul>
+  <p style="text-align: left;">Developed by <a href="https://levani-mirvelashvili.github.io/Techinsider/development">Swift Web Studio</a></p>
+</ul>
+</div>
+<script src="//code.tidio.co/f58rpp470u6sklafvxv4n02zj6utgzqt.js" async></script>
+<!-- Creator_Accountable_Person Levani Mirvelashvili -->
+</body>
+</html>
+
+
+
