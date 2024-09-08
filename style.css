@@ -58,7 +58,10 @@ a:hover {
   cursor: pointer;
 }
 
-
+.responsive {
+  width: 100%;
+  height: auto;
+}
 
 video {
   width: 100%;
