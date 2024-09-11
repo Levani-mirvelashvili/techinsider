@@ -106,7 +106,7 @@ body, h1, h2, h3, h4, h5, h6  {
 
 /* main body column */
 .column.middle {
-  width: 65%;
+  width: 40%;
 }
 
 /* Clear floats after the columns */
