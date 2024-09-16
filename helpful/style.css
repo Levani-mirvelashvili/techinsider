@@ -61,6 +61,23 @@ p {
   cursor: pointer;
 }
 
+    /* imageeeeee */
+    img {
+      width: 50%;
+      height: auto;
+      max-width: 100%;  /* Ensures the image doesn't stretch beyond its natural size */
+    }
+
+    /* Reduce image size on desktop */
+    @media (min-width: 1920px) {
+      img {
+        width: 100%;  /* Reduce the image width on desktop */
+        margin: 0 auto; /* Center the image horizontally */
+        display: block;
+      }
+    }
+/* imageeeeee */
+
 .responsive {
   width: 100%;
   height: auto;
