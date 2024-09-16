@@ -32,6 +32,10 @@ a:hover {
   color: #e50914;
 }
 
+p {
+  line-height: 1.5; /* Adjust the line height */
+}
+
 .block {
     padding: 15px;
     background: #eee;
