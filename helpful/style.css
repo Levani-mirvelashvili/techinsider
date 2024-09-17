@@ -1,3 +1,4 @@
+
 p,h1,h2,h3,h4,h5,h6 {
   color: ;
 }
@@ -32,10 +33,6 @@ a:hover {
   color: #e50914;
 }
 
-p {
-  line-height: 1.7; /* Adjust the line height */
-}
-
 .block {
     padding: 15px;
     background: #eee;
@@ -61,24 +58,12 @@ p {
   cursor: pointer;
 }
 
-    /* imageeeeee */
-    img {
-      width: 50%;
-      height: auto;
-      max-width: 100%;  /* Ensures the image doesn't stretch beyond its natural size */
-    }
-
-    /* Reduce image size on desktop */
-    @media (min-width: 1920px) {
-      img {
-        width: 100%;  /* Reduce the image width on desktop */
-        margin: 0 auto; /* Center the image horizontally */
-        display: block;
-      }
-    }
-/* imageeeeee */
-
 .responsive {
+  width: 100%;
+  height: auto;
+}
+
+video {
   width: 100%;
   height: auto;
 }
@@ -92,7 +77,7 @@ body, h1, h2, h3, h4, h5, h6  {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* top navigation bar */
+/* top navigation bar (font-family: "firago", "Courier New", monospace;)*/
 .topnav {
   overflow: hidden;
   background-color: #121212;
@@ -162,20 +147,19 @@ body, h1, h2, h3, h4, h5, h6  {
       font-size: 19px; 
       color: ; }
 
-div.scrollmenu {
-  background-color: white;
-  overflow: auto;
-  white-space: nowrap;
+.dropbtn {
+  background-color: black;
+  color: red;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
 }
 
-div.scrollmenu a {
+.dropdown {
+  position: relative;
   display: inline-block;
-  color: black;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
 }
 
-div.scrollmenu a:hover {
-  background-color: lightgreen;
+apple { 
+  font-size: 25px; 
 }
