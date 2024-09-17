@@ -58,6 +58,10 @@ a:hover {
   cursor: pointer;
 }
 
+p {
+  line-height: 1.5; /* Adjust the line height */
+}
+
 .responsive {
   width: 100%;
   height: auto;
