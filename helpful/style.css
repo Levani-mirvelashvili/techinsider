@@ -184,4 +184,16 @@ apple {
   font-size: 25px; 
 }
 
+    .two-column-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two equal columns */
+      gap: 10px; /* Spacing between columns */
+      list-style: none; /* Remove bullet points */
+      padding: 0;
+    }
+
+    .two-column-list li {
+      padding: 5px 0;
+    }
+
 
