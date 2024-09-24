@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Swift Web Studio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 591 villa agency
+
+https://templatemo.com/tm-591-villa-agency
+
+-->
+<style>
+    .header .btn {
+    margin-top: 40px;
+    background-color: #ff3b30; /* Red color */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 14px rgba(255, 59, 48, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .header .btn:hover {
+    background-color: #d12d24; /* Darker red on hover */
+    box-shadow: 0 6px 16px rgba(209, 45, 36, 0.3);
+  }
+
+
+  .nav-menu a:hover {
+    background-color: #d1d8e0;
+  }
+
+  .services {
+    padding: 120px 0;
+    text-align: center;
+  }
+
+  .services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #333;
+  }
+
+  .service-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .service-card {
+    background-color: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ff3b30; /* Red color */
+  }
+
+  .service-card p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .about, .contact {
+    padding: 120px 0;
+    text-align: center;
+  }
+
+  .about h2, .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  .about p, .contact p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #666;
+  }
+
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2.5rem;
+    }
+
+    .service-cards {
+      flex-direction: column;
+      gap: 40px;
+    }
+</style>
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-8">
+          <ul class="info">
+            <li><i class="fa fa-envelope"></i> swiftwebstudiohelp@gmail.com</li>
+            <li><i class="fa fa-map"></i> საქართველო, თბილისი</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <ul class="social-links">
+            <li><a href="https://www.facebook.com/Swift.Web.Studio.techinsider.holding/"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://m.me/Swift.Web.Studio.techinsider.holding/"><i class="fab fa-facebook-messenger"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/swift-web-studio-2020/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/stories/swift_web_studio_techinsider/"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <h1><img src="assets/images/logo_01.png" alt="ff" width="250" height="30"></h1>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html" class="active">მთავარი</a></li>
+                      <li><a href="#header1">ჩვენი სერვისები</a></li>
+                      <li><a href="property-details.html">ჩვენ შესახებ</a></li>
+                      <li><a href="#contact">კონტაქტი</a></li>
+                      <li><a href="tel:+995599074630"><i class="fa fa-phone"></i> +995 599 074 630</a></li>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner">
+    <div class="owl-carousel owl-banner">
+      <div class="item item-1">
+        <div class="header-text">
+          <span class="category">ყველგან <em>სადაც ინტერნეტია</em></span>
+          <h1 style="color:white;">მაღალი ხარისხის ვებსაიტის დამზადება</h1>
+        </div>
+      </div>
+      <div class="item item-2">
+        <div class="header-text">
+          <span class="category">Melbourne, <em>Australia</em></span>
+          <h2><br></h2>
+        </div>
+      </div>
+      <div class="item item-3">
+        <div class="header-text">
+          <span class="category">Miami, <em>South Florida</em></span>
+          <h2></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="featured section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="left-image">
+            <img src="assets/images/featured.jpg" alt="">
+            
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="section-heading">
+            <h6>| რას გთავაზობთ</h6>
+            <h2>ჩვენი მთავარი პრიორიტეტია ხარისხი</h2>
+          </div>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  რატომ Swift Web Studio ?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Swift Web Studio: კომპანია იღებს სრულ პასუხისმგებლობას შესულებულ სამუშაოზე Money back guarantee - გარანტია თანხის დაბრუნებით</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  როგორ ვმუშაობთ ?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  ჩვენი გუნდი გთავაზობთ მაღალი ხარისხის პროფესიონალური ვებ საიტის დამზადებას. სწრაფი, ხარისხიანი, ყველა პლატფორმაზე ხელმისაწვდომი, თანამედროვე ვებ საიტი დახვეწილი დიზაინით და ყველა საჭირო ფუნქციონალით.ასევე ჩვენ გვაქვს გარანტია თანხის დაბრუნებით
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  როგორ დაგიკავშირდეთ ?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  ჩვენ გიპასუხებთ 5 წუთის განმავლობაში.
+                  შეგიძლიათ დაგვიკავშირდეთ ნებისმიერ დროს ფეისბუქ მესენჯერის პირად ჩატში <a href="https://www.facebook.com/Swift.Web.Studio.techinsider.holding/">facebook.com/Swift.Web.Studio.techinsider.holding</a><br>ან მობილურ ნომერზე <a href="tel:+995599074630">+995 599 074 630</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="info-table">
+            <ul>
+              <li>
+                <img src="assets/images/info-icon-01.png" alt="" style="max-width: 52px;">
+                <h4>სწრაფი ვებსაიტი<br><span>პერფორმანსი უმნიშვნელოვანესი ფაქტორია ვებსაიტისთვის</span></h4>
+              </li>
+              <li>
+                <img src="assets/images/info-icon-02.png" alt="" style="max-width: 52px;">
+                <h4>რესპონსივი<br><span>აუცილებელია იყოს ყველა პლატფორმაზე მორგებული</span></h4>
+              </li>
+              <li>
+                <img src="assets/images/info-icon-03.png" alt="" style="max-width: 52px;">
+                <h4>დახვეწილი დიზაინით<br><span>თანამედროვე და ლამაზი დიზაინი არანაკლებ მნიშვნელოვანია</span></h4>
+              </li>
+              <li>
+                <img src="assets/images/info-icon-04.png" alt="" style="max-width: 52px;">
+                <h4>ფუნქციონალით<br><span>თქვენს საჭიროებაზე მორგებული ნებისმიერი ფუნქციონალით</span></h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <br>
+  <h1 id="header1"></1>
+  <center><h2><b>რას ვაკეთებთ</b></h2></center>
+  <br>
+  <div class="service-cards">
+    <div class="service-card">
+      <h3>ვებ საიტის დამზადება</h3>
+      <p>თქვენს მოთხოვნებზე მორგებული თანამედროვე დახვეწილი და მოქნილი სწრაფი ვებსაიტის დამზადება, დახვეწილი დიზაინით და სრული საჭირო ფუნქციონალით.</p>
+    </div>
+    <div class="service-card">
+      <h3>Wordpress</h3>
+      <p>ვორდპრესი არის სასურველი ტექნოლოგია თუ გსურთ ბიუჯეტური ვებსაიტი მოკლე დროში. ვორდპრესს მრავალი უპირატესობა აქვს, მაგრამ მთავარი მისი ბიუჯეტური ფასი და დამზადების ვადებია</p>
+    </div>
+    <div class="service-card">
+      <h3>ონლაინ მაღაზიის დამზადება E-ccomerce</h3>
+      <p>ონლაინ მაღაზია -  თუ ყიდით ან გინდათ გაყიდოთ ონლაინ დაგიმზადებთ ონლაინ მაღაზიას სრულყოფილი ფუნქციონალით და სასურველი დიზაინით.</p>
+    </div>
+    <div class="service-card">
+      <h3>რეგულარული ტექნიკური მხარდაჭერა</h3>
+      <p>ტექნიკური მხარდაჭერა ყველა ვებსაიტს სჭირდება, რეგულარული ტექნიკური თუ კონტენტის განახლებისთვის, ასევე უსაფრთხოების პარამეტრების განახლებებისთვის.</p>
+    </div>
+    <div class="service-card">
+      <h3>ტრენინგი</h3>
+      <p>Coming soon.</p>
+    </div>
+    <div class="service-card">
+      <h3>SEO საძიებო სისტემის ოპტიმიზაცია</h3>
+      <p>Coming soon.</p>
+    </div>
+    <div class="service-card">
+      <h3>საიტის მონაცემთა ანალიზი (real time analytics)</h3>
+      <p>Coming soon</p>
+    </div>
+    <div class="service-card">
+      <h3>სოციალური მედია მარკეტინგი</h3>
+      <p>Coming soon</p>
+    </div>
+    <div class="service-card">
+      <h3>რეკლამა Facebook ads</h3>
+      <p>Coming soon</p>
+    </div>
+    <div class="service-card">
+      <h3>გვერდის მართვა facebook instagram</h3>
+      <p>Coming soon</p>
+    </div>
+    <div class="service-card">
+      <h3>Google ads</h3>
+      <p>Coming soon</p>
+    </div>
+ </div>
+
+<br>
+ <center><h2>რატომ ჩვენ?</h2></center>
+ <br>
+  <div class="service-card">
+      <p>რატომ უნდა აირჩიოთ Swift Web Studio? იმიტომ რომ ჩვენი მიზანია დამკვეთი იყოს კმაყოფილი და ბედნიერი ყველა ასპექტში. ყოველთვის მაქსიმალურად ვცდილობთ მივაწოდოთ დამკვეთს უმაღლესი ხარისხის მომსახურება, გვაქვს გარანტია თანხის დაბრუნებით 100%</p>
+      <br>
+      <p>ჩვენი მიზანია ჩვენს მომხმარებელს გაახსენდეს Swift Web Studio როდესაც საუბარია უმაღლესი ხარისხის მომსახურებაზე.</p>
+      </div>
+    
+  <div class="video section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="section-heading text-center">
+            <h6>| Video View</h6>
+            <h2>Get Closer View & Different Feeling</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="video-frame">
+            <img src="assets/images/video-frame.jpg" alt="" width="974" height="752">
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fun-facts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="wrapper">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="45" data-speed="1000"></h2>
+                   <p class="count-text ">დასრულებული<br>პროექტი</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="7" data-speed="1000"></h2>
+                  <p class="count-text ">წლიანი<br>გამოცდილება</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="24" data-speed="1000"></h2>
+                  <p class="count-text ">????<br>-</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h6 id="contact"></h6>
+  <div class="contact section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="section-heading text-center">
+            <h6>| Contact Us</h6>
+            <h2>დაგვიკავშირდით</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-page section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h2>დაგვიკავშირდი, <em>ჩვენ 5 წუთში გიპასუხებთ.</h2></h2>
+          </div>
+          <br><a href="https://m.me/Swift.Web.Studio.techinsider.holding/"><i class="fab fa-facebook-messenger"></i> Facebook Messenger</a></p> <p><li><a href="tel:+995599074630"><i class="fa fa-phone"></i> დაგვირეკე  +995 599 074 630</a></li> <br>Mail: 
+          
+        <div class="col-lg-12">
+          <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d657.8049569899666!2d44.76031560058772!3d41.73116415442176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404473c1466c75bf%3A0xb9eefb1eb043d398!2sMy%20Visa!5e1!3m2!1sen!2sge!4v1727114812600!5m2!1sen!2sge" width="100%" height="500px" frameborder="0" style="border:0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2024 Techinsider Holding LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>
