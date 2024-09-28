@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>ჩვენი სერვისები | Swift Web Studio Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 591 villa agency
+
+https://templatemo.com/tm-591-villa-agency
+
+-->
+<style>
+.header .btn {
+    margin-top: 40px;
+    background-color: #ff3b30; /* Red color */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 14px rgba(255, 59, 48, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .header .btn:hover {
+    background-color: #d12d24; /* Darker red on hover */
+    box-shadow: 0 6px 16px rgba(209, 45, 36, 0.3);
+  }
+
+
+  .nav-menu a:hover {
+    background-color: #d1d8e0;
+  }
+
+  .services {
+    padding: 120px 0;
+    text-align: center;
+  }
+
+  .services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #333;
+  }
+
+  .service-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .service-card {
+    background-color: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ff3b30; /* Red color */
+  }
+
+  .service-card p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .about, .contact {
+    padding: 120px 0;
+    text-align: center;
+  }
+
+  .about h2, .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  .about p, .contact p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #666;
+  }
+
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2.5rem;
+    }
+
+    .service-cards {
+      flex-direction: column;
+      gap: 40px;
+    }
+</style>
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-8">
+          <ul class="info">
+            <li><i class="fa fa-envelope"></i> info@company.com</li>
+            <li><i class="fa fa-map"></i>თბილისი, საქართველო</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <ul class="social-links">
+         <li><a href="https://www.facebook.com/Swift.Web.Studio.techinsider.holding" target="_blank"><i class="fab fa-facebook"></i></a></li>
+         <li><a href="https://www.linkedin.com/company/swift-web-studio-2020" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+         <li><a href="https://www.instagram.com/swift_web_studio_techinsider/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="home.html" class="logo">
+                      <h1><img src="assets/images/logo_01.png" alt="" width="350" height="33"></h1>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="home.html">მთავარი</a></li>
+                      <li><a href="our-services.html">ჩვენი სერვისები</a></li>
+                      <li><a href="about-us.html">ჩვენ შესახებ</a></li>
+                      <li><a href="contact.html">კონტაქტი</a></li>
+                      <li><a href="tel:+995599074630"><i class="fa fa-phone"></i> +995 599 074 630</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  <center><h2><b>რას ვაკეთებთ (to customize)</b></h2></center>
+  <br>
+  <div class="service-cards">
+    <div class="service-card">
+      <h3>ვებ საიტის დამზადება</h3>
+      <p>თქვენს მოთხოვნებზე მორგებული თანამედროვე დახვეწილი და მოქნილი სწრაფი ვებსაიტის დამზადება, დახვეწილი დიზაინით და სრული საჭირო ფუნქციონალით.</p>
+    </div>
+    <div class="service-card">
+      <h3>Wordpress</h3>
+      <p>ვორდპრესი არის სასურველი ტექნოლოგია თუ გსურთ ბიუჯეტური ვებსაიტი მოკლე დროში. ვორდპრესს მრავალი უპირატესობა აქვს, მაგრამ მთავარი მისი ბიუჯეტური ფასი და დამზადების ვადებია</p>
+    </div>
+    <div class="service-card">
+      <h3>ონლაინ მაღაზიის დამზადება E-ccomerce</h3>
+      <p>ონლაინ მაღაზია -  თუ ყიდით ან გინდათ გაყიდოთ ონლაინ დაგიმზადებთ ონლაინ მაღაზიას სრულყოფილი ფუნქციონალით და სასურველი დიზაინით.</p>
+    </div>
+    <div class="service-card">
+      <h3>რეგულარული ტექნიკური მხარდაჭერა</h3>
+      <p>ტექნიკური მხარდაჭერა ყველა ვებსაიტს სჭირდება, რეგულარული ტექნიკური თუ კონტენტის განახლებისთვის, ასევე უსაფრთხოების პარამეტრების განახლებებისთვის.</p>
+    </div>
+    <div class="service-card">
+      <h3>ტრენინგი</h3>
+      <p>Coming soon.</p>
+    </div>
+    <div class="service-card">
+      <h3>SEO საძიებო სისტემის ოპტიმიზაცია</h3>
+      <p>Coming soon.</p>
+    </div>
+    <div class="service-card">
+      <h3>საიტის მონაცემთა ანალიზი (real time analytics)</h3>
+      <p>Coming soon</p>
+    </div>
+    <div class="service-card">
+      <h3>სოციალური მედია მარკეტინგი</h3>
+      <p>Coming soon</p>
+    </div>
+    <div class="service-card">
+      <h3>რეკლამა Facebook ads</h3>
+      <p>Coming soon</p>
+    </div>
+    <div class="service-card">
+      <h3>გვერდის მართვა facebook instagram</h3>
+      <p>Coming soon</p>
+    </div>
+    <div class="service-card">
+      <h3>Google ads</h3>
+      <p>Coming soon</p>
+    </div>
+ </div>
+
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2024 Techinsider Holding LLC. All rights reserved.</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>
