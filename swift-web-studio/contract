@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Download Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.download-card h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.download-card p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.download-btn {
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="download-card">
+            <h1>ხელშეკრულების გადმოწერა</h1>
+            <p>ამ გვერდიდან შეგიძლიათ გადმოწეროთ მომსახურების ხელშეკრულება. ხელშეკრულება იდება დამკეთის და შემსრულებელი კომპანიის/ფიზიკურ პირს შორის. (ხელშეკრულების თითო ეგზემპარი ინახება თითოეულ მხარესთან)</p>
+            <a href="your-file-url.zip" class="download-btn">გადმოწერა</a>
+        </div>
+    </div>
+</body>
+</html>
