@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 — Page Not Found</title>
+  <meta name="description" content="404 — Page not found. Return to home or search the site." />
+
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --accent:#7c5cff;
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 600px at 10% 20%, rgba(124,92,255,0.12), transparent),
+                  radial-gradient(900px 500px at 90% 80%, rgba(0,200,255,0.06), transparent),
+                  var(--bg);
+      color: #e6eef8;
+      -webkit-font-smoothing:antialiased;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+
+    .card{
+      width:100%;
+      max-width:980px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:16px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      padding:36px;
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:28px;
+      align-items:center;
+      backdrop-filter: blur(6px);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .left{
+      padding-right:8px;
+    }
+
+    h1{font-size:88px;margin:0;line-height:0.85;letter-spacing:-2px}
+    h2{margin:6px 0 16px;font-weight:600;font-size:20px;color:var(--muted)}
+    p{color:var(--muted);margin:0 0 18px}
+
+    .cta{
+      display:flex;gap:12px;flex-wrap:wrap;margin-top:12px
+    }
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid transparent;
+      cursor:pointer;
+      transition:transform .18s ease, box-shadow .18s ease;
+      background: linear-gradient(90deg,var(--accent), #4fd1c5);
+      color:#06121a;
+      box-shadow: 0 6px 18px rgba(124,92,255,0.18);
+    }
+    .btn:active{transform:translateY(1px)}
+
+    .btn.ghost{
+      background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04);box-shadow:none
+    }
+
+    .info-list{display:flex;gap:16px;margin-top:18px}
+    .info{background:var(--glass);padding:10px 12px;border-radius:10px;color:var(--muted);font-weight:600}
+
+    .right{
+      display:flex;align-items:center;justify-content:center;position:relative;padding-left:6px
+    }
+
+    /* Illustration box */
+    .illus{
+      width:100%;max-width:360px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:12px;align-items:center
+    }
+
+    .space-ship{width:260px;height:160px}
+
+    .search{
+      width:100%;display:flex;gap:8px;margin-top:6px
+    }
+    .search input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .search button{padding:10px 12px;border-radius:10px;border:none;background:rgba(255,255,255,0.04);color:var(--muted);cursor:pointer}
+
+    footer.small{margin-top:14px;color:var(--muted);font-size:13px}
+
+    /* small screens */
+    @media (max-width:880px){
+      .card{grid-template-columns:1fr;max-width:720px;padding:24px}
+      h1{font-size:72px}
+      .right{order:-1;margin-bottom:6px}
+    }
+
+    @media (max-width:420px){
+      h1{font-size:48px}
+      .card{padding:18px}
+      .space-ship{width:200px;height:120px}
+    }
+
+    /* subtle bob animation */
+    .float{animation:float 4s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="title">
+    <section class="left">
+      <h1 id="title">404</h1>
+      <h2>Page not found — but your next big idea is still here.</h2>
+      <p>Looks like the page you were trying to reach doesn't exist or has moved. Here are some quick options to get you back on track.</p>
+
+      <div class="cta">
+        <a class="btn" href="https://levani-mirvelashvili.github.io/Techinsider/swift-web-studio/home">← Back to Home</a>
+        <a class="btn ghost" href="/contact">Contact Us</a>
+      </div>
+
+      <div class="info-list" aria-hidden="false">
+        <div class="info">Projects completed — <strong style="color:#fff;margin-left:8px">22</strong></div>
+        <div class="info">Team experts — <strong style="color:#fff;margin-left:8px">53</strong></div>
+        <div class="info">Happy clients — <strong style="color:#fff;margin-left:8px">100+</strong></div>
+      </div>
+
+      <form class="search" role="search" action="/search" method="get" onsubmit="return handleSearch(event)">
+        <input name="q" type="search" placeholder="Search the site (try: portfolio, services)" aria-label="Search the site">
+        <button type="submit">Search</button>
+      </form>
+
+      <footer class="small">Tip: try re-checking the URL or visit our <a href="/portfolio" style="color:var(--accent);text-decoration:none">portfolio</a>.</footer>
+    </section>
+
+    <aside class="right" aria-hidden="true">
+      <div class="illus">
+        <!-- Decorative SVG illustration -->
+        <svg class="space-ship float" viewBox="0 0 640 384" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#7c5cff" stop-opacity="0.98" />
+              <stop offset="1" stop-color="#4fd1c5" stop-opacity="0.98" />
+            </linearGradient>
+          </defs>
+          <g fill="none" fill-rule="evenodd">
+            <ellipse cx="320" cy="312" rx="220" ry="28" fill="rgba(0,0,0,0.18)" />
+            <g transform="translate(120 48)">
+              <path d="M200 0c55 0 100 45 100 100s-45 100-100 100-100-45-100-100S145 0 200 0z" fill="url(#g1)" opacity="0.95" />
+              <circle cx="180" cy="70" r="8" fill="#06121a" opacity="0.14" />
+              <rect x="120" y="90" width="160" height="18" rx="8" fill="rgba(0,0,0,0.12)" />
+              <g transform="translate(40 20)">
+                <path d="M0 120 C40 70 160 70 200 120" stroke="rgba(255,255,255,0.06)" stroke-width="6" stroke-linecap="round" fill="none" />
+              </g>
+            </g>
+          </g>
+        </svg>
+        <div style="text-align:center">
+          <strong style="font-size:16px;display:block">We couldn't find that page</strong>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">But we built plenty of pages you might like.</div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    function handleSearch(e){
+      const q = (new FormData(e.target)).get('q') || '';
+      if(!q.trim()){
+        // quick shake animation to hint input
+        const input = e.target.querySelector('input');
+        input.animate([
+          {transform: 'translateX(0)'},
+          {transform: 'translateX(-8px)'},
+          {transform: 'translateX(8px)'},
+          {transform: 'translateX(0)'}
+        ],{duration:320,iterations:1});
+        input.focus();
+        e.preventDefault();
+        return false;
+      }
+      // allow normal submit (to /search?q=...)
+      return true;
+    }
+
+    // Accessibility: allow keyboard "h" to go home, "c" to contact
+    document.addEventListener('keydown', function(e){
+      if(document.activeElement && (document.activeElement.tagName==='INPUT' || document.activeElement.tagName==='TEXTAREA')) return;
+      if(e.key==='h') window.location.href = '/';
+      if(e.key==='c') window.location.href = '/contact';
+    });
+  </script>
+</body>
+</html>
