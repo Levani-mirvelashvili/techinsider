@@ -1108,49 +1108,36 @@ span.price-tick {
 
 
 
-  /* Lift text up on desktop */
+/* Lift text up on desktop */
+.banner-content {
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+}
+
+/* Adjust spacing for larger screens */
+@media (min-width: 992px) {
   .banner-content {
-    top: 55%;
+    top: 45%; /* lifts text higher */
+    width: 60%;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .banner-content {
+    top: 60%; /* push text down for better visibility */
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 90%;
-  }
-
-  /* Adjust spacing for larger screens */
-  @media (min-width: 992px) {
-    .banner-content {
-      top: 45%; /* lifts text higher */
-      width: 60%;
-    }
-  }
-
-  /* Responsive for mobile */
-  @media (max-width: 768px) {
-    .banner-content h1 {
-      font-size: 1.8rem; /* smaller heading */
-      line-height: 1.3;
-    }
-    .banner-content p {
-      font-size: 1rem;
-    }
-    .banner-content {
-      top: 50%;
-      transform: translate(-50%, -50%);
-      padding: 0 10px;
-    }
-  }
-
-  @media (max-width: 768px) {
-  .banner-content {
-    top: 60%; /* Push text down a bit */
-    transform: translateY(-50%);
-    text-align: center;
     padding: 0 20px;
   }
 
   .banner-content h1 {
-    font-size: 1.8rem; /* Smaller title on mobile */
+    font-size: 1.8rem; /* smaller title on mobile */
     line-height: 1.3;
   }
 
