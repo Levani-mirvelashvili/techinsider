@@ -1093,3 +1093,8 @@ span.price-tick {
   white-space: nowrap;   /* prevent text from wrapping */
   box-sizing: border-box;
 }
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
