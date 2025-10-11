@@ -1141,3 +1141,20 @@ span.price-tick {
     }
   }
 
+  @media (max-width: 768px) {
+  .banner-content {
+    top: 60%; /* Push text down a bit */
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .banner-content h1 {
+    font-size: 1.8rem; /* Smaller title on mobile */
+    line-height: 1.3;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+}
