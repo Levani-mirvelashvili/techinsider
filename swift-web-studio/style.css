@@ -1099,5 +1099,9 @@ span.price-tick {
   height: auto;
 }
 
-
-
+/* logo on mobile */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 70%;
+  }
+}
