@@ -1108,36 +1108,38 @@ span.price-tick {
 
 
 
-/* Lift text up on desktop */
+.banner {
+  position: relative;
+}
+
 .banner-content {
-  top: 55%;
+  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   width: 90%;
 }
 
-/* Adjust spacing for larger screens */
+/* Desktop: lift text slightly */
 @media (min-width: 992px) {
   .banner-content {
-    top: 45%; /* lifts text higher */
+    top: 45%; /* lifts slightly higher */
     width: 60%;
   }
 }
 
-/* Responsive for mobile */
+/* Mobile: make sure text is visible and not too high */
 @media (max-width: 768px) {
   .banner-content {
-    top: 60%; /* push text down for better visibility */
-    left: 50%;
+    top: 55%; /* moves text slightly down */
     transform: translate(-50%, -50%);
-    text-align: center;
     width: 90%;
-    padding: 0 20px;
+    padding: 0 15px;
   }
 
   .banner-content h1 {
-    font-size: 1.8rem; /* smaller title on mobile */
+    font-size: 1.7rem;
     line-height: 1.3;
   }
 
