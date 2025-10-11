@@ -1102,6 +1102,7 @@ span.price-tick {
 /* logo on mobile */
 @media (max-width: 768px) {
   .logo {
-    max-width: 70%;
+    max-width: 80%;
   }
 }
+
