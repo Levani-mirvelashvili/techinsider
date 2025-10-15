@@ -1109,12 +1109,19 @@ span.price-tick {
 /* Responsive adjustment: optimize banner text vertical alignment for mobile viewports */
 /* Responsive adjustment: align hero text below fixed header on mobile */
 @media (max-width: 768px) {
+  #intro {
+    position: relative;
+    padding-top: 100px; /* pushes everything below header */
+  }
+
   .banner-content {
-    position: absolute;
-    top: 55% !important;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative !important;
+    top: auto !important;
+    left: 0 !important;
+    transform: none !important;
     text-align: center;
     width: 100%;
   }
 }
+
+
