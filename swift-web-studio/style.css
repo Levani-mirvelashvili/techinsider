@@ -1106,5 +1106,14 @@ span.price-tick {
   }
 }
 
+/* Responsive adjustment: optimize banner text vertical alignment for mobile viewports */
+@media (max-width: 768px) {
+  .banner-content {
+    top: 30% !important; /* Adjust this value until it looks centered */
+  }
+}
+
+
+
 
 
