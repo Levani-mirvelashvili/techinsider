@@ -72,7 +72,7 @@ CSS STRUCTURE:
   --bs-light-rgb: rgba(255, 255, 255, 1);
   --bs-primary-rgb: rgb(77, 122, 107);
   --light-color: #fff;
-  --swiper-theme-color: #111 !important;
+  --swiper-theme-color: #000000 !important;
   --cadet-blue-color: #9AB4B7;
 
 }
@@ -1108,6 +1108,7 @@ span.price-tick {
 
 /* Responsive adjustment: optimize banner text vertical alignment for mobile viewports */
 /* Responsive adjustment: align hero text below fixed header on mobile */
+
 
 
 
