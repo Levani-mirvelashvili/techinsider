@@ -28,6 +28,25 @@
   <!-- script
     ================================================== -->
   <script src="js/modernizr.js"></script>
+  <style>
+  @media (max-width: 768px) {
+    /* Make the middle content full width */
+    main > div {
+      display: block !important;
+    }
+
+    main > div > div:first-child,
+    main > div > div:last-child {
+      display: none !important; /* hide left/right blank spaces */
+    }
+
+    main > div > div:nth-child(2) {
+      width: 100% !important; /* middle content full width */
+      margin: 0 !important;
+      padding: 0 10px; /* optional small padding */
+    }
+  }
+</style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
@@ -450,6 +469,7 @@
 
 
 </html>
+
 
 
 
