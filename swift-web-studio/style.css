@@ -1108,30 +1108,3 @@ span.price-tick {
 
 /* Responsive adjustment: optimize banner text vertical alignment for mobile viewports */
 /* Responsive adjustment: align hero text below fixed header on mobile */
-
-/* Desktop layout (mobile desktop 50 25 25) */
-body {
-  max-width: 50%;
-  margin: 0 auto;
-  background-color: #fff;
-}
-
-/* White edges */
-html {
-  background-color: #ffffff;
-}
-
-/* Mobile full-width layout */
-@media (max-width: 768px) {
-  body {
-    max-width: 100%;
-    margin: 0;
-    padding: 0 10px;
-  }
-}
-
-
-
-
-
-
