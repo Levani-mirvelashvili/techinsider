@@ -3,6 +3,7 @@
 
 <head>
   <title>გადაწყვეტილებები | Swift Web Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/images/favico.png">
   <link href="https://fonts.googleapis.com/css2?family=Fira+GO&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
@@ -146,6 +147,26 @@
 .silver-button:active {
   background: #d9d9d9;         /* pressed effect */
   transform: translateY(1px);
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* hides scrollbar on mobile */
+}
+
+.carousel > .card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 80%; /* or a fixed width like 300px */
+  min-width: 250px; /* ensures visibility on small screens */
 }
 </style>
 </head>
