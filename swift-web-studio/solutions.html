@@ -46,6 +46,107 @@
       padding: 0 10px; /* optional small padding */
     }
   }
+
+/* cards */
+.carousel {
+  overflow-x: auto;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px;
+  gap: 20px; /* space between cards */
+  cursor: grab;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 460px;  /* fixed width */
+  height: 775px; /* fixed height */
+  border-radius: 14px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* image fills the card */
+  display: block;
+}
+
+/* Overlay text taking 30% of card */
+.card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* 👈 30% of card height */
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 12px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center the text */
+}
+
+.card-text h1 {
+  margin: 0 0 5px 0;
+  font-size: 1.5rem;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 500px) {
+  .card {
+    width: 80%;
+    height: auto; /* keeps aspect ratio */
+  }
+  .card img {
+    height: auto;
+  }
+}
+
+.button {
+  padding: 8px 16px;           /* compact, hugs text */
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;                 /* dark text */
+  background: #f0f0f0;         /* silver/white look */
+  border: 1px solid #ccc ;      /* subtle border */
+  border-radius: 6px;          /* soft rounded corners */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;          /* prevents text wrap */
+}
+
+.silver-button:hover {
+  background: #e0e0e0;         /* slightly darker on hover */
+  border-color: #999;
+}
+
+.silver-button:active {
+  background: #d9d9d9;         /* pressed effect */
+  transform: translateY(1px);
+}
 </style>
 </head>
 
@@ -322,6 +423,34 @@
   <!-- Right Blank Space (25%) -->
   <div style="width: 25%;"></div>
 
+</div>
+
+  <!-- cards -->
+  <div class="carousel">
+  <div class="carousel-track">
+    <div class="card">
+      <img src="https://i.redd.it/what-is-your-favorite-iphone-and-ios-default-wallpaper-v0-ywofq9slqq4c1.jpg?width=872&format=pjpg&auto=webp&s=1c833f00f196ee239c43553090c7c742baa8a25b" alt="Image 1">
+      <div class="card-text">
+        <h1>Card 1 Title</h1>
+        <p>Description for card 1</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://i.redd.it/what-is-your-favorite-iphone-and-ios-default-wallpaper-v0-ywofq9slqq4c1.jpg?width=872&format=pjpg&auto=webp&s=1c833f00f196ee239c43553090c7c742baa8a25b" alt="Image 2">
+      <div class="card-text">
+        <h1>Card 2 Title</h1>
+        <p>Description for card 2</p>
+        <button class="button">ვებ დეველოპმენტი</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://i.redd.it/what-is-your-favorite-iphone-and-ios-default-wallpaper-v0-ywofq9slqq4c1.jpg?width=872&format=pjpg&auto=webp&s=1c833f00f196ee239c43553090c7c742baa8a25b" alt="Image 3">
+      <div class="card-text">
+        <h1>Card 3 Title</h1>
+        <p>Description for card 3</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 </main>
