@@ -147,26 +147,6 @@
   background: #d9d9d9;         /* pressed effect */
   transform: translateY(1px);
 }
-
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.carousel::-webkit-scrollbar {
-  display: none; /* hides scrollbar on mobile */
-}
-
-.carousel > .card {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  width: 80%; /* or a fixed width like 300px */
-  min-width: 250px; /* ensures visibility on small screens */
-}
 </style>
 </head>
 
