@@ -1108,16 +1108,3 @@ span.price-tick {
 
 /* Responsive adjustment: optimize banner text vertical alignment for mobile viewports */
 /* Responsive adjustment: align hero text below fixed header on mobile */
-
-/* */
-.carousel {
-  overflow: visible !important;
-  width: 100% !important;
-}
-
-@media (max-width: 768px) {
-  .card {
-    width: 90% !important;
-    margin: 10px auto;
-  }
-}
