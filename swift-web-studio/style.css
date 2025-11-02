@@ -1108,3 +1108,11 @@ span.price-tick {
 
 /* Responsive adjustment: optimize banner text vertical alignment for mobile viewports */
 /* Responsive adjustment: align hero text below fixed header on mobile */
+
+/* */
+* {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
