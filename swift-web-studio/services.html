@@ -38,17 +38,29 @@
     padding: 20px 10px !important;
   }
 }
-
-/* cards */
+  /* cards */
 .carousel {
   overflow-x: auto;
+  overflow-y: hidden;
   display: flex;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   padding: 10px;
-  gap: 20px; /* space between cards */
+  gap: 20px;
   cursor: grab;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar for Chrome, Safari, Opera */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Active dragging cursor */
+.carousel:active {
+  cursor: grabbing;
 }
 
 .carousel-track {
@@ -59,13 +71,14 @@
 .card {
   position: relative;
   flex: 0 0 auto;
-  width: 350px; /* fixed width */
-  height: 600px; /* fixed height */
+  width: 350px;
+  height: 600px;
   border-radius: 14px;
   overflow: hidden;
   scroll-snap-align: start;
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
+  user-select: none;
 }
 
 .card:hover {
@@ -75,8 +88,9 @@
 .card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* image fills the card */
+  object-fit: cover;
   display: block;
+  pointer-events: none;
 }
 
 /* Overlay text taking 30% of card */
@@ -85,7 +99,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 30%; /* 30% of card height */
+  height: 30%;
   background: rgba(0,0,0,0.5);
   color: #fff;
   padding: 12px;
@@ -93,7 +107,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertically center the text */
+  justify-content: center;
 }
 
 .card-text h1 {
@@ -136,15 +150,15 @@
   }
   
   .card {
-    width: 85vw; /* 85% of viewport width - fully responsive! */
-    max-width: 350px; /* don't get too big */
-    min-width: 250px; /* don't get too small */
-    height: auto; /* auto height for responsiveness */
-    aspect-ratio: 3/4; /* maintains proportions */
+    width: 85vw;
+    max-width: 350px;
+    min-width: 250px;
+    height: auto;
+    aspect-ratio: 3/4;
   }
   
   .card-text {
-    height: auto; /* auto height on mobile */
+    height: auto;
     min-height: 30%;
     padding: 10px;
   }
@@ -167,26 +181,61 @@
 }
 
 .button {
-  padding: 8px 16px; /* compact, hugs text */
+  padding: 8px 16px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #333; /* dark text */
-  background: #f0f0f0; /* silver/white look */
-  border: 1px solid #ccc; /* subtle border */
-  border-radius: 6px; /* soft rounded corners */
+  color: #333;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
-  white-space: nowrap; /* prevents text wrap */
+  white-space: nowrap;
 }
 
 .button:hover {
-  background: #e0e0e0; /* slightly darker on hover */
+  background: #e0e0e0;
   border-color: #999;
 }
 
 .button:active {
-  background: #d9d9d9; /* pressed effect */
+  background: #d9d9d9;
   transform: translateY(1px);
+}
+
+/* Arrows under cards (bottom-right) */
+.carousel-arrows {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+.arrow {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.arrow:hover {
+  background: #007bff;
+  color: white;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .carousel-arrows {
+    justify-content: center;
+    margin-right: 0;
+  }
 }
 </style>
 </head>
@@ -394,12 +443,11 @@
   </header>
 
 <main style="font-family: 'FiraGO', sans-serif; max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
-
-<!-- cards -->
-  <div class="carousel">
+  <!-- cards -->
+<div class="carousel">
   <div class="carousel-track">
     <div class="card">
-      <img src="https://i.redd.it/what-is-your-favorite-iphone-and-ios-default-wallpaper-v0-ywofq9slqq4c1.jpg?width=872&format=pjpg&auto=webp&s=1c833f00f196ee239c43553090c7c742baa8a25b" alt="Image 1">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLttU9Xpvkx7Z8M9P78gx4mXOzUHMyX9tSsA&s" alt="Image 1">
       <div class="card-text">
         <h1>ვებ დეველოპმენტი</h1>
         <h6>Front-end web development საიტის დამზადება, მაღალი ხარისხის პერფორმანსი, ლამაზი დიზაინი, გამართული ფუნქციონალი</h6>
@@ -407,7 +455,7 @@
       </div>
     </div>
     <div class="card">
-      <img src="https://external-preview.redd.it/DktQUN6toMke4IO6RfPmO5m6cvwKzF0nj7RZ3k5sOiM.jpg?width=1080&crop=smart&auto=webp&s=09f39aff99b39046eb2d6748a7447e793a584f93" alt="Image 2">
+      <img src="https://cdn.wallpapersafari.com/69/85/zKkA3L.jpg" alt="Image 2">
       <div class="card-text">
         <h1>24/7 ტექნიკური დახმარება, maintanance</h1>
         <h6>...ქარდის აღწერა, მაგალითი2...</h6>
@@ -415,23 +463,23 @@
       </div>
     </div>
     <div class="card">
-      <img src="https://i.pinimg.com/736x/bc/60/af/bc60af64ce7f9bcd69e6c598e7766f78.jpg" alt="Image 3">
+      <img src="https://is.zobj.net/image-server/v1/images?r=RI7ibNahBIc57fXweNk82bY9JlBJPtkGFshKREcvAQ9m56fTFvv9ld_TH7wRYCv06jllWrbNVOeh2VZ_rToqYCN7sRQABzf-uefV3xoY3rXCUHjo9JB8e4XhVHOlKse89aLAo58lgXGfspiNYkacy0ZyHgR87B36qebHEi63KAv58wFrNA5Ow2nCKaYptwmW08cUNURIyJbOqBcT-wEJmvZZdE2CzG3eHebqdGQPya6w1PCwI9Iwt0mqPgE" alt="Image 3">
       <div class="card-text">
-        <h1>Wordpress development</h1>
+        <h1>WordPress development</h1>
         <h6>ქარდის აღწერა, მაგალითი3</h6>
         <button class="button" onclick="window.location.href='https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/solutions'">გაიგე მეტი</button>
       </div>
     </div>
     <div class="card">
-      <img src="https://s2.best-wallpaper.net/wallpaper/iphone/1906/Beautiful-winter-nature-landscape-snow-lake-mountains-dusk_iphone_828x1792.jpg" alt="Image 2">
+      <img src="https://wallpaper.forfun.com/fetch/f3/f36697d3da50eeccf4b057902e7a5823.jpeg" alt="Image 4">
       <div class="card-text">
         <h1>E-commerce</h1>
-        <h5>ონლაინ მაღაზიის დამზადება, იქომერსი</h5>
+        <h6>ონლაინ მაღაზიის დამზადება, იქომერსი</h6>
         <button class="button" onclick="window.location.href='https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/solutions'">გაიგე მეტი</button>
       </div>
     </div>
     <div class="card">
-      <img src="https://wallpaperbat.com/img/1726399-free-beautiful-mountain-wallpaper-for-iphone-you-need-see-nature-photography-iphone-wallpaper-landscape-nature-wallpaper.jpg" alt="Image 2">
+      <img src="https://wallpaperbat.com/img/1726399-free-beautiful-mountain-wallpaper-for-iphone-you-need-see-nature-photography-iphone-wallpaper-landscape-nature-wallpaper.jpg" alt="Image 5">
       <div class="card-text">
         <h1>Quick sites 899₾</h1>
         <h6>სწრაფი დეველოპმენტი, 899 ლარიდან</h6>
@@ -439,13 +487,20 @@
       </div>
     </div>
     <div class="card">
-      <img src="https://fghsnews.wordpress.com/wp-content/uploads/2016/02/cropped-1-iphone-5s-wallpaper-hd-landscapes-nature-photography-snow-mountain-27.jpg" alt="Image 2">
+      <img src="https://fghsnews.wordpress.com/wp-content/uploads/2016/02/cropped-1-iphone-5s-wallpaper-hd-landscapes-nature-photography-snow-mountain-27.jpg" alt="Image 6">
       <div class="card-text">
         <h1>კიბერუსაფრთხოება & მონაცემთა დაცვა</h1>
         <h6>ქარდის აღწერა, მაგალითი2</h6>
         <button class="button" onclick="window.location.href='https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/solutions'">გაიგე მეტი</button>
       </div>
+    </div>
   </div>
+</div>
+
+<!-- Arrows under cards -->
+<div class="carousel-arrows">
+  <button class="arrow left" onclick="scrollCarousel(-1)">&#10094;</button>
+  <button class="arrow right" onclick="scrollCarousel(1)">&#10095;</button>
 </div>
 
 </main>
@@ -592,6 +647,69 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   
   <script src="//code.tidio.co/f58rpp470u6sklafvxv4n02zj6utgzqt.js" async></script>
+
+  <script>
+const carousel = document.querySelector('.carousel');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener('mousedown', (e) => {
+  isDown = true;
+  carousel.style.cursor = 'grabbing';
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener('mouseleave', () => {
+  isDown = false;
+  carousel.style.cursor = 'grab';
+});
+
+carousel.addEventListener('mouseup', () => {
+  isDown = false;
+  carousel.style.cursor = 'grab';
+});
+
+carousel.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 2;
+  carousel.scrollLeft = scrollLeft - walk;
+});
+
+let isDragging = false;
+carousel.addEventListener('mousedown', () => { isDragging = false; });
+carousel.addEventListener('mousemove', () => { isDragging = true; });
+carousel.addEventListener('mouseup', (e) => {
+  if (isDragging) e.preventDefault();
+});
+
+// Touch events for mobile
+let touchStartX = 0;
+let touchScrollLeft = 0;
+
+carousel.addEventListener('touchstart', (e) => {
+  touchStartX = e.touches[0].pageX;
+  touchScrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener('touchmove', (e) => {
+  const touchX = e.touches[0].pageX;
+  const walk = (touchStartX - touchX) * 1.5;
+  carousel.scrollLeft = touchScrollLeft + walk;
+});
+
+// Arrow buttons function
+function scrollCarousel(direction) {
+  const scrollAmount = 400;
+  carousel.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+</script>
 
 </body>
 
