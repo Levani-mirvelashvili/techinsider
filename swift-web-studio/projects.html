@@ -29,93 +29,96 @@
     ================================================== -->
   <script src="js/modernizr.js"></script>
   <style>
-        body {
-        font-family: Arial, sans-serif;
-        background: #f5f5f5;
-        padding: 50px 20px;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 50px 20px;
+}
 
-    h1 {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 50px;
-        color: #333;
-    }
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
 
-    .cards-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        width: 65%;
-        margin: 0 auto; /* center */
-    }
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 65%;
+    margin: 0 auto; /* center */
+}
 
-    .card {
-        background: white;
-        border-radius: 12px;
-        padding: 25px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        opacity: 0;
-        transform: translateY(50px);
-        transition: all 0.6s ease-out;
-    }
+.card {
+    background: white; /* default white background */
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(50px) scale(0.9); /* add slight scale for popup */
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
 
-    .card.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.card.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
 
-    .card-title {
-        font-size: 1.5rem;
-        margin-bottom: 12px;
-        font-weight: bold;
-    }
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
 
-    .card-description {
-        font-size: 1rem;
-        margin-bottom: 15px;
-        color: #555;
-    }
+.card-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
 
-    .card a {
-        text-decoration: none;
-        font-weight: bold;
-        color: #7063e7;
-        transition: all 0.3s;
-    }
+.card a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #7063e7;
+    transition: all 0.3s;
+}
 
-    .card a:hover {
-        color: #fff;
-        background: #7063e7;
-        padding: 8px 15px;
-        border-radius: 6px;
-    }
+.card a:hover {
+    color: #fff;
+    background: #7063e7;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
 
-    @media screen and (max-width: 1024px) {
-        .cards-container {
-            grid-template-columns: repeat(2, 1fr);
-            width: 90%;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .cards-container {
-            grid-template-columns: 1fr;
-            width: 100%;
-        }
-    }
-    .card:hover {
+/* Hover effect for entire card */
+.card:hover {
     background: #7063e7;
     color: white;
     transform: translateY(-15px);
     box-shadow: 0 12px 30px rgba(112, 99, 231, 0.4);
 }
 
-/* Ensure text inside card turns white on hover */
+/* Ensure text and link turn white on hover */
 .card:hover .card-title,
 .card:hover .card-description,
 .card:hover a {
     color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
 }
   </style>
 </head>
