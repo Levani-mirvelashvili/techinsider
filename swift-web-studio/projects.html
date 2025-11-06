@@ -29,147 +29,94 @@
     ================================================== -->
   <script src="js/modernizr.js"></script>
   <style>
-            * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #ffffff;
-            padding: 40px 20px;
-        }
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        padding: 50px 20px;
+    }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        color: #333;
+    }
 
-        h1 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 50px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        width: 65%;
+        margin: 0 auto; /* center */
+    }
 
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(5, auto);
-            gap: 30px;
-            width: 65%;
-            margin: 0 auto;
-        }
+    .card {
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.6s ease-out;
+    }
 
-        .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-            cursor: pointer;
-        }
+    .card.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-        .card:hover {
-            background: #7063e7;
-            transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(112, 99, 231, 0.4);
-        }
+    .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        font-weight: bold;
+    }
 
-        .card-image {
+    .card-description {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        color: #555;
+    }
+
+    .card a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #7063e7;
+        transition: all 0.3s;
+    }
+
+    .card a:hover {
+        color: #fff;
+        background: #7063e7;
+        padding: 8px 15px;
+        border-radius: 6px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .cards-container {
+            grid-template-columns: repeat(2, 1fr);
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .cards-container {
+            grid-template-columns: 1fr;
             width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
         }
+    }
+    .card:hover {
+    background: #7063e7;
+    color: white;
+    transform: translateY(-15px);
+    box-shadow: 0 12px 30px rgba(112, 99, 231, 0.4);
+}
 
-        .card:hover .card-image {
-            transform: scale(1.05);
-        }
-
-        .card-content {
-            padding: 25px;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            color: #333;
-            margin-bottom: 12px;
-            font-weight: bold;
-            transition: color 0.4s ease;
-        }
-
-        .card:hover .card-title {
-            color: white;
-        }
-
-        .card-description {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.6;
-            transition: color 0.4s ease;
-        }
-
-        .card:hover .card-description {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 1024px) {
-            .cards-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .cards-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-                margin-bottom: 30px;
-            }
-
-            .card-image {
-                height: 200px;
-            }
-
-            .card-content {
-                padding: 20px;
-            }
-
-            .card-title {
-                font-size: 1.3rem;
-            }
-
-            .card-description {
-                font-size: 0.95rem;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            body {
-                padding: 20px 10px;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .card-image {
-                height: 180px;
-            }
-        }
+/* Ensure text inside card turns white on hover */
+.card:hover .card-title,
+.card:hover .card-description,
+.card:hover a {
+    color: white;
+}
   </style>
 </head>
 
@@ -377,136 +324,63 @@
 
   <body>
     <main style="text-align:center; padding:100px 20px; font-family:Arial, sans-serif;">
-          <div class="container">
-        <h1>სერვისები</h1>
-        
-        <div class="cards-grid">
-            <!-- Row 1 -->
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Modern web application with cutting-edge design and seamless user experience.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
+      <h1>სერვისები</h1>
 
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Innovative dashboard solution providing real-time analytics and data visualization.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">E-commerce platform with advanced features and secure payment integration.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <!-- Row 2 -->
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Creative portfolio website showcasing stunning visual content with smooth animations.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Corporate website design with professional layout and mobile-first approach.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Social media platform featuring user engagement tools and interactive feeds.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <!-- Row 3 -->
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Mobile application development with native performance and intuitive interface.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Cloud-based collaboration tool enabling seamless teamwork and project management.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Educational platform with interactive learning modules and progress tracking.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <!-- Row 4 -->
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Healthcare management system with appointment scheduling and telemedicine.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Financial technology solution with secure transactions and budget tracking.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Real estate platform with property listings and virtual tours capabilities.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <!-- Row 5 -->
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Fitness tracking application with workout plans and progress monitoring tools.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Event management platform with ticketing system and live event streaming.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="card-title">სათაური</h2>
-                    <p class="card-description">Travel booking system with destination guides and personalized itinerary planning.</p>
-                  <a href="">გაიგე მეტი➜</a>
-                </div>
-            </div>
-        </div>
+<div class="cards-container">
+    <div class="card">
+        <h2 class="card-title">სათაური 1</h2>
+        <p class="card-description">Modern web application with cutting-edge design and seamless user experience.</p>
+        <a href="#">გაიგე მეტი➜</a>
     </div>
+
+    <div class="card">
+        <h2 class="card-title">სათაური 2</h2>
+        <p class="card-description">Innovative dashboard solution providing real-time analytics and data visualization.</p>
+        <a href="#">გაიგე მეტი➜</a>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">სათაური 3</h2>
+        <p class="card-description">E-commerce platform with advanced features and secure payment integration.</p>
+        <a href="#">გაიგე მეტი➜</a>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">სათაური 4</h2>
+        <p class="card-description">Creative portfolio website showcasing stunning visual content with smooth animations.</p>
+        <a href="#">გაიგე მეტი➜</a>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">სათაური 5</h2>
+        <p class="card-description">Corporate website design with professional layout and mobile-first approach.</p>
+        <a href="#">გაიგე მეტი➜</a>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">სათაური 6</h2>
+        <p class="card-description">Social media platform featuring user engagement tools and interactive feeds.</p>
+        <a href="#">გაიგე მეტი➜</a>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">სათაური 7</h2>
+        <p class="card-description">Mobile application development with native performance and intuitive interface.</p>
+        <a href="#">გაიგე მეტი➜</a>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">სათაური 8</h2>
+        <p class="card-description">Cloud-based collaboration tool enabling seamless teamwork and project management.</p>
+        <a href="#">გაიგე მეტი➜</a>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">სათაური 9</h2>
+        <p class="card-description">Educational platform with interactive learning modules and progress tracking.</p>
+        <a href="#">გაიგე მეტი➜</a>
+    </div>
+</div>
     </main>
   </body>
 
@@ -653,6 +527,28 @@
   
   <script src="//code.tidio.co/f58rpp470u6sklafvxv4n02zj6utgzqt.js" async></script>
 
+  <script>
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                // Animate row of 3 cards together
+                const index = Array.from(cards).indexOf(entry.target);
+                for(let i = index; i < index + 3 && i < cards.length; i++){
+                    cards[i].classList.add('visible');
+                }
+                // Stop observing the first card of the row
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    // Observe every 3rd card (start of each row)
+    cards.forEach((card, idx) => {
+        if(idx % 3 === 0) observer.observe(card);
+    });
+</script>
 </body>
 
 
