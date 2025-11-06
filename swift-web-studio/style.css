@@ -1112,7 +1112,9 @@ span.price-tick {
 .social-icons {
   display: flex;
   gap: 7px;
-  justify-content: center;
+  align-items: right;
+  padding: 10px 0;
+  justify-content: flex-start;
   align-items: center;
   padding: 10px 0;
 }
@@ -1138,3 +1140,4 @@ span.price-tick {
   transform: translateY(-4px);
   box-shadow: 0 8px 18px rgba(112,99,231,0.18);
 }
+
