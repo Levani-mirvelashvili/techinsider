@@ -1108,3 +1108,33 @@ span.price-tick {
 
 /* Responsive adjustment: optimize banner text vertical alignment for mobile viewports */
 /* Responsive adjustment: align hero text below fixed header on mobile */
+
+.social-icons {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: white;
+  color: #111;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.08);
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: #7063e7; /* purple */
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(112,99,231,0.18);
+}
