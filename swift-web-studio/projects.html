@@ -28,6 +28,146 @@
   <!-- script
     ================================================== -->
   <script src="js/modernizr.js"></script>
+  <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            background: #7063e7;
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(112, 99, 231, 0.4);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 12px;
+            font-weight: bold;
+            transition: color 0.4s ease;
+        }
+
+        .card:hover .card-title {
+            color: white;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            transition: color 0.4s ease;
+        }
+
+        .card:hover .card-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+
+            .card-image {
+                height: 200px;
+            }
+
+            .card-content {
+                padding: 20px;
+            }
+
+            .card-title {
+                font-size: 1.3rem;
+            }
+
+            .card-description {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .card-image {
+                height: 180px;
+            }
+        }
+  </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
@@ -234,7 +374,146 @@
 
   <body>
     <main style="text-align:center; padding:100px 20px; font-family:Arial, sans-serif;">
-      <h1>მიმდინარეობს ტექნიკური განახლება...</h1>
+          <div class="container">
+        <h1>გადაწყვეტები</h1>
+        
+        <div class="cards-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="" alt="Project 1" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Modern web application with cutting-edge design and seamless user experience. Built with the latest technologies.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="" alt="Project 2" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Innovative dashboard solution providing real-time analytics and comprehensive data visualization tools.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="" alt="Project 3" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">E-commerce platform with advanced features, secure payment integration, and responsive design.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="" alt="Project 4" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Creative portfolio website showcasing stunning visual content with smooth animations and transitions.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="" alt="Project 5" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Corporate website design with professional layout, optimized performance, and mobile-first approach.</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="" alt="Project 6" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Social media platform featuring user engagement tools, interactive feeds, and community building features.</p>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="card">
+                <img src="" alt="Project 7" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Mobile application development with native performance and intuitive user interface design.</p>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="card">
+                <img src="" alt="Project 8" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Cloud-based collaboration tool enabling seamless teamwork and project management across organizations.</p>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="card">
+                <img src="" alt="Project 9" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Educational platform with interactive learning modules, progress tracking, and gamification elements.</p>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="card">
+                <img src="" alt="Project 10" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Healthcare management system with appointment scheduling, patient records, and telemedicine integration.</p>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="card">
+                <img src="https://" alt="Project 11" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Financial technology solution with secure transactions, budget tracking, and investment portfolio management.</p>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="card">
+                <img src="https://" alt="Project 12" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Real estate platform with property listings, virtual tours, and advanced search filtering capabilities.</p>
+                </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="card">
+                <img src="https://" alt="Project 13" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Fitness tracking application with workout plans, nutrition guidance, and progress monitoring tools.</p>
+                </div>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="card">
+                <img src="https://" alt="Project 14" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Event management platform with ticketing system, attendee registration, and live event streaming.</p>
+                </div>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="card">
+                <img src="https://" alt="Project 15" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">--------------</h2>
+                    <p class="card-description">Travel booking system with destination guides, accommodation search, and personalized itinerary planning.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </main>
   </body>
