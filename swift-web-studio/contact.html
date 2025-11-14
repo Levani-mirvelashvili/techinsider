@@ -28,6 +28,169 @@
   <!-- script
     ================================================== -->
   <script src="js/modernizr.js"></script>
+  <style>
+    <style>
+@media (max-width: 768px) {
+  /* Ensure main content is visible */
+  main {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px 10px !important;
+  }
+}
+
+/* cards */
+.carousel {
+  overflow-x: auto;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px;
+  gap: 20px; /* space between cards */
+  cursor: grab;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 350px; /* fixed width */
+  height: 600px; /* fixed height */
+  border-radius: 14px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* image fills the card */
+  display: block;
+}
+
+/* Overlay text taking 30% of card */
+.card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* 30% of card height */
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 12px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center the text */
+}
+
+.card-text h1 {
+  margin: 0 0 5px 0;
+  font-size: 1.5rem;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.card-text h6 {
+  margin: 5px 0 10px 0;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+  .card {
+    width: 300px;
+    height: 500px;
+  }
+  
+  .card-text h1 {
+    font-size: 1.3rem;
+  }
+  
+  .card-text h6 {
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive for mobile phones */
+@media (max-width: 500px) {
+  .carousel {
+    padding: 10px 5px;
+    gap: 15px;
+  }
+  
+  .card {
+    width: 85vw; /* 85% of viewport width - fully responsive! */
+    max-width: 350px; /* don't get too big */
+    min-width: 250px; /* don't get too small */
+    height: auto; /* auto height for responsiveness */
+    aspect-ratio: 3/4; /* maintains proportions */
+  }
+  
+  .card-text {
+    height: auto; /* auto height on mobile */
+    min-height: 30%;
+    padding: 10px;
+  }
+  
+  .card-text h1 {
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+  }
+  
+  .card-text h6 {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    margin: 5px 0 8px 0;
+  }
+  
+  .button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+.button {
+  padding: 8px 16px; /* compact, hugs text */
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333; /* dark text */
+  background: #f0f0f0; /* silver/white look */
+  border: 1px solid #ccc; /* subtle border */
+  border-radius: 6px; /* soft rounded corners */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap; /* prevents text wrap */
+}
+
+.button:hover {
+  background: #e0e0e0; /* slightly darker on hover */
+  border-color: #999;
+}
+
+.button:active {
+  background: #d9d9d9; /* pressed effect */
+  transform: translateY(1px);
+}
+</style>
+  </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
