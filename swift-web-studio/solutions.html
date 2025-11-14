@@ -527,46 +527,29 @@ h1 {
   
   <script src="//code.tidio.co/f58rpp470u6sklafvxv4n02zj6utgzqt.js" async></script>
 
-<script>
-const c = document.querySelector('.carousel');
-let down = false, s, x;
+  <script>
+    const cards = document.querySelectorAll('.card');
 
-c.addEventListener('mousedown', e => {
-  down = true;
-  c.classList.add('active'); // optional: for styling
-  s = e.pageX;
-  x = c.scrollLeft;
-});
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                // Animate row of 3 cards together
+                const index = Array.from(cards).indexOf(entry.target);
+                for(let i = index; i < index + 3 && i < cards.length; i++){
+                    cards[i].classList.add('visible');
+                }
+                // Stop observing the first card of the row
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
 
-c.addEventListener('mouseleave', () => {
-  down = false;
-  c.classList.remove('active');
-});
-
-window.addEventListener('mouseup', () => {
-  down = false;
-  c.classList.remove('active');
-});
-
-c.addEventListener('mousemove', e => {
-  if (!down) return;
-  e.preventDefault(); // prevents text selection
-  c.scrollLeft = x - (e.pageX - s);
-});
-
-c.addEventListener('touchstart', e => {
-  s = e.touches[0].pageX;
-  x = c.scrollLeft;
-});
-
-c.addEventListener('touchmove', e => {
-  c.scrollLeft = x - (e.touches[0].pageX - s);
-});
+    // Observe every 3rd card (start of each row)
+    cards.forEach((card, idx) => {
+        if(idx % 3 === 0) observer.observe(card);
+    });
 </script>
-
-
-
-
+  
 </body>
 
 
