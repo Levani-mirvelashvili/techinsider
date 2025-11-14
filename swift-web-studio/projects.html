@@ -334,28 +334,5 @@
   
   <script src="//code.tidio.co/f58rpp470u6sklafvxv4n02zj6utgzqt.js" async></script>
 
-  <script>
-    const cards = document.querySelectorAll('.card');
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                // Animate row of 3 cards together
-                const index = Array.from(cards).indexOf(entry.target);
-                for(let i = index; i < index + 3 && i < cards.length; i++){
-                    cards[i].classList.add('visible');
-                }
-                // Stop observing the first card of the row
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    // Observe every 3rd card (start of each row)
-    cards.forEach((card, idx) => {
-        if(idx % 3 === 0) observer.observe(card);
-    });
-</script>
-
 
 </html>
