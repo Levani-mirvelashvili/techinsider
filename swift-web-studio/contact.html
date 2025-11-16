@@ -29,6 +29,57 @@
     ================================================== -->
   <script src="js/modernizr.js"></script>
 <style>
+/* Remove padding so map touches the right edge */
+.contact-wrapper {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+/* LEFT SIDE – Contact info */
+.contact-info {
+  width: 50%;
+  padding: 40px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* RIGHT SIDE – Map */
+.contact-map {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Make the whole section at least 400px tall */
+.contact-section {
+  min-height: 400px;
+}
+
+/* ------------------------------
+   MOBILE — Map goes under info
+   ------------------------------ */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-map {
+    width: 100%;
+  }
+
+  .contact-map iframe {
+    height: 300px; /* good height on mobile */
+  }
+}
 </style>
 </head>
 
@@ -242,69 +293,41 @@
 
 </div>
 
+<section class="contact-section">
+  <div class="container-fluid contact-wrapper">
+    <div class="contact-info">
+    <h2>დაგვიკავშირდით თქვენთვის სასურველი გზით</h2>
+<h4>მთავარი ოფისი</h4>
+
+თბილისი, ი.ონიაშვილის N59, 80160
+<br>
+TEL:+995 599 074 630 
+<br>
+Whatsapp:+995 599 074 630
+<br>
+Email:swiftweb@company.com
 
 
+<h4>ფილიალი</h4>
+<br>
+ვაზისუბანი, I მიკრო რაიონი. 0190
+<br>
+TEL:+995 599 074 630
+<br>
+Whatsapp:+995 599 074 630
+<br>
+Email:contact@yourcompany.com
+<br>
+    </div>
 
-  <div class="contact-wrapper">
-  <div class="contact-info">
-
-     <section class="contact-us-wrap py-5 mt-5">
-    <div class="container">
-      <div class="row">
-        <div class="contact-info col-md-6">
-          <h2>საკონტაქტო ინფორმაცია</h2>
-
-          <p>დაგვიკავშირდით თქვენთვის სასურველი გზით</p>
-          <div class="page-content">
-            <div class="col-md-6">
-              <div class="content-box my-5">
-                <h5 class="element-title text-uppercase fs-6 fw-bold ">მთავარი ოფისი</h5>
-                <div class="contact-address">
-                  <p>თბილისი, ი.ონიაშვილის N59, 80160</p>
-                </div>
-                <div class="contact-number ">
-                  TEL:<a href="599074630">+995 599 074 630</a>
-                  Whatsapp:<a href="599074630">+995 599 074 630</a>
-                </div>
-                <div class="email-address">
-                  <p>
-                    <s><a href="#">swiftweb@company.com</a></s>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="content-box my-5">
-                <h5 class="element-title text-uppercase fs-6 fw-bold ">ფილიალი</h5>
-                <div class="contact-address">
-                  <p>ვაზისუბანი, I მიკრო რაიონი. 0190</p>
-                </div>
-                <div class="contact-number ">
-                  TEL:<a href="+995599074630">+995 599 074 630</a> |
-                  Whatsapp:<a href="+995599074630">+995 599 074 630</a>
-                </div>
-                <div class="email-address">
-                  <p>
-                    <s><a href="#">contact@yourcompany.com</a></s>
-                  </p>
-                </div>
-              </div>
-            </div>
-    
+    <div class="contact-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1642.3614186066616!2d44.76055650586832!3d41.73115190995829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDQzJzUyLjMiTiA0NMKwNDUnMzguMCJF!5e0!3m2!1ska!2sge!4v1760592355517!5m2!1ska!2sge"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
   </div>
-
-  <div class="contact-map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.898824460426!2d44.793!3d41.715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDF°NDInNTQuMCJOIDQ0wrA0Nyc0OC4wIkU!5e0!3m2!1sen!2sge!4v1700000000000"
-      width="100%"
-      height="300"
-      style="border:0; border-radius:10px;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-</div>
+</section>
     
 </main>
   </body>
