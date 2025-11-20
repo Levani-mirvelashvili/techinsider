@@ -1,5 +1,193 @@
-<h1>Service: support-maintenance</h1>
-<h2>მიმდინარეობს ტექსნიკური განახლება...</h2>
-<h1><a href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/home">მთავარი გვერდი</a></h1>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Headerless — Logo + Animated Background</title>
 
+<style>
+  :root{
+    /* FIXED: your background image now loads correctly */
+    --bg-url: url('https://i.pinimg.com/1200x/42/e4/8d/42e48df3f820ea5ebc2708b92435068a.jpg');
+    --bg-overlay: rgba(0,0,0,0.25);
+    --accent: #4A90E2;
+  }
 
+  /* Basic reset */
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color:#111;
+    background: #fff;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    overflow-x:hidden;
+  }
+
+  /* HERO (logo only) */
+  .hero{
+    position:relative;
+    width:100%;
+    height:100vh; /* <-- makes the background section fill full screen */
+    display:grid;
+    place-items:center;
+    text-align:center;
+    overflow:hidden;
+  }
+
+  /* Background layer */
+  .bg{
+    position:absolute;
+    inset:0;
+    background-image: var(--bg-url);
+    background-size:cover;       /* <-- full viewport always */
+    background-position:center;
+    background-repeat:no-repeat;
+    will-change:transform, filter;
+    transform-origin:center;
+    transition: transform 900ms cubic-bezier(.2,.9,.25,1), filter 900ms ease, opacity 900ms ease;
+    z-index:0;
+  }
+
+  .bg::after{
+    content:"";
+    position:absolute; inset:0;
+    background:var(--bg-overlay);
+    pointer-events:none;
+  }
+
+  .logo-wrap{
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    align-items:center;
+    padding:20px;
+    transition: transform 500ms ease, opacity 500ms ease;
+  }
+
+  .logo{
+    width:180px;
+    max-width:60vw;
+    height:auto;
+  }
+
+  .hero-sub{
+    color:#fff;
+    text-shadow:0 6px 20px rgba(0,0,0,.45);
+    font-weight:600;
+  }
+
+  .scroll-hint{
+    position:absolute;
+    bottom:28px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:2;
+    font-size:14px;
+    color:#fff;
+    opacity:.85;
+    display:flex;
+    gap:8px;
+    align-items:center;
+  }
+
+  main{
+    min-height:100vh;
+    background:#fff;
+    transform: translateY(30px);
+    opacity:0;
+    transition: transform 700ms cubic-bezier(.2,.9,.25,1), opacity 700ms ease;
+    z-index:1;
+    position:relative;
+    padding:80px 20px;
+  }
+
+  .scrolled .bg{
+    transform: scale(1.06) translateY(-6%);
+    filter: blur(4px) saturate(0.95);
+    opacity:0.95;
+  }
+
+  .scrolled .logo-wrap{
+    transform: translateY(-20px) scale(.95);
+    opacity:0.9;
+  }
+
+  .scrolled main{
+    transform: translateY(0);
+    opacity:1;
+  }
+
+  .container{max-width:1100px;margin:0 auto}
+  h1{font-size:clamp(20px,3.6vw,36px);margin-bottom:12px}
+  p.lead{font-size:clamp(15px,2.2vw,18px);color:#555;line-height:1.6}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
+    margin-top:30px;
+  }
+  .card{padding:18px;border-radius:10px;border:1px solid #efefef;background:#fff}
+
+  @media (max-width:560px){
+    .logo{width:140px}
+    main{padding:36px 16px}
+  }
+
+  h2 a {
+  color: #fff;
+  text-decoration: none; /* optional: removes underline */
+}
+
+h1 a:hover {
+  opacity: 0.8; /* optional hover effect */
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="bg"></div>
+
+  <div class="logo-wrap">
+    <div class="hero-sub"><h1 class="display-1 fw-bold">ვებ დეველოპმენტი</h1></div>
+    <h2><a href="/home">მთავარ გვერდზე დაბრუნება</a></h2>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll...</span>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+      <path d="M7 10l5 5 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+<main>
+  <div class="container">
+    <h1>Welcome — Content section</h1>
+    <p class="lead">This is the site body that appears after you scroll. The background transitions, scales, and blurs to create a subtle sense of depth — like moving up and away from the hero.</p>
+    <div class="grid">
+      <div class="card"><strong>Service A</strong><p>Short description. Lorem ipsum dolor sit amet elit sapien</p></div>
+      <div class="card"><strong>Service B</strong><p>Short description. Lorem ipsum dolor sit amet elit sapien</p></div>
+      <div class="card"><strong>Service c</strong><p>Short description. Lorem ipsum dolor sit amet elit sapien</p></div>
+      <div class="card"><strong>Service d</strong><p>Short description. Lorem ipsum dolor sit amet elit sapien</p></div>
+    </div>
+  </div>
+</main>
+
+<script>
+const main = document.querySelector("main");
+const io = new IntersectionObserver(e=>{
+  if(e[0].isIntersecting){
+    document.body.classList.add("scrolled");
+    io.disconnect();
+  }
+});
+io.observe(main);
+</script>
+
+</body>
+</html>
