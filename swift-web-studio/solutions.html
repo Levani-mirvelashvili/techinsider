@@ -582,6 +582,15 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+function openForm() {
+  document.getElementById("formModal").style.display = "block";
+  document.body.style.overflow = "hidden";   // lock background scroll
+}
+
+function closeForm() {
+  document.getElementById("formModal").style.display = "none";
+  document.body.style.overflow = "";         // restore background scroll
+}
 </script>
 
   <script src="js/jquery-1.11.0.min.js"></script>
