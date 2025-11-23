@@ -407,7 +407,7 @@ h1 {
     <div class="card">
         <h2 class="card-title">მშენებლობის ინდუსტრია</h2>
         <p class="card-description">Construction & building industry / მშენებლობის ინდუსტრია</p>
-        <a href="#">გაიგე მეტი➜</a>
+        <button onclick="openForm()">მოითხოვე ზარი➜</button>
     </div>
 </div>
         <br>
@@ -521,6 +521,17 @@ h1 {
       </div>
     </div>
   </footer>
+
+  <!-- Popup Modal -->
+<div id="formModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeForm()">&times;</span>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeq4PvfnaDfSNzkfMfnHXi9OSggIDh2ttjj7LpSl8EOTrzEbg/viewform?usp=publish-editor"
+            width="90%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+      Loading…
+    </iframe>
+  </div>
+</div>
 
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
