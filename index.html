@@ -115,8 +115,24 @@
 </div>
 <script src="//code.tidio.co/f58rpp470u6sklafvxv4n02zj6utgzqt.js" async></script>
 <!-- Creator_Accountable_Person Levani Mirvelashvili -->
+      <script>
+function requestNotificationPermission() {
+    if ("Notification" in window) {
+        Notification.requestPermission().then(permission => {
+            if (permission === "granted") {
+                alert("Notifications enabled!");
+            } else {
+                alert("Permission denied.");
+            }
+        });
+    } else {
+        alert("Your browser does not support notifications.");
+    }
+}
+</script>
 </body>
 </html>
+
 
 
 
