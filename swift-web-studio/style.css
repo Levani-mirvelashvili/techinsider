@@ -1142,18 +1142,30 @@ span.price-tick {
 }
 
 /* TESTIMONIALS SECTION - RESPONSIVE */
+
+/*  */
 #testimonial {
-    min-height: 595px; 
-    padding-top: 50px; 
-    padding-bottom: 50px;
+    /*  */
+    min-height: 480px; 
+    
+    /*  */
+    padding-top: 30px; 
+    padding-bottom: 30px;
+    
     background-size: cover; 
+    /*  */
+    background-position: center; 
+    /*  */
 }
 
+/*  */
 @media (max-width: 768px) {
     #testimonial {
-        min-height: auto; /*  */
-        padding: 30px 0; /*  */
+        min-height: auto; 
+        
+        /*  */
+        padding: 20px 0; 
+        /*  */
+        background-position: center bottom;
     }
 }
-
-
