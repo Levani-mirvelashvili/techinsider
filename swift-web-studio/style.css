@@ -1141,5 +1141,19 @@ span.price-tick {
   box-shadow: 0 8px 18px rgba(112,99,231,0.18);
 }
 
+/* TESTIMONIALS SECTION - RESPONSIVE */
+#testimonial {
+    min-height: 595px; 
+    padding-top: 50px; 
+    padding-bottom: 50px;
+    background-size: cover; 
+}
+
+@media (max-width: 768px) {
+    #testimonial {
+        min-height: auto; /*  */
+        padding: 30px 0; /*  */
+    }
+}
 
 
