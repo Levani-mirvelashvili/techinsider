@@ -8,7 +8,7 @@ Version:
 */
 
 /*--------------------------------------------------------------
-This is main CSS file that contains custom style rules used in this template
+This is main CSS file that contains custom style rules used in this design
 --------------------------------------------------------------*/
 
 /*------------------------------------*\
@@ -143,7 +143,7 @@ a:hover.light {
 }
 
 p {
-  color: #000000;
+  color: #475467;
 }
 
 b,
@@ -1169,5 +1169,6 @@ span.price-tick {
         background-position: center bottom;
     }
 }
+
 
 
