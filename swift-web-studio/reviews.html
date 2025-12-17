@@ -78,6 +78,14 @@
                 width: 100%;
             }
         }
+         /*  */
+body {
+    opacity: 0;
+    transition: opacity 1.9s ease-in-out;
+}
+body.loaded {
+    opacity: 1;
+}
     </style>
 </head>
 <body>
@@ -129,5 +137,11 @@
             </div>
     </div>
 
+    <script>
+    window.addEventListener("load", function() {
+        document.body.classList.add("loaded");
+    });
+</script>
+    
 </body>
 </html>
