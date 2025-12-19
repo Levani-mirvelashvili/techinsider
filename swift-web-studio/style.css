@@ -1171,12 +1171,8 @@ span.price-tick {
 }
 
 
-/* Desktop Only: Lifts the Tidio widget */
-@media only screen and (min-width: 981px) {
-    #tidio-chat-iframe { 
-        bottom: 50px !important; 
-    }
-}
+
+
 
 
 
