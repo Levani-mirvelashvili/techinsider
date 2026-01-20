@@ -239,6 +239,116 @@
     margin-right: 0;
   }
 }
+    /* modal */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      position: relative;
+      animation: slideUp 0.3s ease;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #667;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .close:hover {
+      color: #333;
+    }
+
+    .modal-content h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .modal-content p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+      .button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+.button {
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background: #e0e0e0;
+  border-color: #999;
+}
+
+.button:active {
+  background: #d9d9d9;
+  transform: translateY(1px);
+}
 </style>
 </head>
 
@@ -442,7 +552,7 @@
       <div class="card-text">
         <h1>ვებ დეველოპმენტი</h1>
         <h6>Front-end web development საიტის დამზადება, მაღალი ხარისხის პერფორმანსი, ლამაზი დიზაინი, გამართული ფუნქციონალი</h6>
-        <button class="button" onclick="window.location.href='https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/web-development'">გაიგე მეტი</button>
+        <button class="button" id="openModal">გაიგე მეტიიიიი</button>
       </div>
     </div>
     <div class="card">
@@ -493,6 +603,18 @@
   <button class="arrow left" onclick="scrollCarousel(-1)">&#10094;</button>
   <button class="arrow right" onclick="scrollCarousel(1)">&#10095;</button>
 </div>
+
+    <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>სათაური</h2>
+      <p>This is a simple modal popup that appears when you click the button. You can close it by clicking the X button, clicking outside the modal, or pressing the Escape key.</p>
+      <p>This is a simple modal popup that appears when you click the button. You can close it by clicking the X button, clicking outside the modal, or pressing the Escape key.</p>
+      <p>This is a simple modal popup that appears when you click the button. You can close it by clicking the X button, clicking outside the modal, or pressing the Escape key.</p>
+      <p>This is a simple modal popup that appears when you click the button. You can close it by clicking the X button, clicking outside the modal, or pressing the Escape key.</p>
+      <p>You can customize the content, styling, and behavior to fit your needs.</p>
+    </div>
+  </div>
 
 </main>
 
@@ -670,6 +792,32 @@ function scrollCarousel(direction) {
   });
 }
 </script>
+
+<script>
+    const modal = document.getElementById('modal');
+    const openBtn = document.getElementById('openModal');
+    const closeBtn = document.getElementById('closeModal');
+
+    openBtn.addEventListener('click', () => {
+      modal.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+      }
+    });
+  </script>
 
 </body>
 
