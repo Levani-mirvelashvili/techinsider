@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>Swift Web Studio | კომპანიის შესახებ</title>
-  <link rel="canonical" href="https://levani-mirvelashvili.github.io/Techinsider/swift-web-studio/about-us" />
+  <title>გადაწყვეტილებები | Swift Web Studio</title>
+  <link rel="canonical" href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/solutions" />
   <link rel="icon" type="image/png" href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/images/favico.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Fira+GO&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
   <meta charset="utf-8">
@@ -31,24 +32,134 @@
     ================================================== -->
   <script src="js/modernizr.js"></script>
   <style>
-  @media (max-width: 768px) {
-    /* Make the middle content full width */
-    main > div {
-      display: block !important;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background: white;
+    padding: 0;
+    margin: 0;
+}
 
-    main > div > div:first-child,
-    main > div > div:last-child {
-      display: none !important; /* hide left/right blank spaces */
-    }
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
 
-    main > div > div:nth-child(2) {
-      width: 100% !important; /* middle content full width */
-      margin: 0 !important;
-      padding: 0 10px; /* optional small padding */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 65%;
+    margin: 0 auto; /* center */
+}
+
+.card {
+    background: white; /* default white background */
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(50px) scale(0.9); /* add slight scale for popup */
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.card-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.card a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #7063e7;
+    transition: all 0.3s;
+}
+
+.card a:hover {
+    color: #fff;
+    background: #7063e7;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+
+/* Hover effect for entire card */
+.card:hover {
+    background: #7063e7;
+    color: white;
+    transform: translateY(-15px);
+    box-shadow: 0 12px 30px rgba(112, 99, 231, 0.4);
+}
+
+/* Ensure text and link turn white on hover */
+.card:hover .card-title,
+.card:hover .card-description,
+.card:hover a {
+    color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
+  /* popup form */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%; max-width: 600px;
+}
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+.close:hover { color: red; }
+@media (max-width: 600px) {
+  .modal-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
   }
-</style>
+  .modal-content iframe {
+    height: 100%;
+  }
+}
+  </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
@@ -182,8 +293,8 @@
           <svg class="navbar-icon mt-3 primary-color-500 bg-light" width="50" height="50">
             <use xlink:href="#navbar-icon"></use>
           </svg>
-        </button>
-        <div class="header-bottom collapse navbar-collapse bg-light border-radius-10 py-2" id="navbar-primary">
+          </button>
+          <div class="header-bottom collapse navbar-collapse bg-light border-radius-10 py-2" id="navbar-primary">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item ps-4 pe-4 border-right">
               <a class="nav-link text-dark p-0" href="home">მთავარი</a>
@@ -224,10 +335,6 @@
                 <li class="py-1"><a href="faq.html" class="dropdown-item text-uppercase">working on it</a></li>
               </ul>
             </li>
-            <li class="nav-item ps-4 pe-4 border-right">
-              <a class="nav-link text-dark p-0 text-uppercase fw-bold text-decoration-underline"
-                href="" target="_blank">Link</a>
-            </li>
           </ul>
           <form class="search-form mb-3 mb-lg-0" role="search">
             <svg class="search primary-color position-absolute" width="18" height="18">
@@ -240,111 +347,412 @@
       </div>
     </nav>
   </header>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<main style="font-family: 'FiraGO', sans-serif; max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
 
-  <div style="display: flex; width: 100%;">
-  
-  <!-- Left Blank Space (25%) -->
-  <div style="width: 25%;"></div>
-  
-  <!-- Middle Content (50%) -->
-  <div style="width: 50%; color: black;">
+        /* Swift Web Studio Header Styles */
+        .top-bar {
+            background: #1a1a1a;
+            color: white;
+            padding: 0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
 
-    <!-- Hero Section -->
-    <section id="hero" style="text-align: center; margin-bottom: 60px;">
-      <h1 class="display-6 fw-bold">სვიფტის შესახებ</h1>
-      <p>Unlimited possibilities... Unlocked 🔓</p>
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .consultation-btn {
+            background: #e63946; /* შეცვლილია წითლად */
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .consultation-btn:hover {
+            background: #c1121f; /* მუქი წითელი ჰოვერზე */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e63946; /* შეცვლილია წითლად */
+        }
+
+        .breadcrumb {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #e63946;
+            text-decoration: none;
+        }
+
+        /* Content Styles */
+        .hero-section {
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero-text {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            color: #222;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 3rem 0;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .stats-section {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .stats-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .stats-number {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #e63946; /* შეცვლილია წითლად */
+        }
+
+        .stats-text {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .stats-description {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background: #e63946; /* შეცვლილია წითლად */
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-button {
+            background: white;
+            color: #e63946; /* ტექსტი წითლად */
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background: #f1f1f1;
+        }
+
+        .how-we-work {
+            max-width: 1400px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .work-card {
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: transform 20.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .work-card:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-bottom: 1px solid #e63946;
+        }
+
+        .work-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #e63946; /*  */
+        }
+
+        .work-card p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .values-section {
+            background: #1a1a1a;
+            color: white;
+            padding: 5rem 2rem;
+            margin: 5rem 0;
+        }
+
+        .values-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #e63946; /* შეცვლილია წითლად */
+        }
+
+        .value-card p {
+            color: #ccc;
+            line-height: 1.7;
+        }
+
+        .management-section {
+            max-width: 1400px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        /* Swift Web Studio Footer Styles */
+
+
+        .work-hours table {
+            width: 100%;
+            color: #ccc;
+        }
+
+        .work-hours td {
+            padding: 0.5rem 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #666;
+        }
+
+        .footer-bottom a {
+            color: #e63946; /* შეცვლილია წითლად */
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .image-grid, .work-grid, .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-content, .footer-main {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="breadcrumb">
+        <a href="home">Home</a> / About Us
+    </div>
+
+    <section class="hero-section">
+        <p class="hero-text">
+            Swift Web Studio — გარდავქმნით ბიზნეს იდეას ციფრულ რეალობად. სწრაფად. ⚡ ციფრულ სამყაროში შესვლა რთული არ უნდა იყოს. ჩვენ ვართ Swift Web Studio — დამოუკიდებელი დეველოპერების გუნდი, რომელმაც 7 წლიანი გამოცდილება ერთ მიზნად აქცია: გახადოს დეველოპმენტი მარტივი, გამჭვირვალე და ძალიან სწრაფი, დამკვეთებისთვის.
+        </p>
+
+        <div class="image-grid">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800" alt="Team Work">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800" alt="Meeting">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800" alt="Community">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800" alt="Collaboration">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800" alt="Tech">
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800" alt="Office">
+        </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" style="margin-bottom: 60px;">
-      <h2></h2>
-      <p>Swift Web Studio — გარდავქმნით ბიზნეს იდეას ციფრულ რეალობად. სწრაფად. ⚡
-      ციფრულ სამყაროში შესვლა რთული არ უნდა იყოს. ჩვენ ვართ Swift Web Studio — დამოუკიდებელი დეველოპერების გუნდი, 
-      რომელმაც 7 წლიანი გამოცდილება ერთ მიზნად აქცია: გახადოს დეველოპმენტი მარტივი, გამჭვირვალე და ძალიან სწრაფი, დამკვეთებისთვის.</p>
-      <p>დაივიწყეთ გაურკვეველი ვადები და არასასურველი გამოცდილება. ჩვენ აქ ვართ, რომ დავამსხვრიოთ სტერეოტიპები შევცვალოთ რეალობა და ვიყოთ 
-      თქვენი სანდო პარტნიორი. კომფორტული და მშვიდი თანამშრომლობა</p>
-      <p>რას ვაკეთებთ? (15+ Solution)
-      ჩვენ არ ვქმნით მხოლოდ ვებსაიტს, ჩვენ ვქმნით ბიზნეს ინსტრუმენტებს:</p>
-      <ul style="list-style-type: none; padding-left: 0;">
-      <li>- Next-Gen ვებ და E-commerce დეველოპმენტი (ყველა მოწყობილობაზე ადაპტირებული)</li>
-      <li>- სმარტ SEO ოპტიმიზაცია (რომ მომხმარებელმა მარტივად გიპოვოთ)</li>
-      <li>- კიბერუსაფრთხოება და მონაცემთა დაცვა (თქვენი მშვიდად ყოფნისთვის)</li>
-      <li>- 24/7 ტექნიკური მხარდაჭერა (ჩვენ ყოველთვის თქვენთან ვართ)</li>
-      </ul>
-      <p>რატომ უნდა აირჩიოთ Swift?
-      იმიტომ, რომ ჩვენი სახელი ჩვენი მთავარი დაპირებაა. Swift Performance. Swift Process. Swift Results. ბრენდის ფერებია — წითელი 🟥, შავი ⬛ და თეთრი ⬜</p>
-      <p>ჩვენი მიზანია ბიზნესისთვის Swift Web Studio პირველი ასოციაცია იყოს, როდესაც საუბარია უმაღლესი ხარისხის მომსახურებაზე</p>
-      <p>უსაზღვრო შესაძლებლობები გახსნილია / Endless possibilities unlocked... 🔓 ⚡</p>
-      <h1 class="display-6 fw-bold">როგორ მივდივართ შედეგამდე:</h1>
-      <p>Hi! — საწყისი კონსულტაცია, და გაცნობა.</p>
-      <p>Plan — ვებ არქიტექტურის ჩამოყალიბება და იდეის და დიზაინის ფორმირება.</p>
-      <p>Build — ფუნქციონალის ტესტირება და ოპტიმიზაცია.</p>
-      <p>Launch — ვებგვერდის დალანჩვა და შემდეგი ტექნიკური მხარდაჭერა.</p>
-      <p>ჩვენ ვქმნით ციფრულ გადაწყვეტებს, სადაც ჩვენი პარტნიორების წარმატება ჩვენი შესრულებული სამუშაოს მთავარი საზომია, თქვენი წარმატება — ჩვენი ტექნოლოგიური მისიის მთავარი მიზანია</p>      
-      <p>ვებსაიტზე გამოყენებული ფოტოები ეკუთვნის საქართველოს ოფიციალურ ტურისტულ პორტალს <a href="https://georgia.travel/">Georgia.travel</a></p>
+    <section class="stats-section">
+        <div class="stats-content">
+            <div>
+                <div class="stats-number">27</div>
+                <div class="stats-text">წარმატებული პროექტი</div>
+            </div>
+            <div>
+                <p class="stats-description">
+                    დაივიწყეთ გაურკვეველი ვადები და არასასურველი გამოცდილება. ჩვენ აქ ვართ, რომ დავამსხვრიოთ სტერეოტიპები შევცვალოთ რეალობა და ვიყოთ თქვენი სანდო პარტნიორი. კომფორტული და მშვიდი თანამშრომლობის ფარგლებში.
+                </p>
+                <p>ხარისხი მთავარი ფოკუსია, გამოცდილება, პროექტის მენეჯმენტი, დამკვეთთან კოლაბორაცია, სწრაფი მიდგომა, დეველოპმენტის სრული ციკლი</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" style="margin-bottom: 60px;">
-      <h2>...</h2>
-      <div class="service" style="text-align:center; margin-bottom:20px;">
-        <h3>...</h3>
-        <h6><headings>ჩვენი მისია / ხედვა / ღირებულებები / როგორ ვმუშაობთ / პროცესები / შექმნილი თქვენი წარმატებისთვის<headings></h6>
+    <div class="cta-section">
+        <h2>Heading h2</h2>
+        <h6>ვებსაიტზე გამოყენებული ფოტოები ეკუთვნის საქართველოს ოფიციალურ ტურისტულ პორტალს <a href="https://georgia.travel/">Georgia.travel</a></h6>
+    </div>
+
+    <section class="how-we-work">
+        <h2 class="section-title">რას ვაკეთებთ? (15+ Solution) ჩვენ არ ვქმნით მხოლოდ ვებსაიტს, ჩვენ ვქმნით ბიზნეს ინსტრუმენტებს</h2>
+        <div class="work-grid">
+            <div class="work-card">
+                <h3>ონლაინ გაყიდვები E-commerce</h3>
+                <p>Next-Gen ვებ და E-commerce დეველოპმენტი (ყველა მოწყობილობაზე ადაპტირებული</p>
+            </div>
+            <div class="work-card">
+                <h3>საძიებო სისტემის ოპტიმიზაცია</h3>
+                <p>სმარტ SEO ოპტიმიზაცია (რომ მომხმარებელმა მარტივად გიპოვოთ)</p>
+            </div>
+            <div class="work-card">
+                <h3>ტექნიკური მხარდაჭერა</h3>
+                <p>24/7 ტექნიკური მხარდაჭერა (ჩვენ ყოველთვის თქვენთან ვართ)</p>
+            </div>
+            <div class="work-card">
+                <h3>კიბერუსაფრთხოება</h3>
+                <p>კიბერუსაფრთხოება და მონაცემთა დაცვა (თქვენი მშვიდად ყოფნისთვის)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="values-content">
+            <h2 class="section-title">რატომ უნდა აირჩიოთ Swift?</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Swift</h3>
+                    <p>იმიტომ, რომ ჩვენი სახელი ჩვენი მთავარი დაპირებაა. Swift Performance. Swift Process. Swift Results. ბრენდის ფერებია — წითელი 🟥, შავი ⬛ და თეთრი ⬜</p>
+                </div>
+                <div class="value-card">
+                    <h3>...</h3>
+                    <p>ჩვენი მიზანია ბიზნესისთვის Swift Web Studio პირველი ასოციაცია იყოს, როდესაც საუბარია უმაღლესი ხარისხის მომსახურებაზე.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="management-section">
+        <h2 class="section-title">როგორ მივდივართ შედეგამდე</h2>
+        <p>Hi! — საწყისი კონსულტაცია, და გაცნობა.</p>
+        <p>Plan — ვებ არქიტექტურის ჩამოყალიბება და იდეის და დიზაინის ფორმირება.</p>
+        <p>Build — ფუნქციონალის ტესტირება და ოპტიმიზაცია.</p>
+        <p>Launch — ვებგვერდის დალანჩვა და შემდეგი ტექნიკური მხარდაჭერა.</p>
+        <p>ჩვენ ვქმნით ციფრულ გადაწყვეტებს, სადაც ჩვენი პარტნიორების წარმატება ჩვენი შესრულებული სამუშაოს მთავარი საზომია, თქვენი წარმატება — ჩვენი ტექნოლოგიური მისიის მთავარი მიზანია</p>
         <p></p>
-      </div>
-      <div class="service" style="text-align:center; margin-bottom:20px;">
-        <h3></h3>
-        <p></p>
-      </div>
+        <a href="contact" class="cta-button" style="background: #e63946; color: white;">დაგვიკავშირდით</a>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" style="margin-bottom:60px;">
-      <h2></h2>
-      <p></p>
-      <p>Based in Tbilisi, but we work globally</p>
-      <p></p>    
-    </section>
-
-  </div>
-
-  <!-- Right Blank Space (25%) -->
-  <div style="width: 25%;"></div>
-
-</div>
-
-  <!-- Google Maps Section -->
-<section id="map-section">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1642.3614186066616!2d44.76055650586832!3d41.73115190995829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDQzJzUyLjMiTiA0NMKwNDUnMzguMCJF!5e0!3m2!1ska!2sge!4v1760592355517!5m2!1ska!2sge" 
-    width="100%" 
-    height="450" 
-    style="border:0; display:block; border-radius:20px;" 
-    allowfullscreen="" 
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</section>
-
-</main>
-
-
-  <footer id="footer" class="overflow-hidden padding-large pb-0">
+    <footer id="footer" class="overflow-hidden padding-large pb-0">
     <div class="container">
       <div class="row d-flex flex-wrap justify-content-between">
         <div class="col-lg-4 col-md-6 col-sm-6 pb-3">
           <div class="footer-menu">
             <img src="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/images/logo_01.png" 
      class="logo" alt="Swift Web Studio Logo" width="400">
-            <p>Elit adipi massa diam in dignissim. Sagittis pulvinar ut dis venenatis nunc nunc.</p>
+            <p>ვქმნით ციფრულ ეკოსისტემებს ბიზნესის წარმატებისთვის</p>
             <div class="contact-item">
               <p>
                 <svg class="location primary-color" width="25" height="25">
                   <use xlink:href="#location"></use>
                 </svg>
-                <span>თბილისი, ონიაშვილის ქუჩა N 51</span>
+                <span>თბილისი, ონიაშვილის ქუჩა N59</span>
               </p>
               <p>
                 <svg class="email primary-color" width="25" height="25">
@@ -358,6 +766,7 @@
                 </svg>
                 <span>(+995)599 074 630</span>
               </p>
+
               <div class="social-icons">
                 <a href="https://www.instagram.com/swift_web_studio_techinsider/" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.youtube.com/@LevaniMirvelashvili-Youtube/" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -365,6 +774,7 @@
                 <a href="https://www.linkedin.com/company/swift-web-studio-2020" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://www.facebook.com/Swift.Web.Studio.techinsider.holding/" target="_blank"><i class="fab fa-facebook-f"></i></a>
               </div>
+
             </div>
           </div>
         </div>
@@ -373,16 +783,16 @@
             <h5 class="widget-title pb-2 fw-semibold">ნავიგაცია</h5>
             <ul class="menu-list list-unstyled">
               <li class="pb-2">
-                <a href="about-us">კომპანიის შესახებ</a>
+                <a href="projects">კომპანიის შესახებ</a>
               </li>
               <li class="pb-2">
-                <a href="services">სერვისები</a>
+                <a href="#about-us">სერვისები</a>
               </li>
               <li class="pb-2">
                 <a href="projects">პორტფოლიო</a>
               </li>
               <li class="pb-2">
-                <a href="#">დამკვეთები/პარტნიორები</a>
+                <a href="projects">დამკვეთები/პარტნიორები</a>
               </li>
               <li class="pb-2">
                 <a href="https://calendar.app.google/n3HHkPqwXo7UYfCm9">დაჯავშნე კონსულტაცია</a>
@@ -391,10 +801,10 @@
                 <a href="projects">შეფასებები</a>
               </li>
               <li class="pb-2">
-                <a href="https://www.linkedin.com/company/swift-web-studio-2020/">ვაკანსია</a>
+                <a href="projects">ვაკანსია</a>
               </li>
               <li class="pb-2">
-                <a href="#">სიახლეები</a>
+                <a href="projects">სიახლეები</a>
               </li>
               <li class="pb-2">
                 <a href="#">რესურსები</a>
@@ -407,19 +817,19 @@
             <h5 class="widget-title fw-semibold">სამუშაო საათები</h5>
             <table class="schedule">
               <tr class="d-flex justify-content-between border-bottom py-2">
-                <td>Monday - Thursday</td>
+                <td>ორშაბათი - ხუთშაბათი</td>
                 <td class="text-primary">8:00 am - 6:00 pm</td>
               </tr>
               <tr class="d-flex justify-content-between border-bottom py-2">
-                <td>Friday - Saturday</td>
+                <td>პარაკევი - შაბათი</td>
                 <td class="text-primary">10:00 am - 4:00 pm</td>
               </tr>
               <tr class="d-flex justify-content-between border-bottom py-2">
-                <td>Sunday</td>
-                <td class="text-primary">Emergency only</td>
+                <td>კვირა</td>
+                <td class="text-primary">Emergency only 24/7</td>
               </tr>
               <tr class="d-flex justify-content-between border-bottom py-2">
-                <td>Personal</td>
+                <td>პერსონალური</td>
                 <td class="text-primary">7:00 pm - 9:00 pm</td>
               </tr>
             </table>
@@ -428,7 +838,8 @@
       </div>
       <div class="d-md-flex text-center justify-content-between border-top mt-5 py-4">
         <p>© 2025 Swift Web Studio/Techinsider Holding LLC - All rights reserved</p>
-        <p><a href="tos">მომსახურების პირობები</a> | <a href="privacy-policy">კონფიდენციალურობის პოლიტიკა</a></p>
+        <p>Website by: <a href="https://www.facebook.com/Swift.Web.Studio.techinsider.holding/" target="_blank" class="fw-semibold">
+            Swift Web Studio</a></p>
       </div>
     </div>
   </footer>
@@ -442,58 +853,5 @@
   
   <script src="//code.tidio.co/f58rpp470u6sklafvxv4n02zj6utgzqt.js" async></script>
 
-</body>
-
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
