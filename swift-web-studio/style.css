@@ -1083,11 +1083,11 @@ span.price-tick {
   font
   --------------------------------------------------------------*/
 * {
-  font-family: 'FiraGO', 'Noto Sans Georgian', sans-serif;
+  font-family: 'Fira GO', 'Noto Sans Georgian', sans-serif;
 }
 
 .btn.btn-medium.btn-outline-primary.btn-pill.text-uppercase {
-  font-family: 'FiraGO', 'Noto Sans Georgian', sans-serif;
+  font-family: 'Fira GO', 'Noto Sans Georgian', sans-serif;
   font-size: 17px;      /* smaller font, adjust as needed */
   padding: 8px 16px;    /* optional: reduce padding to fit one line */
   white-space: nowrap;   /* prevent text from wrapping */
@@ -1170,6 +1170,7 @@ span.price-tick {
         background-position: center bottom;
     }
 }
+
 
 
 
