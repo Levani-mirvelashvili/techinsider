@@ -305,10 +305,6 @@ h1, h2, h3, h4, h5 {
 /* - here we are */
 body {
     /*  */
-    -webkit-font-smoothing: subpixel-antialiased; 
-    -moz-osx-font-smoothing: auto;
-    
-    /* : */
     text-rendering: optimizeLegibility;
 }
 
@@ -1180,6 +1176,7 @@ span.price-tick {
         background-position: center bottom;
     }
 }
+
 
 
 
