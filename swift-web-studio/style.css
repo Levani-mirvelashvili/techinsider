@@ -1179,41 +1179,34 @@ span.price-tick {
 
 /* here we are */
 @media screen and (max-width: 991px) {
-  
   .banner-content {
-    /*  */
-    position: relative !important;
-    left: 0 !important;
-    top: 0 !important;
-    transform: none !important;
-    padding: 100px 20px; /*  */
-    text-align: center; /*  */
-    width: 100% !important;
+    position: absolute !important;
+    top: 55% !important; /* ოდნავ ქვემოთ ჩამოვწიე */
+    left: 20px !important; /* ეკრანის მარცხენა კიდიდან 20 პიქსელით დაშორდება */
+    transform: translateY(-50%) !important; /* მხოლოდ ვერტიკალური გაცენტრვა */
+    width: calc(100% - 40px) !important; /* ეკრანის სრულ სიგანეს მინუს გვერდითა დაშორებები */
+    text-align: left !important; /* ტექსტი გასწორდება მარცხნივ */
+    padding: 0 !important;
   }
 
   .banner-content h1 {
-    /*  */
-    font-size: 2.5rem !important; 
+    font-size: 2rem !important; /* ზომა, რომელიც მარცხნივ კარგად გამოჩნდება */
     line-height: 1.2 !important;
-    word-wrap: break-word; /*  */
+    margin-bottom: 15px !important;
+    text-align: left !important;
   }
 
   .banner-content p {
     font-size: 1rem !important;
-    padding: 0 10px;
+    line-height: 1.5 !important;
+    text-align: left !important;
+    max-width: 100% !important;
   }
 
-  #intro .banner img {
-    /*  */
-    min-height: 500px;
-    object-fit: cover;
-  }
-}
-
-/*  */
-@media screen and (max-width: 480px) {
-  .banner-content h1 {
-    font-size: 2rem !important;
+  /* ღილაკის მარცხნივ დატოვება */
+  .banner-content .btn {
+    align-self: flex-start !important;
+    display: inline-block !important;
   }
 }
 
@@ -1264,6 +1257,7 @@ span.price-tick {
     object-fit: cover !important;
   }
 }
+
 
 
 
