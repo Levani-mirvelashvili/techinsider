@@ -1094,6 +1094,11 @@ span.price-tick {
   box-sizing: border-box;
 }
 
+/* here it is */
+body {
+    font-family: 'Fira Sans', sans-serif;
+}
+
 .logo {
   max-width: 100%;
   height: auto;
@@ -1169,6 +1174,7 @@ span.price-tick {
         background-position: center bottom;
     }
 }
+
 
 
 
