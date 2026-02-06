@@ -305,8 +305,20 @@ h1, h2, h3, h4, h5 {
 /* - here we are */
 body {
     /*  */
+    -webkit-font-smoothing: subpixel-antialiased; 
+    -moz-osx-font-smoothing: auto;
+    
+    /* : */
     text-rendering: optimizeLegibility;
 }
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('../fonts/FiraGO-Bold.woff2') format('woff2');
+    font-weight: 700; /*  */
+}
+/* - here we are */
+
 
 h1.light,
 h2.light,
@@ -1176,6 +1188,7 @@ span.price-tick {
         background-position: center bottom;
     }
 }
+
 
 
 
