@@ -56,28 +56,6 @@ CSS STRUCTURE:
   4.11 Subscribe Section
   4.12 Footer
 
-/* - here we are */
-body {
-    /*  */
-    -webkit-font-smoothing: subpixel-antialiased; 
-    -moz-osx-font-smoothing: auto;
-    
-    /* : */
-    text-rendering: optimizeLegibility;
-}
-
-@font-face {
-    font-family: 'FiraGO';
-    src: url('../fonts/FiraGO-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-h1, h2, h3, h4, h5 {
-  -webkit-text-stroke: 0.5px; /* ეს ფონტს ხელოვნურად უმატებს ჩარჩოს და ასქელებს */
-}
-/* - here we are */
-
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
@@ -1192,6 +1170,7 @@ span.price-tick {
         background-position: center bottom;
     }
 }
+
 
 
 
