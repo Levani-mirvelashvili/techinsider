@@ -72,6 +72,10 @@ body {
     font-weight: 700;
     font-style: normal;
 }
+
+h1, h2, h3, h4, h5 {
+  -webkit-text-stroke: 0.5px; /* ეს ფონტს ხელოვნურად უმატებს ჩარჩოს და ასქელებს */
+}
 /* - here we are */
 
 /*--------------------------------------------------------------
@@ -1188,6 +1192,7 @@ span.price-tick {
         background-position: center bottom;
     }
 }
+
 
 
 
