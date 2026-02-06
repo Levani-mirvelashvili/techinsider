@@ -314,7 +314,7 @@ strong {
 /* - Section Title
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5 {
-  font-family: 'Fira GO', 'Noto Sans Georgian', sans-serif;
+  font-family: 'FiraGO', 'Noto Sans Georgian', sans-serif;
   font-weight: 500;
   line-height: 1;
 }
@@ -1101,11 +1101,11 @@ span.price-tick {
   font
   --------------------------------------------------------------*/
 * {
-  font-family: 'Fira GO', 'Noto Sans Georgian', sans-serif;
+  font-family: 'FiraGO', 'Noto Sans Georgian', sans-serif;
 }
 
 .btn.btn-medium.btn-outline-primary.btn-pill.text-uppercase {
-  font-family: 'Fira GO', 'Noto Sans Georgian', sans-serif;
+  font-family: 'FiraGO', 'Noto Sans Georgian', sans-serif;
   font-size: 17px;      /* smaller font, adjust as needed */
   padding: 8px 16px;    /* optional: reduce padding to fit one line */
   white-space: nowrap;   /* prevent text from wrapping */
@@ -1188,6 +1188,7 @@ span.price-tick {
         background-position: center bottom;
     }
 }
+
 
 
 
