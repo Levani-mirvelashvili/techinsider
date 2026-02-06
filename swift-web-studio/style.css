@@ -56,7 +56,23 @@ CSS STRUCTURE:
   4.11 Subscribe Section
   4.12 Footer
 
+/* - here we are */
+body {
+    /*  */
+    -webkit-font-smoothing: subpixel-antialiased; 
+    -moz-osx-font-smoothing: auto;
     
+    /* : */
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('../fonts/FiraGO-Bold.woff2') format('woff2');
+    font-weight: 700; /*  */
+}
+/* - here we are */
+
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
@@ -301,23 +317,6 @@ h1, h2, h3, h4, h5 {
   font-weight: 500;
   line-height: 1;
 }
-
-/* - here we are */
-body {
-    /*  */
-    -webkit-font-smoothing: subpixel-antialiased; 
-    -moz-osx-font-smoothing: auto;
-    
-    /* : */
-    text-rendering: optimizeLegibility;
-}
-
-@font-face {
-    font-family: 'FiraGO';
-    src: url('../fonts/FiraGO-Bold.woff2') format('woff2');
-    font-weight: 700; /*  */
-}
-/* - here we are */
 
 
 h1.light,
@@ -1188,6 +1187,7 @@ span.price-tick {
         background-position: center bottom;
     }
 }
+
 
 
 
