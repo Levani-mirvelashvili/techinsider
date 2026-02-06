@@ -297,7 +297,7 @@ strong {
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5 {
   font-family: 'FiraGO', 'Noto Sans Georgian', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1;
 }
 
@@ -1170,6 +1170,7 @@ span.price-tick {
         background-position: center bottom;
     }
 }
+
 
 
 
