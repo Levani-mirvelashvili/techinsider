@@ -1187,15 +1187,16 @@ span.price-tick {
 
 
 
-/* მობილური მოწყობილობებისთვის */
+/* for mobile */
 @media (max-width: 480px) {
     h1 {
         font-size: clamp(1.8rem, 8vw, 2.5rem) !important; 
-        margin-top: 50px !important; /* არეგულირე ეს ციფრი იმის მიხედვით, თუ რამდენად დაბლა გინდა ჩამოწევა */
-        text-align: left !important; /* ტექსტი დაიწყება მარცხნიდან */
-        padding-left: 20px; /* სურვილისამებრ: დაამატე გვერდიდან დაშორება, რომ ეკრანის კიდეს არ მიეკროს */
+        margin-top: 60px !important; /*  */
+        text-align: left !important; /*  */
+        padding-left: 10px; /*  */
         word-wrap: break-word;
         max-width: 100%;
     }
 }
+
 
