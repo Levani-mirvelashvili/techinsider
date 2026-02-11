@@ -1193,11 +1193,12 @@ span.price-tick {
         font-size: clamp(1.8rem, 8vw, 2.5rem) !important; 
         margin-top: 80px !important; /*  */
         text-align: left !important; /*  */
-        padding-left: 5px; /*  */
+        padding-left: 1px; /*  */
         word-wrap: break-word;
         max-width: 100%;
     }
 }
+
 
 
 
