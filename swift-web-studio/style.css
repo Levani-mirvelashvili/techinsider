@@ -1175,3 +1175,22 @@ span.price-tick {
 
 
 
+
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+}
