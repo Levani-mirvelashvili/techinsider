@@ -1170,3 +1170,19 @@ span.price-tick {
         background-position: center bottom;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3.5rem); /* მინიმუმ 1.8rem, იცვლება ეკრანის 5%-ით, მაქსიმუმ 3.5rem */
+    line-height: 1.2;
+    word-wrap: break-word; /* უზრუნველყოფს გრძელი სიტყვების გადატანას */
+}
