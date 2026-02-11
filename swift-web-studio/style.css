@@ -1170,3 +1170,22 @@ span.price-tick {
         background-position: center bottom;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* მობილური მოწყობილობებისთვის (480px-მდე) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem) !important; /* მობილურზე ცოტა უფრო პატარა */
+        margin-top: 40px !important; /* ეს ჩამოწევს ტექსტს დაბლა */
+        text-align: center; /* სურვილისამებრ: მობილურზე ცენტრირება უფრო ლამაზია */
+    }
+}
+
