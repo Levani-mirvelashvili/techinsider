@@ -1190,8 +1190,8 @@ span.price-tick {
 /* for mobile */
 @media (max-width: 480px) {
     h1 {
-        font-family: 'FiraGO', sans-serif !important; /* ამატებს FiraGO-ს */
-        font-weight: 700 !important; /* ხდის ტექსტს Bold-ს (700 ან 800 საუკეთესოა) */
+        font-family: 'FiraGO', sans-serif !important; /*  */
+        font-weight: 200 !important; /* */
         font-size: clamp(1.8rem, 8vw, 2.5rem) !important; 
         margin-top: 100px !important; /*  */
         text-align: left !important; /*  */
@@ -1200,6 +1200,7 @@ span.price-tick {
         max-width: 100%;
     }
 }
+
 
 
 
