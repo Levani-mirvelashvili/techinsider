@@ -1,5 +1,5 @@
 /*
-Theme Name: 
+Theme Name: Swift Web Studio
 Theme URI: 
 Author: 
 Author URI: 
@@ -142,7 +142,7 @@ a:hover.light {
 }
 
 p {
-  color: #333333;
+  color: #2C2C2C;
 }
 
 b,
@@ -1200,6 +1200,7 @@ span.price-tick {
         max-width: 100%;
     }
 }
+
 
 
 
