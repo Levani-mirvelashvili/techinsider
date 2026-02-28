@@ -1,82 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ხელშეკრულება</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+GO&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+GO&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Swift Web Studio | Client Portal</title>
     <style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        :root {
+            --primary-color: #007AFF; /* Apple-style Blue */
+            --bg-color: #f5f5f7;
+            --card-bg: #ffffff;
+            --text-main: #1d1d1f;
+            --text-muted: #86868b;
+            --border: #d2d2d7;
+        }
 
-body {
-    font-family: 'Arial', sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
-}
+        body {
+            font-family: "FiraGO", "Segoe UI", Tahoma, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.3; /* As we discussed for readability */
+            margin: 0;
+            padding: 40px 20px;
+        }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
 
-.download-card {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 40px;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+        header {
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
 
-.download-card h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-}
+        h1 {
+            font-size: 18px; /* Your requested heading size */
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-.download-card p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 30px;
-}
+        .subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
 
-.download-btn {
-    text-decoration: none;
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
+        .document-list {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
 
-.download-btn:hover {
-    background-color: #45a049;
-    cursor: pointer;
-}
+        .document-list th {
+            text-align: left;
+            font-size: 12px;
+            color: var(--text-muted);
+            padding: 10px;
+            border-bottom: 1px solid var(--border);
+        }
 
+        .document-list td {
+            padding: 15px 10px;
+            font-size: 12px; /* Your requested paragraph size */
+            border-bottom: 1px solid #f0f0f2;
+        }
+
+        .doc-name {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .btn-download {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+            display: inline-block;
+        }
+
+        .btn-download:hover {
+            opacity: 0.8;
+        }
+
+        .instructions {
+            margin-top: 40px;
+            background: #f9f9fb;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .instructions h2 {
+            font-size: 14px;
+            margin-top: 0;
+        }
+
+        .instructions p {
+            font-size: 12px;
+            color: #48484a;
+            margin: 5px 0;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            .document-list th:nth-child(3), 
+            .document-list td:nth-child(3) { display: none; } /* Hide date on small screens */
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="download-card">
-        <a href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/home"><img src="images/logo_01.png" alt="" width="250" height="23"></a>
-            <h1>ხელშეკრულების დოკუმენტის ჩამოტვირთვა (PDF)</h1>
-            <p>ამ გვერდიდან შეგიძლიათ ჩამოტვირთოთ მომსახურების ხელშეკრულება. ხელშეკრულება იდება დამკეთსა და შემსრულებელი კომპანიის/ფიზიკურ პირს შორის. (ხელშეკრულების თითო ეგზემპლიარი ინახება თითოეულ მხარესთან)</p>
-            <a href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/ხელშეკრულება_ვებსაიტი_Swift_დამკვეთი_ ... .pdf" class="download-btn">ხელშეკრულების ჩამოტვირთვა</a>
-        </div>
+
+<div class="container">
+    <header>
+        <a href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/home"><h1>Swift Web Studio</h1></a>
+        <div class="subtitle">Client Document Portal • Project #2026-042</div>
+    </header>
+
+    <table class="document-list">
+        <thead>
+            <tr>
+                <th>Document Name</th>
+                <th>Type</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="doc-name">ვებსაიტი, მომსახურების ხელშეკრულება</td>
+                <td>PDF</td>
+                <td>28/02/2026</td>
+                <td><a href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/ხელშეკრულება_ვებსაიტი_Swift_დამკვეთი_ ... .pdf" class="btn-download">DOWNLOAD</a></td>
+            </tr>
+            <tr>
+                <td class="doc-name">Technical Specifications (SOW)</td>
+                <td>PDF</td>
+                <td>28/02/2026</td>
+                <td><a href="home" class="btn-download">DOWNLOAD</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="instructions">
+        <h2>ინსტრუქცია:</h2>
+        <p>1. ჩამოტვირთეთ ხელშეკრულების PDF ვერსია.</p>
+        <p>2. შეამოწმეთ რეკვიზიტები (პ.ნ / ს.კ).</p>
+        <p>3. შეავსეთ ყველა მონაცემი.</p>
+        <p>4. მოაწერეთ ხელი ციფრულად ან სკანირებული სახით გამოაგზავნეთ: legal@swiftweb.ge</p>
     </div>
+
+    <footer>
+        &copy; 2026 Swift Web Studio. All rights reserved. Secure Document Transfer.
+    </footer>
+</div>
+
 </body>
 </html>
