@@ -83,15 +83,17 @@
       font-size: 18px; /* Optional: standard for blog readability */
   }
 
-    /*  */
+<style>
+  /* 1. Desktop Styling (The "Cal AI" Look with Top Alignment) */
   @media (min-width: 992px) {
     main > div {
       display: flex !important;
-      flex-direction: row;      /*  */
-      justify-content: center;  /*  */
-      gap: 40px;                /*  */
+      flex-direction: row;      /* გვერდიგვერდ */
+      justify-content: center;  /* ჰორიზონტალურად ცენტრში */
+      align-items: flex-start;  /* აი ეს აიტანს ორივე ბლოკს თავში ⬆️ */
+      gap: 50px;                /* დაშორება ტექსტსა და sidebar-ს შორის */
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 40px auto;        /* ზემოდანაც დაამატებს დაშორებას */
     }
 
     /* ძირითადი ტექსტის ბლოკი (50%) */
@@ -104,14 +106,16 @@
     aside {
       width: 25% !important;
       flex: 0 0 25%;
+      position: sticky;         /* სურვილისამებრ: ჩამოყვება სკროლისას */
+      top: 20px;
     }
   }
 
-  /* 2 (Mobile & Tablet) */
+  /* 2. მობილური ვერსია (Mobile & Tablet) */
   @media (max-width: 991px) {
     main > div {
       display: flex !important;
-      flex-direction: column;   /*  */
+      flex-direction: column;   /* ტექსტი ზემოთ, რესურსები ქვემოთ */
     }
 
     main > div > div:first-child,
@@ -121,26 +125,18 @@
     }
 
     aside {
-      margin-top: 40px;         /*  */
-      border-top: 1px solid #eee; /*  */
+      margin-top: 40px;
+      border-top: 1px solid #eee;
       padding-top: 20px;
     }
   }
 
-  /*  */
+  /* 3. ტექსტის სტილი */
   p {
     line-height: 1.7;
     margin-bottom: 20px;
     font-size: 18px;
     color: #333;
-  }
-
-  /*  */
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 20px 0;
   }
 </style>
 </head>
