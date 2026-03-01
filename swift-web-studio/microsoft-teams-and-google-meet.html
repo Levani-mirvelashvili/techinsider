@@ -38,34 +38,51 @@
   <!-- script
     ================================================== -->
   <script src="js/modernizr.js"></script>
-  <style>
-    /*  */
-@media (max-width: 768px) {
-    /* */
-    main > div {
-        display: block !important; /*  */
-    }
+ <style>
+  /* 1. Desktop Styling () */
+  @media (min-width: 769px) {
+      main > div {
+          display: flex;
+          flex-direction: column; /* Stacks elements vertically */
+          align-items: center;    /* Centers the 50% block horizontally */
+          width: 100%;
+      }
 
-    /*  */
-    main > div > div[style*="width: 50%"] {
-        width: 100% !important; /*  */
-        padding: 0 20px; /*  */
-    }
+      /* Target the specific div containing your blog text */
+      .single-post-area .col-lg-8, 
+      main > div > div:first-child { 
+          width: 50% !important;
+          margin: 0 auto;         /* Force centering */
+          float: none;            /* Remove floats if any */
+      }
+  }
 
-    /*  */
-    aside[style*="width: 25%"] {
-        width: 100% !important; /*  */
-        margin-top: 30px; /*  */
-        padding: 0 20px; /*  */
-    }
-}
+  /* 2. Mobile Styling (Already in your code, kept for consistency) */
+  @media (max-width: 768px) {
+      main > div {
+          display: block !important;
+      }
 
-    p {
-    line-height: 1.7; /* */
-    margin-bottom: 20px; /* */
-}
+      main > div > div[style*="width: 50%"],
+      main > div > div {
+          width: 100% !important;
+          padding: 0 20px;
+      }
 
-  </style>
+      aside[style*="width: 25%"] {
+          width: 100% !important;
+          margin-top: 30px;
+          padding: 0 20px;
+      }
+  }
+
+  /* 3. Typography (Your existing settings) */
+  p {
+      line-height: 1.7; 
+      margin-bottom: 20px;
+      font-size: 18px; /* Optional: standard for blog readability */
+  }
+</style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
