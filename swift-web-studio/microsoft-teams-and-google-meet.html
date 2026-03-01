@@ -82,6 +82,66 @@
       margin-bottom: 20px;
       font-size: 18px; /* Optional: standard for blog readability */
   }
+
+    /*  */
+  @media (min-width: 992px) {
+    main > div {
+      display: flex !important;
+      flex-direction: row;      /*  */
+      justify-content: center;  /*  */
+      gap: 40px;                /*  */
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ძირითადი ტექსტის ბლოკი (50%) */
+    main > div > div:first-child {
+      width: 50% !important;
+      flex: 0 0 50%;
+    }
+
+    /* მარჯვენა პანელი (რესურსები) */
+    aside {
+      width: 25% !important;
+      flex: 0 0 25%;
+    }
+  }
+
+  /* 2 (Mobile & Tablet) */
+  @media (max-width: 991px) {
+    main > div {
+      display: flex !important;
+      flex-direction: column;   /*  */
+    }
+
+    main > div > div:first-child,
+    aside {
+      width: 100% !important;
+      padding: 0 20px;
+    }
+
+    aside {
+      margin-top: 40px;         /*  */
+      border-top: 1px solid #eee; /*  */
+      padding-top: 20px;
+    }
+  }
+
+  /*  */
+  p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  /*  */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
 </style>
 </head>
 
