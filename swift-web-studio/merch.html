@@ -1,0 +1,134 @@
+<main>
+    <section class="intro">
+        <h1>Merch by Swift.</h1>
+    </section>
+
+    <section class="grid">
+        <div class="item featured">
+        <img src="your-image-path.jpg" alt="Content is King Hoodie" class="product-img">
+            <div class="placeholder"></div>
+            <div class="details">
+                <span>01. "Content is King" Oversized Hoodie</span>
+                <span>120 GEL</span>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="placeholder"></div>
+            <div class="details">
+                <span>02. Minimalist Logic Tee</span>
+                <span>65 GEL</span>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="placeholder"></div>
+            <div class="details">
+                <span>03. B2 English Grammar Cap</span>
+                <span>45 GEL</span>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="placeholder"></div>
+            <div class="details">
+                <span>04. Saakadze Square Poster</span>
+                <span>30 GEL</span>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="placeholder"></div>
+            <div class="details">
+                <span>05. Break-Even Analyst Notebook</span>
+                <span>25 GEL</span>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="placeholder"></div>
+            <div class="details">
+                <span>06. Marketing War Stickers</span>
+                <span>15 GEL</span>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="placeholder"></div>
+            <div class="details">
+                <span>07. Creative Toggle Pin</span>
+                <span>10 GEL</span>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+/* Keep your previous CSS Reset and Nav, then update/add these: */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 60px 40px; /* Vertical and Horizontal gap */
+}
+
+/* Make the first item (01) take up the full width of both columns */
+.item.featured {
+    grid-column: span 2;
+    margin-bottom: 40px;
+}
+
+/* Adjust the image height for the featured item so it's not too tall */
+.item.featured .placeholder {
+    aspect-ratio: 16 / 7; 
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.placeholder {
+    background-color: #f7f7f7;
+    aspect-ratio: 3 / 4; 
+    margin-bottom: 15px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid transparent;
+}
+
+.placeholder:hover {
+    background-color: #efefef;
+    border: 1px solid #ddd;
+    cursor: crosshair; /* A minimalist "pro" detail */
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+    color: #555;
+}
+
+/* Responsive: On phones, everything goes to 1 column */
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+    .item.featured { grid-column: span 1; }
+    .item.featured .placeholder { aspect-ratio: 3 / 4; }
+}
+
+/* This ensures the cursor stays as the standard arrow */
+.placeholder:hover {
+    background-color: #efefef;
+    border: 1px solid #ddd;
+    cursor: default; /* This overrides the 'pointer' or 'crosshair' */
+}
+
+/* If you have links or buttons, you must also apply it there */
+nav a, .details, .item {
+    cursor: default;
+}
+</style>
