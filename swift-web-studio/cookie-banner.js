@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // 1. 
+    // 1. Create and Inject the CSS
     const style = document.createElement('style');
     style.innerHTML = `
         .cookie-banner {
             position: fixed !important;
             bottom: 25px !important;
-            left: 25px !important; /* განთავსება მარცხნივ */
-            right: auto !important;
+            left: 25px !important;
             max-width: 400px !important;
-            background: #2d2d2d !important; /* მუქი ნაცრისფერი */
+            background: #2d2d2d !important;
             padding: 24px !important;
             border-radius: 12px !important;
             border: 1px solid #444 !important;
@@ -19,68 +18,33 @@ document.addEventListener("DOMContentLoaded", function() {
             opacity: 1;
             transition: opacity 0.5s ease !important;
         }
-        .cookie-container { 
-            display: flex !important; 
-            align-items: flex-start !important; 
-            gap: 15px !important; 
-        }
+        .cookie-container { display: flex !important; align-items: flex-start !important; gap: 15px !important; }
         .cookie-icon { flex-shrink: 0 !important; margin-top: 5px !important; }
-        
-        /* ტექსტის ფერის გასწორება */
         .cookie-content p { 
-            color: #f0f0f0 !important; /* ღია ფერის ტექსტი */
+            color: #f0f0f0 !important; 
             font-size: 13px !important; 
             line-height: 1.5 !important; 
             margin: 0 0 15px 0 !important; 
             font-weight: 300 !important;
             text-align: left !important;
         }
-
-        .cookie-buttons { 
-            display: flex !important; 
-            justify-content: flex-end !important; 
-            gap: 10px !important; 
-        }
-
-        /* წითელი ღილაკი */
+        .cookie-buttons { display: flex !important; justify-content: flex-end !important; gap: 10px !important; }
         .btn-accept { 
-            background: #e63946 !important; 
-            color: #ffffff !important; 
-            border: none !important; 
-            padding: 10px 20px !important; 
-            border-radius: 5px !important; 
-            font-weight: 700 !important; 
-            cursor: pointer !important; 
-            text-transform: uppercase !important; 
-            font-size: 11px !important;
-            transition: 0.3s !important;
+            background: #e63946 !important; color: #ffffff !important; border: none !important; 
+            padding: 10px 20px !important; border-radius: 5px !important; font-weight: 700 !important; 
+            cursor: pointer !important; text-transform: uppercase !important; font-size: 11px !important;
         }
-        .btn-accept:hover { background: #bd2f3a !important; transform: translateY(-2px) !important; }
-
-        /* უარყოფის ღილაკი */
         .btn-decline { 
-            background: transparent !important; 
-            color: #999 !important; 
-            border: 1px solid #555 !important; 
-            padding: 10px 15px !important; 
-            border-radius: 5px !important; 
-            cursor: pointer !important; 
-            font-size: 11px !important;
+            background: transparent !important; color: #999 !important; border: 1px solid #555 !important; 
+            padding: 10px 15px !important; border-radius: 5px !important; cursor: pointer !important; font-size: 11px !important;
         }
-
-        /* მობილური ვერსია iPhone 15-ისთვის */
         @media (max-width: 480px) {
-            .cookie-banner {
-                left: 10px !important;
-                right: 10px !important;
-                bottom: 10px !important;
-                max-width: none !important;
-            }
+            .cookie-banner { left: 10px !important; right: 10px !important; bottom: 10px !important; max-width: none !important; }
         }
     `;
     document.head.appendChild(style);
 
-    // 2. 
+    // 2. Create and Inject the HTML
     const bannerHTML = `
         <div id="cookie-notice" class="cookie-banner">
             <div class="cookie-container">
@@ -101,3 +65,25 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             </div>
         </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', bannerHTML);
+
+    // 3. Banner Logic
+    const cookieNotice = document.getElementById("cookie-notice");
+    if (!localStorage.getItem("cookieConsent")) {
+        cookieNotice.style.display = "block";
+        setTimeout(() => {
+            cookieNotice.style.opacity = "0";
+            setTimeout(() => { cookieNotice.style.display = "none"; }, 500);
+        }, 30000); 
+    }
+
+    document.getElementById("accept-cookies").onclick = () => {
+        localStorage.setItem("cookieConsent", "accepted");
+        cookieNotice.style.display = "none";
+    };
+    document.getElementById("decline-cookies").onclick = () => {
+        localStorage.setItem("cookieConsent", "declined");
+        cookieNotice.style.display = "none";
+    };
+});
