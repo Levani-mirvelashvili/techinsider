@@ -1,53 +1,86 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // 1. Inject Styles (Positioned to the LEFT)
+    // 1. 
     const style = document.createElement('style');
     style.innerHTML = `
         .cookie-banner {
-            position: fixed; 
-            bottom: 25px; 
-            left: 25px; /* MOVED TO LEFT */
-            max-width: 400px; 
-            background: #2d2d2d; 
-            color: #f0f0f0;
-            padding: 24px; 
-            border-radius: 12px; 
-            border: 1px solid #444;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-            font-family: 'FiraGO', sans-serif; 
-            z-index: 10000;
-            display: none; 
-            opacity: 1; 
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            transform: translateY(0);
+            position: fixed !important;
+            bottom: 25px !important;
+            left: 25px !important; /* განთავსება მარცხნივ */
+            right: auto !important;
+            max-width: 400px !important;
+            background: #2d2d2d !important; /* მუქი ნაცრისფერი */
+            padding: 24px !important;
+            border-radius: 12px !important;
+            border: 1px solid #444 !important;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4) !important;
+            font-family: 'FiraGO', sans-serif !important;
+            z-index: 10000 !important;
+            display: none;
+            opacity: 1;
+            transition: opacity 0.5s ease !important;
         }
-        .cookie-container { display: flex; align-items: flex-start; gap: 15px; }
-        .cookie-icon { flex-shrink: 0; margin-top: 5px; }
-        .cookie-content p { font-size: 13px; line-height: 1.5; margin-bottom: 15px; font-weight: 300; }
-        .cookie-buttons { display: flex; justify-content: flex-end; gap: 10px; }
-        .btn-accept { 
-            background: #e63946; color: #fff; border: none; padding: 10px 20px; 
-            border-radius: 5px; font-weight: 700; cursor: pointer; transition: 0.3s;
-            text-transform: uppercase; font-size: 11px;
+        .cookie-container { 
+            display: flex !important; 
+            align-items: flex-start !important; 
+            gap: 15px !important; 
         }
-        .btn-accept:hover { background: #bd2f3a; transform: translateY(-2px); }
-        .btn-decline { 
-            background: transparent; color: #999; border: 1px solid #555; 
-            padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 11px;
-        }
+        .cookie-icon { flex-shrink: 0 !important; margin-top: 5px !important; }
         
-        /* Mobile adjustment for iPhone 15 and smaller screens */
+        /* ტექსტის ფერის გასწორება */
+        .cookie-content p { 
+            color: #f0f0f0 !important; /* ღია ფერის ტექსტი */
+            font-size: 13px !important; 
+            line-height: 1.5 !important; 
+            margin: 0 0 15px 0 !important; 
+            font-weight: 300 !important;
+            text-align: left !important;
+        }
+
+        .cookie-buttons { 
+            display: flex !important; 
+            justify-content: flex-end !important; 
+            gap: 10px !important; 
+        }
+
+        /* წითელი ღილაკი */
+        .btn-accept { 
+            background: #e63946 !important; 
+            color: #ffffff !important; 
+            border: none !important; 
+            padding: 10px 20px !important; 
+            border-radius: 5px !important; 
+            font-weight: 700 !important; 
+            cursor: pointer !important; 
+            text-transform: uppercase !important; 
+            font-size: 11px !important;
+            transition: 0.3s !important;
+        }
+        .btn-accept:hover { background: #bd2f3a !important; transform: translateY(-2px) !important; }
+
+        /* უარყოფის ღილაკი */
+        .btn-decline { 
+            background: transparent !important; 
+            color: #999 !important; 
+            border: 1px solid #555 !important; 
+            padding: 10px 15px !important; 
+            border-radius: 5px !important; 
+            cursor: pointer !important; 
+            font-size: 11px !important;
+        }
+
+        /* მობილური ვერსია iPhone 15-ისთვის */
         @media (max-width: 480px) {
             .cookie-banner {
-                left: 10px;
-                right: 10px;
-                bottom: 10px;
-                max-width: none;
+                left: 10px !important;
+                right: 10px !important;
+                bottom: 10px !important;
+                max-width: none !important;
             }
         }
     `;
     document.head.appendChild(style);
 
-    // 2. Inject HTML (Remains the same)
+    // 2. 
     const bannerHTML = `
         <div id="cookie-notice" class="cookie-banner">
             <div class="cookie-container">
@@ -68,26 +101,3 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             </div>
         </div>
-    `;
-    document.body.insertAdjacentHTML('beforeend', bannerHTML);
-
-    // 3. Logic (Same functionality)
-    const cookieNotice = document.getElementById("cookie-notice");
-    if (!localStorage.getItem("cookieConsent")) {
-        cookieNotice.style.display = "block";
-        setTimeout(() => {
-            cookieNotice.style.opacity = "0";
-            cookieNotice.style.transform = "translateY(20px)"; // Subtle slide out
-            setTimeout(() => { cookieNotice.style.display = "none"; }, 500);
-        }, 30000); 
-    }
-
-    document.getElementById("accept-cookies").onclick = () => {
-        localStorage.setItem("cookieConsent", "accepted");
-        cookieNotice.style.display = "none";
-    };
-    document.getElementById("decline-cookies").onclick = () => {
-        localStorage.setItem("cookieConsent", "declined");
-        cookieNotice.style.display = "none";
-    };
-});
