@@ -101,9 +101,15 @@
       flex: 0 0 50%;
     }
 
-    /* მარჯვენა პანელი (რესურსები) */
-.sidebar-sticky {
-    position: static !important; /*  */
+aside {
+  width: 25% !important;
+  flex: 0 0 25%;
+  
+  /* მთავარი ნაწილი */
+  position: -webkit-sticky; /* Safari-ს მხარდაჭერისთვის */
+  position: sticky;
+  top: 20px;                /* დაშორება ეკრანის ზედა კიდიდან სქროლისას */
+  align-self: flex-start;   /* კრიტიკულად მნიშვნელოვანია Flexbox-ისთვის */
 }
 
   /* 2. მობილური ვერსია (Mobile & Tablet) */
