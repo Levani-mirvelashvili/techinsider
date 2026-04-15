@@ -142,22 +142,31 @@ aside {
   }
 
     /*vid*/
-  .video-container {
-    width: 100%;
-    max-width: 800px; /* Or whatever width you need */
-    overflow: hidden;
-    border-radius: 20px; /* Optional: for that sleek, modern look */
-}
+    /* Fixed container for mobile responsiveness */
+    .video-container {
+        width: 100%;
+        max-width: 100%; 
+        margin: 20px 0; /*  */
+        overflow: hidden;
+        border-radius: 8px; /*  */
+        line-height: 0;
+    }
 
-.bg-video {
-    width: 100%;
-    height: auto;
-    display: block;
-    outline: none;
-    border: none;
-    /* Removes the brief flash of white on some browsers */
-    background-color: transparent; 
-}
+    /* Makes the video fluid */
+    .bg-video {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border: none;
+    }
+
+    /* Specific fix for smaller screens */
+    @media (max-width: 768px) {
+        .video-container {
+            border-radius: 20px;
+        }
+    }
 </style>
 </head>
 
@@ -396,17 +405,10 @@ aside {
     </section>
     <section id="about" style="margin-bottom: 60px;">
       <h2></h1>
-      <div class="video-container">
-    <video 
-        autoplay 
-        muted 
-        loop 
-        playsinline 
-        preload="auto" 
-        class="bg-video">
-        <source src="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/images/Vid001.mp4
-" type="video/mp4">
-        თქვენი ბრაუზერი მხარს არ უჭერს ვიდეოს.
+ <div class="video-container">
+    <video autoplay muted loop playsinline preload="auto" class="bg-video">
+        <source src="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/images/Vid001.mp4" type="video/mp4">
+        თქვენი ბრაუზერი მხარს არ უჭერს ვიდეოს ფორმატს, სამწუხაროა
     </video>
 </div>
       <p></p>
