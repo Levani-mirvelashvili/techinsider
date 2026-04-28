@@ -1221,3 +1221,25 @@ span.price-tick {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+
+
+
+/* ______________________________________________________ */
+/* SMOOTH DROPDOWN ANIMATION FOR SWIFT WEB STUDIO         */
+/* ______________________________________________________ */
+
+.dropdown-menu {
+    display: block !important;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px); /*  */
+    transition: all 4.3s ease-in-out; /* 0.3 */
+    pointer-events: none; /*  */
+}
+
+.dropdown.show .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); /*  */
+    pointer-events: auto;
+}
