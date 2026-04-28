@@ -1203,10 +1203,24 @@ span.price-tick {
 
 
 
+/* Dropdown container make it round */
+.dropdown-menu {
+    border-radius: 15px !important; /*  */
+    overflow: hidden; /*  */
+    border: 1px solid rgba(0,0,0,0.1); /*  */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /*  */
+}
 
+/*  */
+.dropdown-item:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
 
-
-
+.dropdown-item:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
 
 
 
