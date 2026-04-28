@@ -1222,3 +1222,32 @@ span.price-tick {
     border-bottom-right-radius: 15px;
 }
 
+
+
+
+
+
+
+
+
+/* ______________________________________________________ */
+/* ULTRA-STABLE SMOOTH DROPDOWN                           */
+/* ______________________________________________________ */
+
+/* 1. საწყისი მდგომარეობა: გამჭვირვალე და ოდნავ დაბლა */
+.dropdown-menu {
+    border-radius: 15px !important;
+    overflow: hidden;
+    margin-top: 10px !important; /* მცირე დაშორება ღილაკიდან */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 3.3s ease;
+}
+
+/* 2. როცა ბუთსტრაპი ამატებს .show კლასს */
+.dropdown-menu.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
