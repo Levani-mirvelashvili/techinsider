@@ -286,11 +286,30 @@ h1 {
               </li>
             </ul>
           </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
+             <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="btn-book text-end">
-              <a href="https://calendar.app.google/n3HHkPqwXo7UYfCm9" target="_blank"" class="btn btn-medium btn-outline-primary btn-pill text-uppercase">კონსულტაციის დაჯავშნა➜</a>
-            </div>
-          </div>
+              <!-- Button -->
+<button onclick="document.getElementById('consultModal').style.display='flex'" class="btn btn-medium btn-outline-primary btn-pill text-uppercase">კონსულტაციის დაჯავშნა➜</button>
+
+<!-- Modal -->
+<div id="consultModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center; padding:20px;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#fff; border-radius:16px; padding:24px 28px; max-width:500px; width:100%; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-height:90vh; overflow-y:auto;">
+    
+    <!-- Close button -->
+    <button onclick="document.getElementById('consultModal').style.display='none'" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:20px; cursor:pointer; color:red;">Close ✕</button>
+    
+    <!-- Content -->
+    <h4 style="margin:0 0 6px;">კონსულტაციის დაჯავშნა</h4>
+    <p style="color:#666; margin:0 0 20px; font-size:14px;">აირჩიეთ მოსახერხებელი დრო Google Calendar-ის საშუალებით.</p>
+    
+    <div style="display: flex; justify-content: center;">
+  <iframe 
+    src="https://calendar.app.google/n3HHkPqwXo7UYfCm9"
+    style="border: 0; width: 100%; max-width: 1000px; height: 165vh;"
+    frameborder="0"
+    scrolling="no">
+  </iframe>
+</div>
         </div>
       </div>
     </nav>
