@@ -355,6 +355,57 @@
   background: #d9d9d9;
   transform: translateY(1px);
 }
+
+
+/* modaaaaal*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  padding: 20px; /* Padding for mobile breathing room */
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Keeps the box centered on the screen */
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  
+  /* CRITICAL CHANGES FOR SCROLLING */
+  max-height: 85vh;    /* Box will never be taller than 85% of the screen */
+  overflow-y: auto;   /* Shows a scrollbar only if text is too long */
+  
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+/* Ensure the close button stays visible while scrolling */
+.close {
+  position: sticky;
+  top: -10px;        /* Pulls it slightly up to align with padding */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  color: #667;
+  cursor: pointer;
+  background: white; /* Prevents text from overlapping behind it */
+  z-index: 10;
+  padding: 0 5px;
+}
 </style>
 </head>
 
@@ -617,7 +668,25 @@
       <p>დღევანდელ დროში ვებგვერდი თქვენი ბიზნესის „მთავარი ოფისია“ ინტერნეტში. Swift Web Studio-ში ჩვენი მიზანია შევქმნათ ისეთი პლატფორმა, რომელიც იქნება არა მხოლოდ 
         ვიზუალურად მომხიბვლელი, არამედ ინდივიდუალური, ტექნიკურად უნაკლო, სწრაფი და გაყიდვებზე ორიენტირებული.</p>
       <p>რას გთავაზობთ ჩვენი დეველოპმენტის გუნდი?</p>
-
+            <p>ინდივიდუალური მიდგომა (Custom Development): ჩვენ არ ვიყენებთ შაბლონურ გადაწყვეტილებებს, რომლებიც თქვენს ბიზნესს „ზღუდავს“. თითოეული 
+        დეტალი იქმნება თქვენი სპეციფიკური მოთხოვნების გათვალისწინებით???????????????</p>
+      <p>სისწრაფე და წარმადობა (Performance): სახელი Swift შემთხვევითი არ არის. ჩვენი საიტები იტვირთება მყისიერად, რაც პირდაპირ აისახება მომხმარებლის 
+        კმაყოფილებასა და Google-ში რეიტინგზე.</p>
+      <p>ადაპტირებადი დიზაინი (Responsive): თქვენი საიტი იდეალურად გამოჩნდება ნებისმიერ ეკრანზე – სმარტფონიდან დაწყებული, ულტრა-ფართო მონიტორით დასრულებული</p>
+      <p>SEO სტრუქტურა: დეველოპმენტის პროცესშივე ვქმნით სწორ იერარქიას, რათა საძიებო სისტემებმა მარტივად აღმოაჩინონ თქვენი ბიზნესი.</p>
+      <p>მართვის სიმარტივე: ჩვენს მიერ აწყობილი საიტების მართვა იმდენად მარტივია, რომ თქვენ არ დაგჭირდებათ პროგრამისტი ყოველი სიტყვის ან ფოტოს შესაცვლელად.</p>
+      <h2>რატომ Swift Web Studio?</h2>
+      <p>კარგი ვებგვერდი ხარჯი არ არის, ინვესტიციაა</p>
+      <p>ჩვენი გუნდი ორიენტირებულია ხარისხზე. ჩვენ არ ვაბარებთ პროექტს მანამ, სანამ ის არ გაივლის მკაცრ ტესტირებას უსაფრთხოებაზე, სისწრაფეზე და გამართულობაზე. ჩვენთან თანამშრომლობით თქვენ 
+        იღებთ არა მხოლოდ პროგრამისტების გუნდს, არამედ პარტნიორს, რომელიც ზრუნავს თქვენი ბიზნესის ზრდაზე</p>
+      <p>რამდენად სიმედო და დაცულია ვორდპრესი? (პასუხი)</p>
+      <p>როგორ განისაზღვრება საიტის დამზადების ფასი? (პასუხი)</p>
+      <p>როგორ ვნახო თქვენი დამზადებული პროექტები? (პასუხი)</p>
+      <p>როგორია სამუშაო პროცესი და ეტაპები დასაწყისიდან დასასრულამდე? (პასუხი)</p>
+      <h2>იქომერს სერვისი</h2>
+      <p>როგორ დავიცვათ ონლაინ მაღაზია ჰაკერებისგან</p>
+      <p>რომელი პლატფორმაა ოპტიმალური ონლაინ მაღაზიისთვის და რატომ?</p>
+      <p>როგორ შეიძლება გადახდების მიღება და განვადება?</p>
       <p></p>
       <p></p>
       <p><a href="https://calendar.app.google/n3HHkPqwXo7UYfCm9" style="font-weight: bold; text-decoration: underline;">კონსულტაციის დაჯავშნა</a></p>
