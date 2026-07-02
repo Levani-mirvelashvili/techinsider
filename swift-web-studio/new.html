@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HF2HD3XND0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-HF2HD3XND0');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HF2HD3XND0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HF2HD3XND0');
+  </script>
   <title>Swiftweb.studio - კომპანიის შესახებ</title>
   <link rel="canonical" href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/solutions" />
   <link rel="icon" type="image/png" href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/images/favico.png">
@@ -72,7 +71,7 @@
   .card:hover .card-title, .card:hover .card-description, .card:hover a { color: white; }
   @media screen and (max-width: 1024px) { .cards-container { grid-template-columns: repeat(2, 1fr); width: 90%; } }
   @media screen and (max-width: 768px) { .cards-container { grid-template-columns: 1fr; width: 100%; } }
-
+  
   /* Modal */
   @media (min-width: 769px) {
     #consultModal > div { max-width: 600px; width: 90vw; }
@@ -84,7 +83,6 @@
   }
   </style>
 </head>
-
 <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
 
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -153,40 +151,26 @@
           </div>
           <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="btn-book text-end">
-
-              <!-- გახსნის ღილაკი -->
               <button onclick="document.getElementById('consultModal').style.display='flex'; document.body.style.overflow='hidden'" class="btn btn-medium btn-outline-primary btn-pill text-uppercase">კონსულტაციის დაჯავშნა➜</button>
-
-              <!-- Modal -->
-<div id="consultModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center; padding:20px;" onclick="if(event.target===this){this.style.display='none'; document.body.style.overflow=''}">
-  <div style="background:#fff; border-radius:16px; padding:24px 28px; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-height:90vh; width:100%; max-width:600px; display:flex; flex-direction:column; overflow:hidden;">
-    
-    <!-- დახურვის ღილაკი -->
-    <button onclick="document.getElementById('consultModal').style.display='none'; document.body.style.overflow=''" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:20px; cursor:pointer; color:red; z-index:10;">✕</button>
-    
-    <!-- სათაურის ფიქსირებული ნაწილი -->
-    <div style="padding-bottom:10px;">
-      <h4 style="margin:0 0 6px;">კონსულტაციის დაჯავშნა</h4>
-      <p style="color:#775; margin:0 0 10px; font-size:14px;">აირჩიეთ მოსახერხებელი დრო Google Calendar-ის საშუალებით.</p>
-    </div>
-
-    <!-- სქროლვადი კონტენტი (Iframe კონტეინერი) -->
-    <div style="flex:1; overflow-y:auto; -webkit-overflow-scrolling:touch; display:flex; justify-content:center;">
-      <iframe src="https://calendar.app.google/n3HHkPqwXo7UYfCm9" 
-              style="border:0; width:100%; height:600px; min-height:450px;" 
-              frameborder="0">
-      </iframe>
-    </div>
-
-  </div>
-</div>
-
+              
+              <div id="consultModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center; padding:20px;" onclick="if(event.target===this){this.style.display='none'; document.body.style.overflow=''}">
+                <div style="background:#fff; border-radius:16px; padding:24px 28px; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-height:90vh; width:100%; max-width:600px; display:flex; flex-direction:column; overflow:hidden;">
+                  <button onclick="document.getElementById('consultModal').style.display='none'; document.body.style.overflow=''" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:20px; cursor:pointer; color:red; z-index:10;">✕</button>
+                  <div style="padding-bottom:10px;">
+                    <h4 style="margin:0 0 6px;">კონსულტაციის დაჯავშნა</h4>
+                    <p style="color:#775; margin:0 0 10px; font-size:14px;">აირჩიეთ მოსახერხებელი დრო Google Calendar-ის საშუალებით.</p>
+                  </div>
+                  <div style="flex:1; overflow-y:auto; -webkit-overflow-scrolling:touch; display:flex; justify-content:center;">
+                    <iframe src="https://calendar.app.google/n3HHkPqwXo7UYfCm9" style="border:0; width:100%; height:600px; min-height:450px;" frameborder="0"></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </nav>
-
+    
     <nav id="primary-header" class="navbar navbar-expand-lg shadow-none" aria-label="navbar" height="30">
       <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
@@ -221,105 +205,7 @@
     </nav>
   </header>
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; }
-    .breadcrumb { max-width: 1400px; margin: 2rem auto; padding: 0 2rem; font-size: 0.9rem; color: #666; }
-    .breadcrumb a { color: #e63946; text-decoration: none; }
-    .hero-section { max-width: 1400px; margin: 3rem auto; padding: 0 2rem; }
-    .hero-text { font-size: 1.8rem; line-height: 1.6; font-weight: 600; margin-bottom: 3rem; color: #222; }
-    .image-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 3rem 0; }
-    .image-grid img { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; }
-    .stats-section { background: #f8f9fa; padding: 4rem 2rem; margin: 4rem 0; }
-    .stats-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-    .stats-number { font-size: 4rem; font-weight: bold; color: #e63946; }
-    .stats-text { font-size: 2rem; font-weight: 600; margin-bottom: 1rem; }
-    .stats-description { line-height: 1.8; color: #555; margin-bottom: 1rem; }
-    .cta-section { background: #e63946; padding: 3rem 2rem; text-align: center; color: white; }
-    .cta-button { background: white; color: #e63946; padding: 1rem 2rem; border: none; border-radius: 5px; font-size: 1.1rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 1rem; transition: transform 0.3s, background 0.3s; }
-    .cta-button:hover { transform: scale(1.05); background: #f1f1f1; }
-    .how-we-work { max-width: 1400px; margin: 5rem auto; padding: 0 2rem; font-weight: bold; }
-    .section-title { font-size: 2.5rem; font-weight: bold; margin-bottom: 3rem; text-align: center; }
-    .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
-    .work-card { padding: 2rem; background: #f8f9fa; border-radius: 8px; border-bottom: 3px solid transparent; }
-    .work-card:hover { transform: translateY(-1px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-bottom: 1px solid #e63946; }
-    .work-card h3 { font-size: 1.3rem; margin-bottom: 1rem; color: #e63946; }
-    .work-card p { color: #555; line-height: 1.7; }
-    .values-section { background: #1a1a1a; color: white; padding: 5rem 2rem; margin: 5rem 0; }
-    .values-content { max-width: 1400px; margin: 0 auto; }
-    .values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; margin-top: 3rem; }
-    .value-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #e63946; }
-    .value-card p { color: #ccc; line-height: 1.7; }
-    .management-section { max-width: 1400px; margin: 5rem auto; padding: 0 2rem; text-align: center; }
-    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
-    @media (max-width: 768px) {
-      .image-grid, .work-grid, .values-grid { grid-template-columns: 1fr; }
-      .stats-content, .footer-main { grid-template-columns: 1fr; }
-    }
-  </style>
-
-  <div class="breadcrumb">
-    <a href="home">მთავარი</a> / კომპანიის შესახებ
-  </div>
-
-  <section class="hero-section">
-    <p class="hero-text">Test Test test გამარჯობა, ჩვენ ვართ - სვიფტი. Swift Web Studio — გარდავქმნით ბიზნეს იდეას ციფრულ რეალობად. სწრაფად. ⚡ ციფრულ სამყაროში ინტეგრაცია რთული არ უნდა იყოს. ჩვენ ვართ Swift Web Studio — გამოცდილი დეველოპერების გუნდი, (Direct Access Team) რომელმაც 7 წლიანი გამოცდილება ერთ მიზნად აქცია: გახადოს დეველოპმენტი მარტივი, გამჭვირვალე და ძალიან სწრაფი, დამკვეთებისთვის.</p>
-    <div class="image-grid">
-      <img src="images/Swift_Web_Studio.png" alt="swift office">
-      <img src="https://i.imgur.com/F6BrxKy.png" alt="Meeting">
-      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800" alt="Community">
-    </div>
-  </section>
-
-  <section class="stats-section">
-    <div class="stats-content">
-      <div>
-        <div class="stats-number">27</div>
-        <div class="stats-text">წარმატებული პროექტი</div>
-      </div>
-      <div>
-        <p class="stats-description">დაივიწყეთ გაურკვეველი ვადები და არასასურველი გამოცდილება. ჩვენ აქ ვართ, რომ დავამსხვრიოთ სტერეოტიპები შევცვალოთ რეალობა და ვიყოთ თქვენი სანდო პარტნიორი. კომფორტული და მშვიდი თანამშრომლობის ფარგლებში.</p>
-        <p>ხარისხი მთავარი ფოკუსია, AI გამოცდილება, პროექტის მენეჯმენტი, დამკვეთთან კოლაბორაცია, სწრაფი მიდგომა, 7 წლიანი პრაქტიკული გამოცდილება, მოქნილობა, დეველოპმენტის სრული ციკლი</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="cta-section">
-    <h2>Heading h2</h2>
-    <h6><a href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/home">http://swiftweb.studio/</a> ვებსაიტზე გამოყენებული ფოტოები ეკუთვნის საქართველოს ოფიციალურ ტურისტულ პორტალს <a href="https://georgia.travel/ka" target="_blank" rel="noopener noreferrer">georgia.travel</a></h6>
-  </div>
-
-  <section class="how-we-work">
-    <h2 class="section-title">რას ვაკეთებთ? (15+ Solution) ჩვენ არ ვქმნით მხოლოდ ვებსაიტს, ჩვენ ვქმნით ბიზნეს ინსტრუმენტებს</h2>
-    <div class="work-grid">
-      <div class="work-card"><h3>ონლაინ გაყიდვები E-commerce</h3><p>Next-Gen ვებ და E-commerce დეველოპმენტი (ყველა მოწყობილობაზე ადაპტირებული)</p></div>
-      <div class="work-card"><h3>საძიებო სისტემის ოპტიმიზაცია</h3><p>სმარტ SEO ოპტიმიზაცია (რომ მომხმარებელმა მარტივად გიპოვოთ)</p></div>
-      <div class="work-card"><h3>ტექნიკური მხარდაჭერა</h3><p>24/7 ტექნიკური მხარდაჭერა (ჩვენ ყოველთვის თქვენთან ვართ)</p></div>
-      <div class="work-card"><h3>კიბერუსაფრთხოება</h3><p>კიბერუსაფრთხოება და მონაცემთა დაცვა (თქვენი მშვიდად ყოფნისთვის)</p></div>
-    </div>
-  </section>
-
-  <section class="values-section">
-    <div class="values-content">
-      <h2 class="section-title">რატომ უნდა აირჩიოთ Swift?</h2>
-      <div class="values-grid">
-        <div class="value-card"><h3>Swift</h3><p>იმიტომ, რომ ჩვენი სახელი ჩვენი მთავარი დაპირებაა. Swift Performance. Swift Process. Swift Results. ბრენდის ფერებია — წითელი 🟥, შავი ⬛ და თეთრი ⬜</p></div>
-        <div class="value-card"><h3>...</h3><p>ჩვენი მიზანია ბიზნესისთვის Swift Web Studio პირველი ასოციაცია იყოს, როდესაც საუბარია უმაღლესი ხარისხის მომსახურებაზე.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <script src="cookie-banner.js"></script>
-
-  <section class="management-section">
-    <h2 class="section-title">Swift კოლაბორაციის ეტაპები</h2>
-    <p>Hi! — საწყისი კონსულტაცია, და გაცნობა.</p>
-    <p>Plan — ვებ არქიტექტურის ჩამოყალიბება და იდეის და დიზაინის ფორმირება.</p>
-    <p>Build — ფუნქციონალის ტესტირება და ოპტიმიზაცია.</p>
-    <p>Launch — ვებგვერდის დალანჩვა და შემდეგი ტექნიკური მხარდაჭერა.</p>
-    <p>ჩვენ ვქმნით ციფრულ გადაწყვეტებს, სადაც ჩვენი პარტნიორების წარმატება ჩვენი შესრულებული სამუშაოს მთავარი საზომია, თქვენი წარმატება — ჩვენი ტექნოლოგიური მისიის მთავარი მიზანია</p>
-    <a href="contact" class="cta-button" style="background: #e63946; color: white;">დაგვიკავშირდით</a>
-  </section>
+  <!-- აქ ჩაჯდება ახალი კონტენტი -->
 
   <footer id="footer" class="overflow-hidden padding-large pb-0">
     <div class="container">
@@ -380,5 +266,5 @@
   <script type="text/javascript" src="js/script.js"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <script src="//code.tidio.co/f58rpp470u6sklafvxv4n02zj6utgzqt.js" async></script>
-
+</body>
 </html>
