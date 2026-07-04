@@ -10,7 +10,7 @@
     gtag('js', new Date());
     gtag('config', 'G-HF2HD3XND0');
   </script>
-  <title>Swiftweb.studio - კომპანიის შესახებ</title>
+  <title>კონტაქტი | Swift Web Studio</title>
   <link rel="canonical" href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/solutions" />
   <link rel="icon" type="image/png" href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/images/favico.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -41,6 +41,7 @@
   h1 {
     text-align: center;
     font-size: 2.5rem;
+    margin-top: 0;
     margin-bottom: 50px;
     color: #333;
   }
@@ -82,6 +83,58 @@
     #consultModal > div { width: 100% !important; max-width: 100% !important; border-radius: 0 !important; margin: 0 !important; padding: 16px !important; }
     #consultModal > div iframe { height: 80vh !important; }
   }
+
+  /* Remove padding so map touches the right edge */
+.contact-wrapper {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+/* LEFT SIDE – Contact info */
+.contact-info {
+  width: 50%;
+  padding: 20px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* RIGHT SIDE – Map */
+.contact-map {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Make the whole section at least 400px tall */
+.contact-section {
+  min-height: 400px;
+}
+
+/* ------------------------------
+   MOBILE — Map goes under info
+   ------------------------------ */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-map {
+    width: 100%;
+  }
+
+  .contact-map iframe {
+    height: 300px; /* good height on mobile */
+  }
+}
   </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
@@ -171,38 +224,69 @@
         </div>
       </div>
     </nav>
-    
-    <nav id="primary-header" class="navbar navbar-expand-lg shadow-none" aria-label="navbar" height="30">
+
+    <nav id="primary-header" nav class="navbar navbar-expand-lg shadow-none" aria-label="navbar" height="30">
       <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
-          <svg class="navbar-icon mt-3 primary-color-500 bg-light" width="50" height="50"><use xlink:href="#navbar-icon"></use></svg>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-primary"
+          aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="navbar-icon mt-3 primary-color-500 bg-light" width="50" height="50">
+            <use xlink:href="#navbar-icon"></use>
+          </svg>
         </button>
         <div class="header-bottom collapse navbar-collapse bg-light border-radius-10 py-2" id="navbar-primary">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark p-0" href="home">მთავარი</a></li>
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark p-0" href="solutions">გადაწყვეტები</a></li>
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark p-0" href="services">სერვისები</a></li>
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark p-0" href="projects">პროექტები</a></li>
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark active p-0 mt-3 mt-lg-0" aria-current="page" href="about-us">კომპანია</a></li>
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark p-0" href="team">გუნდი</a></li>
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark p-0" href="contact">კონტაქტი</a></li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="home">მთავარი</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="solutions">გადაწყვეტები</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="services">სერვისები</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="projects">პროექტები</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="about-us">კომპანია</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="team">გუნდი</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark active p-0 mt-3 mt-lg-0" aria-current="page" href="contact">კონტაქტი</a>
+            </li>
             <li class="nav-item ps-4 pe-3 dropdown border-right">
-              <a class="nav-link text-dark p-0 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">მეტი<iconify-icon icon="iconamoon:arrow-down-2-fill"></iconify-icon></a>
+              <a class="nav-link text-dark p-0 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">მეტი<iconify-icon icon="iconamoon:arrow-down-2-fill"></iconify-icon> </a>
               <ul class="dropdown-menu">
                 <li class="py-1"><a href="about.html" class="dropdown-item text-uppercase">დამკვეთები/პარტნიორები</a></li>
                 <li class="py-1"><a href="blog.html" class="dropdown-item text-uppercase">მომხმარებლის შეფასებები</a></li>
+                <li class="py-1"><a href="blog-single.html" class="dropdown-item text-uppercase">Blog-Single</a></li>
                 <li class="py-1"><a href="booking.html" class="dropdown-item text-uppercase">ვაკანსიები</a></li>
                 <li class="py-1"><a href="services.html" class="dropdown-item text-uppercase">სიახლეები</a></li>
                 <li class="py-1"><a href="departments.html" class="dropdown-item text-uppercase">ფასები</a></li>
+                <li class="py-1"><a href="gallery.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="pricing.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="contact.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="team.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="review.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="faq.html" class="dropdown-item text-uppercase">working on it</a></li>
               </ul>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0 text-uppercase fw-bold text-decoration-underline"
+                href="" target="_blank">Link</a>
             </li>
           </ul>
           <form class="search-form mb-3 mb-lg-0" role="search">
-            <svg class="search primary-color position-absolute" width="18" height="18"><use xlink:href="#search"></use></svg>
-            <input class="form-control border-0 ps-4 position-relative" type="search" placeholder="ძებნა..." aria-label="Search">
+            <svg class="search primary-color position-absolute" width="18" height="18">
+              <use xlink:href="#search"></use>
+            </svg>
+            <input class="form-control border-0 ps-4 position-relative" type="search" placeholder="ძებნა..."
+              aria-label="Search">
           </form>
         </div>
       </div>
     </nav>
   </header>
-
