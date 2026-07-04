@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,7 @@
     gtag('js', new Date());
     gtag('config', 'G-HF2HD3XND0');
   </script>
-  <title>Swiftweb.studio - კომპანიის შესახებ</title>
+  <title>კონტაქტი | Swift Web Studio</title>
   <link rel="canonical" href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/solutions" />
   <link rel="icon" type="image/png" href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/images/favico.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -40,6 +41,7 @@
   h1 {
     text-align: center;
     font-size: 2.5rem;
+    margin-top: 0;
     margin-bottom: 50px;
     color: #333;
   }
@@ -81,6 +83,58 @@
     #consultModal > div { width: 100% !important; max-width: 100% !important; border-radius: 0 !important; margin: 0 !important; padding: 16px !important; }
     #consultModal > div iframe { height: 80vh !important; }
   }
+
+  /* Remove padding so map touches the right edge */
+.contact-wrapper {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+/* LEFT SIDE – Contact info */
+.contact-info {
+  width: 50%;
+  padding: 20px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* RIGHT SIDE – Map */
+.contact-map {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Make the whole section at least 400px tall */
+.contact-section {
+  min-height: 400px;
+}
+
+/* ------------------------------
+   MOBILE — Map goes under info
+   ------------------------------ */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-map {
+    width: 100%;
+  }
+
+  .contact-map iframe {
+    height: 300px; /* good height on mobile */
+  }
+}
   </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
@@ -170,38 +224,258 @@
         </div>
       </div>
     </nav>
-    
-    <nav id="primary-header" class="navbar navbar-expand-lg shadow-none" aria-label="navbar" height="30">
+
+    <nav id="primary-header" nav class="navbar navbar-expand-lg shadow-none" aria-label="navbar" height="30">
       <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
-          <svg class="navbar-icon mt-3 primary-color-500 bg-light" width="50" height="50"><use xlink:href="#navbar-icon"></use></svg>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-primary"
+          aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="navbar-icon mt-3 primary-color-500 bg-light" width="50" height="50">
+            <use xlink:href="#navbar-icon"></use>
+          </svg>
         </button>
         <div class="header-bottom collapse navbar-collapse bg-light border-radius-10 py-2" id="navbar-primary">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark p-0" href="home">მთავარი</a></li>
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark p-0" href="solutions">გადაწყვეტები</a></li>
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark p-0" href="services">სერვისები</a></li>
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark p-0" href="projects">პროექტები</a></li>
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark active p-0 mt-3 mt-lg-0" aria-current="page" href="about-us">კომპანია</a></li>
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark p-0" href="team">გუნდი</a></li>
-            <li class="nav-item ps-4 pe-4 border-right"><a class="nav-link text-dark p-0" href="contact">კონტაქტი</a></li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="home">მთავარი</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="solutions">გადაწყვეტები</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="services">სერვისები</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="projects">პროექტები</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="about-us">კომპანია</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="team">გუნდი</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark active p-0 mt-3 mt-lg-0" aria-current="page" href="contact">კონტაქტი</a>
+            </li>
             <li class="nav-item ps-4 pe-3 dropdown border-right">
-              <a class="nav-link text-dark p-0 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">მეტი<iconify-icon icon="iconamoon:arrow-down-2-fill"></iconify-icon></a>
+              <a class="nav-link text-dark p-0 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">მეტი<iconify-icon icon="iconamoon:arrow-down-2-fill"></iconify-icon> </a>
               <ul class="dropdown-menu">
                 <li class="py-1"><a href="about.html" class="dropdown-item text-uppercase">დამკვეთები/პარტნიორები</a></li>
                 <li class="py-1"><a href="blog.html" class="dropdown-item text-uppercase">მომხმარებლის შეფასებები</a></li>
+                <li class="py-1"><a href="blog-single.html" class="dropdown-item text-uppercase">Blog-Single</a></li>
                 <li class="py-1"><a href="booking.html" class="dropdown-item text-uppercase">ვაკანსიები</a></li>
                 <li class="py-1"><a href="services.html" class="dropdown-item text-uppercase">სიახლეები</a></li>
                 <li class="py-1"><a href="departments.html" class="dropdown-item text-uppercase">ფასები</a></li>
+                <li class="py-1"><a href="gallery.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="pricing.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="contact.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="team.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="review.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="faq.html" class="dropdown-item text-uppercase">working on it</a></li>
               </ul>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0 text-uppercase fw-bold text-decoration-underline"
+                href="" target="_blank">Link</a>
             </li>
           </ul>
           <form class="search-form mb-3 mb-lg-0" role="search">
-            <svg class="search primary-color position-absolute" width="18" height="18"><use xlink:href="#search"></use></svg>
-            <input class="form-control border-0 ps-4 position-relative" type="search" placeholder="ძებნა..." aria-label="Search">
+            <svg class="search primary-color position-absolute" width="18" height="18">
+              <use xlink:href="#search"></use>
+            </svg>
+            <input class="form-control border-0 ps-4 position-relative" type="search" placeholder="ძებნა..."
+              aria-label="Search">
           </form>
         </div>
       </div>
     </nav>
   </header>
 
+  <body>
+    <main style="font-family: 'FiraGO', sans-serif; max-width: 1200px; margin: 0 auto; padding: 0px 0px;">
+
+        <div style="display: flex; width: 100%;">
+
+  <!-- Left Blank Space (25%) -->
+  <div style="width: 25%;"></div>
+
+  <!-- Middle Content (50%) -->
+  <div style="width: 50%; color: black;">
+
+
+
+  </div>
+
+  <!-- Right Blank Space (25%) -->
+  <div style="width: 25%;"></div>
+
+</div>
+
+<section class="contact-section">
+  <div class="container-fluid contact-wrapper">
+    <div class="contact-info">
+    <h1 class="display-6 fw-bold">დაგვიკავშირდით</h1>
+    <br>
+<h5>მთავარი ოფისი</h5>
+
+<p>თბილისი, ი.ონიაშვილის N59, 80160
+<br>
+TEL: <a href="tel:599074630">+995 599 074 630</a>
+<br>
+Whatsapp: <a href="https://wa.me/599074630">მოგვწერე ვათსაფზე</a>
+<br>
+Email: support@swiftwebstudio.com</p>
+<br>
+<h5>ფილიალი</h5>
+<p>ვაზისუბანი, I მიკრო რაიონი. 0190
+<br>
+TEL: <a href="tel:599074630">+995 599 074 630</a>
+<br>
+Whatsapp: <a href="https://wa.me/599074630">მოგვწერე ვათსაფზე</a>
+<br>
+Email: support@swiftwebstudio.com</p>
+<br>
+<h5>სოციალური ქსელები</h5>
+<div class="social-icons">
+    <a href="https://www.instagram.com/swift_web_studio_techinsider/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.youtube.com/@LevaniMirvelashvili-Youtube/" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.linkedin.com/company/swift-web-studio-2020" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.facebook.com/Swift.Web.Studio.techinsider.holding/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  </div>
+ </div>
+
+<!-- Google Maps Section -->
+<section id="map-section" style="width: 100%; padding: 0; margin: 0;">
+  <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; /* 16:9 aspect ratio */">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1642.3614186066616!2d44.76055650586832!3d41.73115190995829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDQzJzUyLjMiTiA0NMKwNDUnMzguMCJF!5e0!3m2!1ska!2sge!4v1760592355517!5m2!1ska!2sge" 
+      width="80%" 
+      height="100%" 
+      style="border:0; display: block; border-radius: 20px; position: absolute; top: 0; left: 0;"
+      allowfullscreen="" 
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+
+</main>
+  </body>
+
+  <footer id="footer" class="overflow-hidden padding-large pb-0">
+    <div class="container">
+      <div class="row d-flex flex-wrap justify-content-between">
+        <div class="col-lg-4 col-md-6 col-sm-6 pb-3">
+          <div class="footer-menu">
+            <img src="images/logo_01.png" 
+     class="logo" alt="Swift Web Studio Logo" width="400">
+            <p>ვქმნით ციფრულ ეკოსისტემებს ბიზნესის წარმატებისთვის</p>
+            <div class="contact-item">
+              <p>
+                <svg class="location primary-color" width="25" height="25">
+                  <use xlink:href="#location"></use>
+                </svg>
+                <span>თბილისი, ონიაშვილის ქუჩა N 51</span>
+              </p>
+              <p>
+                <svg class="email primary-color" width="25" height="25">
+                  <use xlink:href="#email"></use>
+                </svg>
+                <a href="mailto:">Info@yourinfo.com</a>
+              </p>
+              <p>
+                <svg class="phone primary-color" width="25" height="25">
+                  <use xlink:href="#phone"></use>
+                </svg>
+                <span>(+995)599 074 630</span>
+              </p>
+              <div class="social-icons">
+                <a href="https://www.instagram.com/swift_web_studio_techinsider/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@LevaniMirvelashvili-Youtube/" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.linkedin.com/company/swift-web-studio-2020" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/Swift.Web.Studio.techinsider.holding/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 pb-3">
+          <div class="footer-menu">
+            <h5 class="widget-title pb-2 fw-semibold">ნავიგაცია</h5>
+            <ul class="menu-list list-unstyled">
+              <li class="pb-2">
+                <a href="about-us">კომპანიის შესახებ</a>
+              </li>
+              <li class="pb-2">
+                <a href="services">სერვისები</a>
+              </li>
+              <li class="pb-2">
+                <a href="projects">პორტფოლიო</a>
+              </li>
+              <li class="pb-2">
+                <a href="#">დამკვეთები/პარტნიორები</a>
+              </li>
+              <li class="pb-2">
+                <a href="https://calendar.app.google/n3HHkPqwXo7UYfCm9">დაჯავშნე კონსულტაცია</a>
+              </li>
+              <li class="pb-2">
+                <a href="projects">შეფასებები</a>
+              </li>
+              <li class="pb-2">
+                <a href="https://www.linkedin.com/company/swift-web-studio-2020/">ვაკანსია</a>
+              </li>
+              <li class="pb-2">
+                <a href="#">სიახლეები</a>
+              </li>
+              <li class="pb-2">
+                <a href="#">რესურსები</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 pb-3">
+          <div class="footer-menu">
+            <h5 class="widget-title fw-semibold">სამუშაო საათები</h5>
+            <table class="schedule">
+              <tr class="d-flex justify-content-between border-bottom py-2">
+                <td>Monday - Thursday</td>
+                <td class="text-primary">8:00 am - 6:00 pm</td>
+              </tr>
+              <tr class="d-flex justify-content-between border-bottom py-2">
+                <td>Friday - Saturday</td>
+                <td class="text-primary">10:00 am - 4:00 pm</td>
+              </tr>
+              <tr class="d-flex justify-content-between border-bottom py-2">
+                <td>Sunday</td>
+                <td class="text-primary">Emergency only</td>
+              </tr>
+              <tr class="d-flex justify-content-between border-bottom py-2">
+                <td>Personal</td>
+                <td class="text-primary">7:00 pm - 9:00 pm</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-flex text-center justify-content-between border-top mt-5 py-4">
+        <p>© <script> document.write(new Date().getFullYear()); </script> Swift Web Studio/Techinsider Holding LLC - All rights reserved</p>
+        <p><a href="tos">მომსახურების პირობები</a> | <a href="privacy-policy">კონფიდენციალურობის პოლიტიკა</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/plugins.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+  <script src="//code.tidio.co/f58rpp470u6sklafvxv4n02zj6utgzqt.js" async></script>
+
+</body>
+
+
+</html>
