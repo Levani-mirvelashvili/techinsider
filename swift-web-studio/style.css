@@ -1176,7 +1176,7 @@ span.price-tick {
 @media (max-width: 480px) {
     #intro h1 {
         font-family: 'FiraGO', sans-serif !important;
-        font-weight: 700 !important
+        font-weight: 700 !important;
         font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
         margin-top: 100px !important;
         text-align: left !important;
