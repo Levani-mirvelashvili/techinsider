@@ -1186,11 +1186,6 @@ span.price-tick {
     }
 }
 
-/* temporary fix on every browser */
-#intro h1 {
-    margin-top: 0;
-    margin-bottom: 200px;   /* ან რაც სასურველია */
-}
 
 /* Dropdown container make it round */
 .dropdown-menu {
