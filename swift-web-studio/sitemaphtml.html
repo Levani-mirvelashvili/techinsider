@@ -1,1 +1,295 @@
 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HF2HD3XND0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HF2HD3XND0');
+  </script>
+  <title>Sitemap HTML | Swift Web Studio</title>
+  <link rel="canonical" href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/solutions" />
+  <link rel="icon" type="image/png" href="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/images/favico.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+GO&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="">
+  <meta name="keywords" content="Swift Web Studio">
+  <meta name="description" content="Swift Web Studio">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <script src="js/modernizr.js"></script>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    background: white;
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: #333;
+  }
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 65%;
+    margin: 0 auto;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .card.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  .card-title { font-size: 1.5rem; margin-bottom: 12px; font-weight: bold; }
+  .card-description { font-size: 1rem; margin-bottom: 15px; color: #555; }
+  .card a { text-decoration: none; font-weight: bold; color: #7063e7; transition: all 0.3s; }
+  .card a:hover { color: #fff; background: #7063e7; padding: 8px 15px; border-radius: 6px; }
+  .card:hover { background: #7063e7; color: white; transform: translateY(-15px); box-shadow: 0 12px 30px rgba(112, 99, 231, 0.4); }
+  .card:hover .card-title, .card:hover .card-description, .card:hover a { color: white; }
+  @media screen and (max-width: 1024px) { .cards-container { grid-template-columns: repeat(2, 1fr); width: 90%; } }
+  @media screen and (max-width: 768px) { .cards-container { grid-template-columns: 1fr; width: 100%; } }
+  
+  /* Modal */
+  @media (min-width: 769px) {
+    #consultModal > div { max-width: 600px; width: 90vw; }
+  }
+  @media (max-width: 768px) {
+    #consultModal { padding: 0 !important; align-items: flex-start !important; }
+    #consultModal > div { width: 100% !important; max-width: 100% !important; border-radius: 0 !important; margin: 0 !important; padding: 16px !important; }
+    #consultModal > div iframe { height: 80vh !important; }
+  }
+
+  /* Remove padding so map touches the right edge */
+.contact-wrapper {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+/* LEFT SIDE – Contact info */
+.contact-info {
+  width: 50%;
+  padding: 20px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* RIGHT SIDE – Map */
+.contact-map {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Make the whole section at least 400px tall */
+.contact-section {
+  min-height: 400px;
+}
+
+/* ------------------------------
+   MOBILE — Map goes under info
+   ------------------------------ */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-map {
+    width: 100%;
+  }
+
+  .contact-map iframe {
+    height: 300px; /* good height on mobile */
+  }
+}
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol xmlns="http://www.w3.org/2000/svg" id="navbar-icon" viewBox="0 0 16 16">
+      <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="location" viewBox="0 0 512 512">
+      <circle cx="256" cy="192" r="32" fill="currentColor" />
+      <path fill="currentColor" d="M256 32c-88.22 0-160 68.65-160 153c0 40.17 18.31 93.59 54.42 158.78c29 52.34 62.55 99.67 80 123.22a31.75 31.75 0 0 0 51.22 0c17.42-23.55 51-70.88 80-123.22C397.69 278.61 416 225.19 416 185c0-84.35-71.78-153-160-153Zm0 224a64 64 0 1 1 64-64a64.07 64.07 0 0 1-64 64Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="phone" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M5 9.86a18.466 18.466 0 0 0 9.566 9.292l.68.303a3.5 3.5 0 0 0 4.33-1.247l.889-1.324a1 1 0 0 0-.203-1.335l-3.012-2.43a1 1 0 0 0-1.431.183l-.932 1.257a12.14 12.14 0 0 1-5.51-5.511l1.256-.932a1 1 0 0 0 .183-1.431l-2.43-3.012a1 1 0 0 0-1.335-.203l-1.333.894a3.5 3.5 0 0 0-1.237 4.355L5 9.86Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="email" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="search" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0m18 11l-6-6" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="facebook" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="youtube" viewBox="0 0 32 32">
+      <path fill="currentColor" d="M29.41 9.26a3.5 3.5 0 0 0-2.47-2.47C24.76 6.2 16 6.2 16 6.2s-8.76 0-10.94.59a3.5 3.5 0 0 0-2.47 2.47A36.13 36.13 0 0 0 2 16a36.13 36.13 0 0 0 .59 6.74a3.5 3.5 0 0 0 2.47 2.47c2.18.59 10.94.59 10.94.59s8.76 0 10.94-.59a3.5 3.5 0 0 0 2.47-2.47A36.13 36.13 0 0 0 30 16a36.13 36.13 0 0 0-.59-6.74ZM13.2 20.2v-8.4l7.27 4.2Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="instagram" viewBox="0 0 256 256">
+      <path fill="currentColor" d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32Zm48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56Zm40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="linkedin" viewBox="0 0 512 512">
+      <path fill="currentColor" d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32Zm-273.3 373.43h-64.18V205.88h64.18ZM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43c0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43Zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44c-17.74 0-28.24 12-32.91 23.69c-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44c42.13 0 74 27.77 74 87.64Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="twitter" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-down" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="plus" viewBox="0 0 16 16">
+      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 16 16">
+      <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+    </symbol>
+  </svg>
+
+  <header id="header">
+    <nav class="header-top py-4">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-5 col-md-4 col-sm-6">
+            <a class="navbar-brand" href="home">
+              <img src="https://levani-mirvelashvili.github.io/techinsider/swift-web-studio/images/logo_01.png" class="logo" alt="Swift Web Studio Logo" width="400">
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-4 d-md-block d-sm-none">
+            <ul class="contact-list d-flex justify-content-lg-end flex-wrap list-unstyled m-0">
+              <li class="pe-5 pe-lg-0 pe-xxl-5 pb-3 pb-lg-0">
+                <svg class="location primary-color" width="24" height="24"><use xlink:href="#location"></use></svg>
+                <a href="https://maps.app.goo.gl/gAQ62qJeCMSj18LQ9/" target="_blank" rel="noopener noreferrer">ონიაშვილის 59</a>
+              </li>
+              <li class="ps-xl-3">
+                <svg class="phone primary-color" width="24" height="24"><use xlink:href="#phone"></use></svg>
+                <a href="tel:+995599074630">(+995) 599 074 630</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="btn-book text-end">
+              <button onclick="document.getElementById('consultModal').style.display='flex'; document.body.style.overflow='hidden'" class="btn btn-medium btn-outline-primary btn-pill text-uppercase">კონსულტაციის დაჯავშნა➜</button>
+              
+              <div id="consultModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center; padding:20px;" onclick="if(event.target===this){this.style.display='none'; document.body.style.overflow=''}">
+                <div style="background:#fff; border-radius:16px; padding:24px 28px; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-height:90vh; width:100%; max-width:600px; display:flex; flex-direction:column; overflow:hidden;">
+                  <button onclick="document.getElementById('consultModal').style.display='none'; document.body.style.overflow=''" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:20px; cursor:pointer; color:red; z-index:10;">✕</button>
+                  <div style="padding-bottom:10px;">
+                    <h4 style="margin:0 0 6px;">კონსულტაციის დაჯავშნა</h4>
+                    <p style="color:#775; margin:0 0 10px; font-size:14px;">აირჩიეთ მოსახერხებელი დრო Google Calendar-ის საშუალებით.</p>
+                  </div>
+                  <div style="flex:1; overflow-y:auto; -webkit-overflow-scrolling:touch; display:flex; justify-content:center;">
+                    <iframe src="https://calendar.app.google/n3HHkPqwXo7UYfCm9" style="border:0; width:100%; height:600px; min-height:450px;" frameborder="0"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="primary-header" nav class="navbar navbar-expand-lg shadow-none" aria-label="navbar" height="30">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-primary"
+          aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="navbar-icon mt-3 primary-color-500 bg-light" width="50" height="50">
+            <use xlink:href="#navbar-icon"></use>
+          </svg>
+        </button>
+        <div class="header-bottom collapse navbar-collapse bg-light border-radius-10 py-2" id="navbar-primary">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="home">მთავარი</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="solutions">გადაწყვეტები</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="services">სერვისები</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="projects">პროექტები</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="about-us">კომპანია</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0" href="team">გუნდი</a>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark active p-0 mt-3 mt-lg-0" aria-current="page" href="contact">კონტაქტი</a>
+            </li>
+            <li class="nav-item ps-4 pe-3 dropdown border-right">
+              <a class="nav-link text-dark p-0 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">მეტი<iconify-icon icon="iconamoon:arrow-down-2-fill"></iconify-icon> </a>
+              <ul class="dropdown-menu">
+                <li class="py-1"><a href="about.html" class="dropdown-item text-uppercase">დამკვეთები/პარტნიორები</a></li>
+                <li class="py-1"><a href="blog.html" class="dropdown-item text-uppercase">მომხმარებლის შეფასებები</a></li>
+                <li class="py-1"><a href="blog-single.html" class="dropdown-item text-uppercase">Blog-Single</a></li>
+                <li class="py-1"><a href="booking.html" class="dropdown-item text-uppercase">ვაკანსიები</a></li>
+                <li class="py-1"><a href="services.html" class="dropdown-item text-uppercase">სიახლეები</a></li>
+                <li class="py-1"><a href="departments.html" class="dropdown-item text-uppercase">ფასები</a></li>
+                <li class="py-1"><a href="gallery.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="pricing.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="contact.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="team.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="review.html" class="dropdown-item text-uppercase">working on it</a></li>
+                <li class="py-1"><a href="faq.html" class="dropdown-item text-uppercase">working on it</a></li>
+              </ul>
+            </li>
+            <li class="nav-item ps-4 pe-4 border-right">
+              <a class="nav-link text-dark p-0 text-uppercase fw-bold text-decoration-underline"
+                href="" target="_blank">Link</a>
+            </li>
+          </ul>
+          <form class="search-form mb-3 mb-lg-0" role="search">
+            <svg class="search primary-color position-absolute" width="18" height="18">
+              <use xlink:href="#search"></use>
+            </svg>
+            <input class="form-control border-0 ps-4 position-relative" type="search" placeholder="ძებნა..."
+              aria-label="Search">
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header> 
+
+  <h2>საიტის რუკა</h2>
