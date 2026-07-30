@@ -294,8 +294,23 @@
   <h1 class="display-6 fw-bold">modal popup template page (modal is done)</h1>
       <h1 class="display-6 fw-bold">Multiple chats on this page</h1>
  
+<script>
+  const targetSelector = '#tidio-chat-iframe'; // Adjust this ID if Tidio changed it
+  
+  const observer = new MutationObserver((mutations) => {
+    const chatWidget = document.querySelector(targetSelector);
+    if (chatWidget) {
+      chatWidget.style.setProperty('bottom', '80px', 'important');
+      // If you need to lift it higher, change '80px'
+    }
+  });
 
-  <script src="//code.tidio.co/f58rpp470u6sklafvxv4n02zj6utgzqt.js" async></script>
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+</script>
+  
 
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="bff6b970-7159-4f8a-bce8-e5fc10ddb30f";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
   <script>
